@@ -22,8 +22,12 @@ const Byline = () => {
   const getRandomIndex = len => Math.floor(Math.random() * len);
   const getRandomLetter = () => ALPHABET[getRandomIndex(ALPHABET.length)];
 
+  const setByline = newByline => {
+    if (bylineEl && bylineEl.current) {
   // @ts-ignore
-  const setByline = newByline => (bylineEl.current.innerText = newByline); 
+      bylineEl.current.innerText = newByline;
+    }
+  };
 
   let timeout;
   let bylineIndex = 0;
