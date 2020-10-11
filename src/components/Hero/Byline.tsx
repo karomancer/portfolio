@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const ALPHABET = 'abcdefghijklmnopqrstuvwxyzαβΓΔδεζηθικΛλμνΞξΠπρΣσςτυΦφχΨψΩω';
 const BYLINE_OPTIONS = [
@@ -18,11 +18,12 @@ const BYLINE_OPTIONS = [
 ];
 
 const Byline = () => {
+  const bylineEl = useRef();
   const getRandomIndex = len => Math.floor(Math.random() * len);
   const getRandomLetter = () => ALPHABET[getRandomIndex(ALPHABET.length)];
 
-  const setByline = newByline =>
-    (document.getElementById('byline').innerText = newByline);
+  // @ts-ignore
+  const setByline = newByline => (bylineEl.current.innerText = newByline); 
 
   let timeout;
   let bylineIndex = 0;
@@ -95,7 +96,7 @@ const Byline = () => {
     setTimeout(changeByline, 2800);
   });
 
-  return <h3 id="byline">{byline}</h3>;
+  return <h3 ref={bylineEl}>{byline}</h3>;
 };
 
 export default Byline;
