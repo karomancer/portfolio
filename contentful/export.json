@@ -1,0 +1,2836 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "blogPost",
+        "type": "ContentType",
+        "createdAt": "2020-10-30T00:30:00.762Z",
+        "updatedAt": "2020-11-03T23:29:47.627Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-11-03T23:29:47.627Z",
+        "firstPublishedAt": "2020-10-30T00:30:01.379Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Blog Post",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "date",
+          "name": "date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "person",
+        "type": "ContentType",
+        "createdAt": "2020-10-30T01:18:03.874Z",
+        "updatedAt": "2020-11-03T23:29:48.100Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2020-11-03T23:29:48.100Z",
+        "firstPublishedAt": "2020-10-30T01:18:07.312Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Person",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "company",
+          "name": "Company",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "shortBio",
+          "name": "Short Bio",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "email",
+          "name": "Email",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "phone",
+          "name": "Phone",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "facebook",
+          "name": "Facebook",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "twitter",
+          "name": "Twitter",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "github",
+          "name": "Github",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "portfolioPiece",
+        "type": "ContentType",
+        "createdAt": "2020-10-30T02:03:48.037Z",
+        "updatedAt": "2020-11-03T22:14:47.995Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2020-11-03T22:14:47.995Z",
+        "firstPublishedAt": "2020-10-30T02:03:48.485Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Portfolio Piece",
+      "description": "",
+      "fields": [
+        {
+          "id": "thumbnail",
+          "name": "Thumbnail Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "date",
+          "name": "Date",
+          "type": "Date",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "type",
+          "name": "Type",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "in": [
+                "UX Research",
+                "Front-end Development",
+                "Creative Coding",
+                "Illustration",
+                "Project Management",
+                "Cosplay"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "role",
+          "name": "Role",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "hero",
+          "name": "Hero",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "RichText",
+          "localized": true,
+          "required": false,
+          "validations": [
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Process Pics",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "deliverables",
+          "name": "Final Deliverables",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "879jbu294ufv",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 12,
+        "createdAt": "2020-10-30T00:30:01.555Z",
+        "createdBy": {
+          "sys": {
+            "id": "0kg7uKy52oIEgObVqvwW0J",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-11-03T23:29:48.652Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0kg7uKy52oIEgObVqvwW0J",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "blogPost",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "879jbu294ufv",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 14,
+        "createdAt": "2020-10-30T01:18:07.441Z",
+        "createdBy": {
+          "sys": {
+            "id": "0kg7uKy52oIEgObVqvwW0J",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-11-03T23:29:48.652Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0kg7uKy52oIEgObVqvwW0J",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "person",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "company",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "shortBio",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "email",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "phone",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "facebook",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "twitter",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "github",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "879jbu294ufv",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 18,
+        "createdAt": "2020-10-30T02:03:48.612Z",
+        "createdBy": {
+          "sys": {
+            "id": "0kg7uKy52oIEgObVqvwW0J",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-11-03T22:14:48.575Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0kg7uKy52oIEgObVqvwW0J",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "portfolioPiece",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "thumbnail",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "date",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "type",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "role",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "hero",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "assetGalleryEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "deliverables",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "54V4UjJAIFpnJhQxqC89m8",
+        "type": "Entry",
+        "createdAt": "2020-11-03T20:57:18.681Z",
+        "updatedAt": "2020-11-03T23:24:54.911Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 306,
+        "publishedAt": "2020-11-03T23:24:54.911Z",
+        "firstPublishedAt": "2020-11-03T21:59:41.072Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 307,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "portfolioPiece"
+          }
+        }
+      },
+      "fields": {
+        "thumbnail": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4XkE6OsIX8xtukSpkR5fCq"
+            }
+          }
+        },
+        "title": {
+          "en-US": "Platypus Dreamtime"
+        },
+        "date": {
+          "en-US": "2013-05-08"
+        },
+        "type": {
+          "en-US": "UX Research"
+        },
+        "role": {
+          "en-US": "UX Researcher, Project Manager"
+        },
+        "hero": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2oROtEWgy5usM9Y5xb08lu"
+            }
+          }
+        },
+        "slug": {
+          "en-US": "platypus-ux-research"
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Teammates",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://alexrothera.com/info"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " & Roles",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://alexrothera.com/info"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Alex Rothera",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " - Art & Design & Project Management\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://dribbble.com/abhoopathy"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Aneesh Bhoopathy",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " - Programming & Design\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.linkedin.com/in/dev-doshi"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Dev Doshi",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " - Programming\nKarina Chow - UX Research & Project Management\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://hcii.cmu.edu/people/soyeon-hwang"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Soyeon Hwang",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " - UX Research",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Context",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "At CMU, both Bachelors and Master HCI students ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://hcii.cmu.edu/academics/mhci/capstone-project"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "work on capstone projects",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " to close out their education. They are the exact same with the exception that the bachelor version is a semester shorter.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The Capstone project is structured to cover the end-to-end design process of a product development lifecycle. HCI students work in teams of 4-6 students with ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://hcii.cmu.edu/research/mhci-capstone/grid"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "companies ranging from nimble startups to globally recognized brands",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ". ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Working with faculty mentors and their industry partners, teams produce user research, product designs and interactive prototypes to improve or design new applications to a partner's existing technology. The project culminates with a presentation of the teams' final prototypes at the end of the summer. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Typically, students with complementary skillsets are chosen to work together. Think: a computer scientist, a designer, a psychologist, and an artist. Our group had three software people, an artist, and a psychologist. I decided to leave the software work to the other two computer people and work with the psychologist on UX interviewing, persona creation, and mapping out processes.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The Client and the Ask",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Our client for this capstone was ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "http://senseplatypus.com/"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Platypus LLC",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ", a local Pittsburgh startup. At the time, they produced small hover boats equipped with Android phones that autonomously travel across bodies of water. While traversing a body of water, the boats test samples of water for pH level and common contaminants, and create a map of the water for the owner of the boat to review. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Fracking is a large concern in the part of the United States that Platypus is located (near the Appalachians), so the product was created with reporting results in mind. The \"heat map\" graphic is useful to identify from where a contaminant might be emitting from to help identify fracking leaks. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "When we first met with Platypus, they already had the hardware and the graphic making ability, but their reports were printed and mailed by snail mail at the end of the month. A month can be a long time, especially given it can take a matter of a few short days for a body of water to be completely contaminated. They wanted us to investigate whether investing resources into making a live web dashboard was worth it, and to make a prototype if we found it was. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "The Project",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "In order to investigate on behalf of Platypus, we had to find potential Platypus users to interview. We had a lot of questions given that none of us were from the Appalachians or the agricultural industry. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Some of our asks of agricultural workers were:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "How tech-savvy are they? Do they have reliable internet? Would they look at a dashboard frequently?",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "How knowledgable are they about fracking? Is fracking a known quantity in their area?",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "How dangerous is fracking contamination to their business? Would a contamination have a huge effect on their crops/timber/etc? ",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Platypus was still early in development, so they didn't have too many resources for us to lean on, so we had to get creative. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "I asked a Pittsburgh police officer if he knew kanyone and he pointed us to a timberer that lives in Beaver County, PA",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "My teammate ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://hcii.cmu.edu/people/soyeon-hwang"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "Soyeon",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " and I went to the Carnegie Science Center and found a hydrologist ",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "We all went to the Strip District Farmer's Market and found several farmers/ranchers",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "We grabbed some professors and students to run through paper and low-fidelity mockups with us after having interviewed the rest",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "What did I do?",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "I found most of our interviewees and ran the vast majority of our ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.sciencedirect.com/book/9780128008942/contextual-design"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "contextual design",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " interviews. I provided design feedback to my teammate ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://alexrothera.com/info"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Alex Rothera",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " on his product mocks, and took his mocks into the world to gather feedback for the next iteration. I also produced a lot of the visualizations in our final presentation and report, such as the informational flow chart and the people interviewed visualization. Lastly, I did a lot of project management. I maintained the Gantt chart and scheduling, which was a natural step because a lot had to be scheduled around when user feedback would come back. ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3NCPHi2pF97SOBT7WVHcP0"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3dsoOB7GDLTb3vpLlk2BLm"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5o4dFuPLZfQOUdPpbE0hsG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7lAmRP6FoGB2uBvc5HfEav"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "18NPBIbwzpK0Q5z0entlOQ"
+              }
+            }
+          ]
+        },
+        "deliverables": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5Fj481tU6Kh7P1Jl4tvDCF"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "76wL6OyAcXElctcEu2OqNi"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "15jwOBqpxqSAOy2eOO4S0m",
+        "type": "Entry",
+        "createdAt": "2020-11-03T23:27:07.829Z",
+        "updatedAt": "2020-11-03T23:30:04.595Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-11-03T23:30:04.595Z",
+        "firstPublishedAt": "2020-11-03T23:27:11.191Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "person"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "John Doe"
+        },
+        "title": {
+          "en-US": "Web Developer"
+        },
+        "company": {
+          "en-US": "ACME"
+        },
+        "shortBio": {
+          "en-US": "Research and recommendations for modern stack websites."
+        },
+        "email": {
+          "en-US": "john@doe.com"
+        },
+        "phone": {
+          "en-US": "0176 / 1234567"
+        },
+        "facebook": {
+          "en-US": "johndoe"
+        },
+        "twitter": {
+          "en-US": "johndoe"
+        },
+        "github": {
+          "en-US": "johndoe"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "7orLdboQQowIUs22KAW4U"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "4shwYI3POEGkw0Eg6kcyaQ",
+        "type": "Asset",
+        "createdAt": "2020-10-30T01:18:08.864Z",
+        "updatedAt": "2020-11-03T23:29:57.744Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2020-11-03T23:29:57.744Z",
+        "firstPublishedAt": "2020-10-30T01:21:59.848Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Man in the fields"
+        },
+        "description": {
+          "en-US": "Tattooed man walking in a field"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/4shwYI3POEGkw0Eg6kcyaQ/afe311ac876fe9d6803587fab0efffb7/felix-russell-saw-112140.jpg",
+            "details": {
+              "size": 4539181,
+              "image": {
+                "width": 2500,
+                "height": 1667
+              }
+            },
+            "fileName": "felix-russell-saw-112140.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "7orLdboQQowIUs22KAW4U",
+        "type": "Asset",
+        "createdAt": "2020-10-30T01:18:09.267Z",
+        "updatedAt": "2020-11-03T23:30:00.697Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2020-11-03T23:30:00.697Z",
+        "firstPublishedAt": "2020-10-30T01:21:59.616Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Sparkler"
+        },
+        "description": {
+          "en-US": "John with Sparkler"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/7orLdboQQowIUs22KAW4U/c46853656bfa83fa091034116ab82bee/matt-palmer-254999.jpg",
+            "details": {
+              "size": 2293094,
+              "image": {
+                "width": 3000,
+                "height": 2000
+              }
+            },
+            "fileName": "matt-palmer-254999.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "4NzwDSDlGECGIiokKomsyI",
+        "type": "Asset",
+        "createdAt": "2020-10-30T01:18:09.291Z",
+        "updatedAt": "2020-11-03T23:30:00.251Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2020-11-03T23:30:00.251Z",
+        "firstPublishedAt": "2020-10-30T01:22:00.291Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "City"
+        },
+        "description": {
+          "en-US": "City pictured from the sky"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/4NzwDSDlGECGIiokKomsyI/db8606921de96d807e36230da6a6d263/denys-nevozhai-100695.jpg",
+            "details": {
+              "size": 15736986,
+              "image": {
+                "width": 3992,
+                "height": 2992
+              }
+            },
+            "fileName": "denys-nevozhai-100695.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "6Od9v3wzLOysiMum0Wkmme",
+        "type": "Asset",
+        "createdAt": "2020-10-30T01:18:09.293Z",
+        "updatedAt": "2020-11-03T23:29:57.992Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2020-11-03T23:29:57.992Z",
+        "firstPublishedAt": "2020-10-30T01:22:00.700Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Woman with black hat"
+        },
+        "description": {
+          "en-US": "Woman wearing a black hat"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/6Od9v3wzLOysiMum0Wkmme/073222ef063fb09b656f8d771754881e/cameron-kirby-88711.jpg",
+            "details": {
+              "size": 7316629,
+              "image": {
+                "width": 3000,
+                "height": 2000
+              }
+            },
+            "fileName": "cameron-kirby-88711.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "76wL6OyAcXElctcEu2OqNi",
+        "type": "Asset",
+        "createdAt": "2020-11-03T21:51:39.292Z",
+        "updatedAt": "2020-11-03T21:56:12.131Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 20,
+        "publishedAt": "2020-11-03T21:56:12.131Z",
+        "firstPublishedAt": "2020-11-03T21:56:12.131Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Final Client Report"
+        },
+        "description": {
+          "en-US": "The final report of our UX findings to be given to the client, Platypus LLC. \n\nCovers the exploration for how we designed our medium-fidelity prototype we created and how different identified personas would use that prototype. Also explains the breakdowns we found in their existing product and user feedback on our iterations on their product."
+        },
+        "file": {
+          "en-US": {
+            "url": "//assets.ctfassets.net/879jbu294ufv/76wL6OyAcXElctcEu2OqNi/9851115b667e5f72dbfb55d643379c02/final_report.pdf",
+            "details": {
+              "size": 7984213
+            },
+            "fileName": "final_report.pdf",
+            "contentType": "application/pdf"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "5Fj481tU6Kh7P1Jl4tvDCF",
+        "type": "Asset",
+        "createdAt": "2020-11-03T21:56:17.689Z",
+        "updatedAt": "2020-11-03T21:58:39.813Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2020-11-03T21:58:39.813Z",
+        "firstPublishedAt": "2020-11-03T21:58:39.813Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Final Presentation"
+        },
+        "description": {
+          "en-US": "Final presentation of work done for Platypus LLC. Presentation was intended for the rest of our class, and includes a lot of context as to who the client is and what they are trying to accomplish. \n\nA much more generalized version of the final report we gifted the client intended for a much broader audience. The information is more focused on UX techniques used, including contextual inquiry and persona creation, and less on business recommendations. "
+        },
+        "file": {
+          "en-US": {
+            "url": "//downloads.ctfassets.net/879jbu294ufv/5Fj481tU6Kh7P1Jl4tvDCF/4c88d4d90609d8ab390827be358565b4/presentation.pdf",
+            "details": {
+              "size": 12802659
+            },
+            "fileName": "presentation.pdf",
+            "contentType": "application/pdf"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "3dsoOB7GDLTb3vpLlk2BLm",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:05:59.692Z",
+        "updatedAt": "2020-11-03T23:09:25.354Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 30,
+        "publishedAt": "2020-11-03T23:09:25.354Z",
+        "firstPublishedAt": "2020-11-03T22:09:00.326Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 31,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Timberer Interview"
+        },
+        "description": {
+          "en-US": "Through a friend of a friend, I found a timberer who was willing to take part in our UX research. We drove through the February snow in Pennsylvania down to Beaver County to see his day-to-day operations. While there we inquired about his knowledge of the dangers of fracking and whether his timbering operation would be interested in beta-testing the Platypus water monitoring system. \n\nPictured here is myself and my teammate Soyeon Hwang interviewing the timberer"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/3dsoOB7GDLTb3vpLlk2BLm/b9396698fb3764d0d1bb881206e623a9/pnc-5.jpg",
+            "details": {
+              "size": 5411903,
+              "image": {
+                "width": 3648,
+                "height": 2736
+              }
+            },
+            "fileName": "pnc-5.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "3NCPHi2pF97SOBT7WVHcP0",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:11:15.093Z",
+        "updatedAt": "2020-11-03T22:13:40.893Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-11-03T22:13:40.893Z",
+        "firstPublishedAt": "2020-11-03T22:13:40.893Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Interviewing a rancher at the Strip District Farmer's Market"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/3NCPHi2pF97SOBT7WVHcP0/b6257145d52bbc1c364c12733b685517/2013-02-16_12.14.21.jpg",
+            "details": {
+              "size": 1312502,
+              "image": {
+                "width": 2048,
+                "height": 1536
+              }
+            },
+            "fileName": "2013-02-16 12.14.21.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "qZXIlL37u2Otth5pL0li9",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:17:34.724Z",
+        "updatedAt": "2020-11-03T22:17:56.673Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-11-03T22:17:56.673Z",
+        "firstPublishedAt": "2020-11-03T22:17:56.673Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Identifying flows and breakdowns"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/qZXIlL37u2Otth5pL0li9/038ca70701e0c77cf9f9e6f09e882f33/DSC_0252.jpg",
+            "details": {
+              "size": 5722832,
+              "image": {
+                "width": 3417,
+                "height": 2247
+              }
+            },
+            "fileName": "DSC_0252.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "7lAmRP6FoGB2uBvc5HfEav",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:21:58.778Z",
+        "updatedAt": "2020-11-03T22:23:03.168Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-11-03T22:23:03.168Z",
+        "firstPublishedAt": "2020-11-03T22:23:03.168Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Flow of information"
+        },
+        "description": {
+          "en-US": "Identifying the entities involved, the flow of information, and where the breakdowns are in that flow "
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/7lAmRP6FoGB2uBvc5HfEav/f7fb6848da2d694413e1b623e3add5b3/Screen_Shot_2020-11-03_at_2.21.13_PM.png",
+            "details": {
+              "size": 150382,
+              "image": {
+                "width": 1295,
+                "height": 892
+              }
+            },
+            "fileName": "Screen Shot 2020-11-03 at 2.21.13 PM.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "18NPBIbwzpK0Q5z0entlOQ",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:23:17.819Z",
+        "updatedAt": "2020-11-03T22:24:45.310Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2020-11-03T22:24:45.310Z",
+        "firstPublishedAt": "2020-11-03T22:24:45.310Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Interviewed population"
+        },
+        "description": {
+          "en-US": "Who we interviewed to both understand the agricultural space better but also to test the ease of our UX in our mockups."
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/18NPBIbwzpK0Q5z0entlOQ/ce3eca592bb25e156664e6a94c985cdf/Screen_Shot_2020-11-03_at_2.21.43_PM.png",
+            "details": {
+              "size": 137336,
+              "image": {
+                "width": 1282,
+                "height": 797
+              }
+            },
+            "fileName": "Screen Shot 2020-11-03 at 2.21.43 PM.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "6FaQElwaJsgbfIfWlR60ia",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:25:49.267Z",
+        "updatedAt": "2020-11-03T22:26:31.365Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-11-03T22:26:31.365Z",
+        "firstPublishedAt": "2020-11-03T22:26:31.365Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "A Platypus Boat"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/6FaQElwaJsgbfIfWlR60ia/e9cded0df90879c122cc794b78a6e555/Screen_Shot_2020-11-03_at_2.26.05_PM.png",
+            "details": {
+              "size": 80059,
+              "image": {
+                "width": 1317,
+                "height": 735
+              }
+            },
+            "fileName": "Screen Shot 2020-11-03 at 2.26.05 PM.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "4XkE6OsIX8xtukSpkR5fCq",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:27:40.441Z",
+        "updatedAt": "2020-11-03T22:27:57.470Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-11-03T22:27:57.470Z",
+        "firstPublishedAt": "2020-11-03T22:27:57.470Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Platypus Boat, small"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/4XkE6OsIX8xtukSpkR5fCq/ccf3c37f5572e0ebc65aefbd8ab98e18/Screen_Shot_2020-11-03_at_2.25.43_PM.png",
+            "details": {
+              "size": 76855,
+              "image": {
+                "width": 1066,
+                "height": 757
+              }
+            },
+            "fileName": "Screen Shot 2020-11-03 at 2.25.43 PM.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "5o4dFuPLZfQOUdPpbE0hsG",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:30:07.874Z",
+        "updatedAt": "2020-11-03T22:30:24.703Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-11-03T22:30:24.703Z",
+        "firstPublishedAt": "2020-11-03T22:30:24.703Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lo-Fi testing with users"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/5o4dFuPLZfQOUdPpbE0hsG/b395adfaa5f5cbdb51480715f1e4108f/Screen_Shot_2020-11-03_at_2.29.53_PM.png",
+            "details": {
+              "size": 960368,
+              "image": {
+                "width": 990,
+                "height": 677
+              }
+            },
+            "fileName": "Screen Shot 2020-11-03 at 2.29.53 PM.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "2oROtEWgy5usM9Y5xb08lu",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:33:39.022Z",
+        "updatedAt": "2020-11-03T22:33:55.243Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-11-03T22:33:55.243Z",
+        "firstPublishedAt": "2020-11-03T22:33:55.243Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lo-Fi testing"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/2oROtEWgy5usM9Y5xb08lu/2aa783ad89502ff800fc08dbbb4f49f3/Screen_Shot_2020-11-03_at_2.31.29_PM.png",
+            "details": {
+              "size": 559879,
+              "image": {
+                "width": 982,
+                "height": 388
+              }
+            },
+            "fileName": "Screen Shot 2020-11-03 at 2.31.29 PM.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "U.S. English",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "4k1Iie9R2KGMn5WHmLVhUh",
+        "version": 2,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "createdAt": "2020-10-29T23:51:15Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedAt": "2020-10-30T01:18:03Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4k2gbLpVJzAbdZJmbR1Avj",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "createdAt": "2020-10-29T23:51:15Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedAt": "2020-10-29T23:51:15Z"
+      }
+    }
+  ]
+}
