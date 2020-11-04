@@ -1,63 +1,105 @@
 .__portfolio {
+  --height: 10rem;
   background-color: var(--light);
-  width: calc(var(--siteWidth) * 2);
-  margin: 0 auto;
+
+  width: 100%;
 
   h2 {
     color: var(--dark);
     text-align: center;
   }
 
-  .__portfolio-pieces {
+  .__portfolio-section {
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-}
+    min-height: var(--height);
 
-.__portfolio-piece {
-  padding: 0;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
 
-  a {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    border: none;
-  }
+      text-align: right;
+      background-color: var(--gray);
 
-  img {
-    height: 10rem;
-    object-fit: cover;
-    object-position: center center;
-  }
-
-  .__title {
-    box-sizing: border-box;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 2rem 1rem;
-
-    h4 {
-      font-family: var(--strongFontFamiliy);
-      font-weight: var(--headerFontWeight);
-      font-size: 2rem;
-      line-height: 1;
-
-      span {
-        display: block;
-        font-family: var(--fontFamily);
-        font-weight: var(--bodyFontWeight);
-        margin-top: 0.5rem;
+      h3 {
+        color: var(--light) !important;
+        text-align: right;
       }
     }
 
-    &:hover {
-      opacity: 1;
+    .__piece-type {
+      width: 50%;
+      margin: 2rem 0;
+      position: relative;
+
+      h3 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 8rem;
+        overflow-wrap: anywhere;
+        line-height: 0.75;
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: 50%;
+    }
+
+    .__portfolio-piece {
+      
+      padding: 0;
+
+      a {
+        position: relative;
+        width: fit-content;
+        display: block;
+        overflow: hidden;
+        border: none;
+        height: var(--height);
+      }
+
+      img {
+        height: var(--height);
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      .__title {
+        box-sizing: border-box;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--height);
+        padding: 0.75rem;
+
+        h4 {
+          font-family: var(--strongFontFamiliy);
+          font-weight: var(--headerFontWeight);
+          font-size: 1.75rem;
+          line-height: 1;
+
+          span {
+            display: block;
+            font-family: var(--fontFamily);
+            font-weight: var(--bodyFontWeight);
+            margin-top: 0.5rem;
+          }
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 }

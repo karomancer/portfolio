@@ -8,7 +8,7 @@ const Portfolio = () => {
     allContentfulPortfolioPiece: { nodes: portfolioPieces },
   } = useStaticQuery(graphql`
     query PortfolioIndexQuery {
-      allContentfulPortfolioPiece(sort: { fields: type, order: ASC }) {
+      allContentfulPortfolioPiece(sort: {fields: [date, title], order: [DESC, ASC]}) {
         nodes {
           hero {
             description
@@ -85,8 +85,10 @@ const Portfolio = () => {
       <h2>My work</h2>
       {Object.keys(portfolioTypeMap).map(type => (
         <section className="__portfolio-section" key={`section-${type}`}>
+          <div className="__piece-type">
           <h3>{type}</h3>
-          <ul className="__portfolio-pieces">
+          </div>
+          <ul>
             {portfolioTypeMap[type].map(piece => (
               <Piece piece={piece} />
             ))}
