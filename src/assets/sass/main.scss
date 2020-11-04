@@ -12,13 +12,16 @@
 */
 
 :root {
+  --siteWidth: 60em;
+
   /**
    * Colors
    **/
-  --tealColor: #50bfa0;
-  --darkColor: #231f20;
-  --lightColor: #666766;
-  --activeColor: #215e9e;
+  --teal: #50bfa0;
+  --dark: #231f20;
+  --gray: #666766;
+  --active: #215e9e;
+  --light: #eaeaea;
 
   /**
    * Fonts
@@ -28,7 +31,6 @@
   --bodyFontWeight: 400;
 
   --strongFontFamiliy: futura-pt-bold, sans-serif;
-  --strongFontWeight: 700;
 
   --condensedFontFamily: futura-pt-condensed, sans-serif;
   --condensedFontBoldWeight: 700;
@@ -1493,7 +1495,7 @@ button,
   @include padding(6em, 0);
 
   > .inner {
-    width: 60em;
+    width: var(--siteWidth);
     margin: 0 auto;
 
     @include breakpoint('<=large') {

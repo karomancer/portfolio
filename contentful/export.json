@@ -12,7 +12,7 @@
         "id": "blogPost",
         "type": "ContentType",
         "createdAt": "2020-10-30T00:30:00.762Z",
-        "updatedAt": "2020-11-03T23:29:47.627Z",
+        "updatedAt": "2020-11-03T23:41:11.531Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,8 +20,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2020-11-03T23:29:47.627Z",
+        "publishedVersion": 13,
+        "publishedAt": "2020-11-03T23:41:11.531Z",
         "firstPublishedAt": "2020-10-30T00:30:01.379Z",
         "createdBy": {
           "sys": {
@@ -37,8 +37,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 6,
-        "version": 12,
+        "publishedCounter": 7,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -116,7 +116,7 @@
         "id": "person",
         "type": "ContentType",
         "createdAt": "2020-10-30T01:18:03.874Z",
-        "updatedAt": "2020-11-03T23:29:48.100Z",
+        "updatedAt": "2020-11-03T23:41:12.409Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -124,8 +124,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2020-11-03T23:29:48.100Z",
+        "publishedVersion": 15,
+        "publishedAt": "2020-11-03T23:41:12.409Z",
         "firstPublishedAt": "2020-10-30T01:18:07.312Z",
         "createdBy": {
           "sys": {
@@ -141,8 +141,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 7,
-        "version": 14,
+        "publishedCounter": 8,
+        "version": 16,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -280,7 +280,7 @@
         "id": "portfolioPiece",
         "type": "ContentType",
         "createdAt": "2020-10-30T02:03:48.037Z",
-        "updatedAt": "2020-11-03T22:14:47.995Z",
+        "updatedAt": "2020-11-04T05:39:43.820Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -288,8 +288,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 17,
-        "publishedAt": "2020-11-03T22:14:47.995Z",
+        "publishedVersion": 21,
+        "publishedAt": "2020-11-04T05:39:43.820Z",
         "firstPublishedAt": "2020-10-30T02:03:48.485Z",
         "createdBy": {
           "sys": {
@@ -305,8 +305,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 9,
-        "version": 18,
+        "publishedCounter": 11,
+        "version": 22,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -330,6 +330,17 @@
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
+        },
+        {
+          "id": "hex",
+          "name": "Color",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
         },
         {
           "id": "title",
@@ -461,6 +472,81 @@
           }
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "codepen",
+        "type": "ContentType",
+        "createdAt": "2020-11-04T06:50:15.202Z",
+        "updatedAt": "2020-11-04T06:50:45.575Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-11-04T06:50:45.575Z",
+        "firstPublishedAt": "2020-11-04T06:50:15.889Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "CodePen",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "url",
+          "name": "URL",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -477,7 +563,7 @@
             "linkType": "Space"
           }
         },
-        "version": 12,
+        "version": 14,
         "createdAt": "2020-10-30T00:30:01.555Z",
         "createdBy": {
           "sys": {
@@ -486,7 +572,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2020-11-03T23:29:48.652Z",
+        "updatedAt": "2020-11-03T23:41:13.193Z",
         "updatedBy": {
           "sys": {
             "id": "0kg7uKy52oIEgObVqvwW0J",
@@ -547,7 +633,7 @@
             "linkType": "Space"
           }
         },
-        "version": 14,
+        "version": 16,
         "createdAt": "2020-10-30T01:18:07.441Z",
         "createdBy": {
           "sys": {
@@ -556,7 +642,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2020-11-03T23:29:48.652Z",
+        "updatedAt": "2020-11-03T23:41:13.070Z",
         "updatedBy": {
           "sys": {
             "id": "0kg7uKy52oIEgObVqvwW0J",
@@ -633,7 +719,7 @@
             "linkType": "Space"
           }
         },
-        "version": 18,
+        "version": 22,
         "createdAt": "2020-10-30T02:03:48.612Z",
         "createdBy": {
           "sys": {
@@ -642,7 +728,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2020-11-03T22:14:48.575Z",
+        "updatedAt": "2020-11-04T05:39:44.309Z",
         "updatedBy": {
           "sys": {
             "id": "0kg7uKy52oIEgObVqvwW0J",
@@ -669,6 +755,11 @@
         {
           "fieldId": "thumbnail",
           "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "hex",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
         {
@@ -721,6 +812,62 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "879jbu294ufv",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2020-11-04T06:50:16.027Z",
+        "createdBy": {
+          "sys": {
+            "id": "0kg7uKy52oIEgObVqvwW0J",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-11-04T06:50:46.198Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0kg7uKy52oIEgObVqvwW0J",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "codepen",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "url",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
     }
   ],
   "entries": [
@@ -736,7 +883,7 @@
         "id": "54V4UjJAIFpnJhQxqC89m8",
         "type": "Entry",
         "createdAt": "2020-11-03T20:57:18.681Z",
-        "updatedAt": "2020-11-03T23:24:54.911Z",
+        "updatedAt": "2020-11-04T05:40:54.975Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -744,8 +891,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 306,
-        "publishedAt": "2020-11-03T23:24:54.911Z",
+        "publishedVersion": 310,
+        "publishedAt": "2020-11-04T05:40:54.975Z",
         "firstPublishedAt": "2020-11-03T21:59:41.072Z",
         "createdBy": {
           "sys": {
@@ -761,8 +908,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 9,
-        "version": 307,
+        "publishedCounter": 11,
+        "version": 311,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -787,6 +934,9 @@
               "id": "4XkE6OsIX8xtukSpkR5fCq"
             }
           }
+        },
+        "hex": {
+          "en-US": "#60BAD9"
         },
         "title": {
           "en-US": "Platypus Dreamtime"
@@ -1594,7 +1744,7 @@
         "id": "15jwOBqpxqSAOy2eOO4S0m",
         "type": "Entry",
         "createdAt": "2020-11-03T23:27:07.829Z",
-        "updatedAt": "2020-11-03T23:30:04.595Z",
+        "updatedAt": "2020-11-03T23:41:45.325Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1602,8 +1752,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2020-11-03T23:30:04.595Z",
+        "publishedVersion": 7,
+        "publishedAt": "2020-11-03T23:41:45.325Z",
         "firstPublishedAt": "2020-11-03T23:27:11.191Z",
         "createdBy": {
           "sys": {
@@ -1619,8 +1769,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1674,6 +1824,691 @@
           }
         }
       }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "7pIgTf28bC7p5waNFRb7YP",
+        "type": "Entry",
+        "createdAt": "2020-11-04T06:41:00.365Z",
+        "updatedAt": "2020-11-04T06:55:58.459Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 40,
+        "publishedAt": "2020-11-04T06:55:58.459Z",
+        "firstPublishedAt": "2020-11-04T06:48:08.468Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 41,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "portfolioPiece"
+          }
+        }
+      },
+      "fields": {
+        "thumbnail": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1Yp8gWJKJ1zALOBMcnBmtg"
+            }
+          }
+        },
+        "title": {
+          "en-US": "Sewing Triptych"
+        },
+        "date": {
+          "en-US": "2020-04-29"
+        },
+        "type": {
+          "en-US": "Creative Coding"
+        },
+        "role": {
+          "en-US": "CSS Sorceress"
+        },
+        "slug": {
+          "en-US": "sewing-triptych"
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "In spring 2020, I took Gray Area's Computer Science in Studio Art 12-Week Immersive. One of our first challenges was to make a triptych purely with CSS + HTML (no JavaScript!)",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Because I am a frontend engineer professionally, I wanted to challenge myself. I made a checklist of things I wanted to accomplish:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Every pane has to use a different method of generating graphics and animation. I chose:",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      },
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "bold"
+                                      }
+                                    ],
+                                    "value": "SVG",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": ". SVG has its own markup and its  (using the ",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "code"
+                                      }
+                                    ],
+                                    "value": "animateTransform",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " and ",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "code"
+                                      }
+                                    ],
+                                    "value": "animate",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " tags)",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "bold"
+                                      }
+                                    ],
+                                    "value": "Sprite map.",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " Part of the reason this took me so long is that I drew my own sprite map from scratch. A is a large image file with a grid of images that each represent a keyframe in an animation. You can then use the CSS value in the ",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "code"
+                                      }
+                                    ],
+                                    "value": "animation",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " property to flip between keyframes in one giant image.",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "bold"
+                                      }
+                                    ],
+                                    "value": "CSS",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "-only. Make shapes and animate using only CSS, like our other assignments.",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          }
+                        ],
+                        "nodeType": "unordered-list"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Utilize CSS variables. I've actually never used plain CSS variables; I've usually used SASS or LESS ones, or JavaScript variables and something like ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://github.com/emotion-js/emotion"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "emotion",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " or ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://styled-components.com/"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "styled-components",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": ".",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Make it responsive. My single div challenge looked ass awful on mobile, so wanted to ensure this one was mobile-friendly.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Biggest issues: ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-4"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Couldn't get the sprite map to line up from frame-to-frame, even though I used software specifically intended to make sprite maps. ",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      },
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "italic"
+                              }
+                            ],
+                            "value": "Solution?",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " Some hackery including colored borders.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Also couldn't quite get the stitch and top-thread on the sewing machine pane to line up. ",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      },
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "italic"
+                              }
+                            ],
+                            "value": "Solution?",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " Speed up the animation so it's so fast you can't tell! :) ",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "54wJRhEy8rQYZQQtGrNizy",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [
+                    ],
+                    "nodeType": "embedded-entry-inline"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Glitch code and live site:\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://glitch.com/edit/#!/sewing-triptych"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "https://glitch.com/edit/#!/sewing-triptych",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://sewing-triptych.glitch.me"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "https://sewing-triptych.glitch.me",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "54wJRhEy8rQYZQQtGrNizy",
+        "type": "Entry",
+        "createdAt": "2020-11-04T06:50:53.795Z",
+        "updatedAt": "2020-11-04T06:51:30.116Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-11-04T06:51:30.116Z",
+        "firstPublishedAt": "2020-11-04T06:51:30.116Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "codepen"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Sewing Triptych"
+        },
+        "url": {
+          "en-US": "https://codepen.io/karomancer/pen/yLNdeXE"
+        }
+      }
     }
   ],
   "assets": [
@@ -1689,7 +2524,7 @@
         "id": "4shwYI3POEGkw0Eg6kcyaQ",
         "type": "Asset",
         "createdAt": "2020-10-30T01:18:08.864Z",
-        "updatedAt": "2020-11-03T23:29:57.744Z",
+        "updatedAt": "2020-11-03T23:41:35.062Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1697,8 +2532,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 19,
-        "publishedAt": "2020-11-03T23:29:57.744Z",
+        "publishedVersion": 22,
+        "publishedAt": "2020-11-03T23:41:35.062Z",
         "firstPublishedAt": "2020-10-30T01:21:59.848Z",
         "createdBy": {
           "sys": {
@@ -1714,8 +2549,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 6,
-        "version": 20,
+        "publishedCounter": 7,
+        "version": 23,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1733,7 +2568,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/4shwYI3POEGkw0Eg6kcyaQ/afe311ac876fe9d6803587fab0efffb7/felix-russell-saw-112140.jpg",
+            "url": "//images.ctfassets.net/879jbu294ufv/4shwYI3POEGkw0Eg6kcyaQ/b70ad05541539e46ade6baafdec7c169/felix-russell-saw-112140.jpg",
             "details": {
               "size": 4539181,
               "image": {
@@ -1759,7 +2594,7 @@
         "id": "7orLdboQQowIUs22KAW4U",
         "type": "Asset",
         "createdAt": "2020-10-30T01:18:09.267Z",
-        "updatedAt": "2020-11-03T23:30:00.697Z",
+        "updatedAt": "2020-11-03T23:41:40.908Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1767,8 +2602,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 19,
-        "publishedAt": "2020-11-03T23:30:00.697Z",
+        "publishedVersion": 22,
+        "publishedAt": "2020-11-03T23:41:40.908Z",
         "firstPublishedAt": "2020-10-30T01:21:59.616Z",
         "createdBy": {
           "sys": {
@@ -1784,8 +2619,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 6,
-        "version": 20,
+        "publishedCounter": 7,
+        "version": 23,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1803,7 +2638,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/7orLdboQQowIUs22KAW4U/c46853656bfa83fa091034116ab82bee/matt-palmer-254999.jpg",
+            "url": "//images.ctfassets.net/879jbu294ufv/7orLdboQQowIUs22KAW4U/ee0d87e68e5ba8d6f661fbce89a24302/matt-palmer-254999.jpg",
             "details": {
               "size": 2293094,
               "image": {
@@ -1829,7 +2664,7 @@
         "id": "4NzwDSDlGECGIiokKomsyI",
         "type": "Asset",
         "createdAt": "2020-10-30T01:18:09.291Z",
-        "updatedAt": "2020-11-03T23:30:00.251Z",
+        "updatedAt": "2020-11-03T23:41:40.655Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1837,8 +2672,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 19,
-        "publishedAt": "2020-11-03T23:30:00.251Z",
+        "publishedVersion": 22,
+        "publishedAt": "2020-11-03T23:41:40.655Z",
         "firstPublishedAt": "2020-10-30T01:22:00.291Z",
         "createdBy": {
           "sys": {
@@ -1854,8 +2689,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 6,
-        "version": 20,
+        "publishedCounter": 7,
+        "version": 23,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1873,7 +2708,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/4NzwDSDlGECGIiokKomsyI/db8606921de96d807e36230da6a6d263/denys-nevozhai-100695.jpg",
+            "url": "//images.ctfassets.net/879jbu294ufv/4NzwDSDlGECGIiokKomsyI/4a14e49e02a24bdf5c986ccdcd00aa4e/denys-nevozhai-100695.jpg",
             "details": {
               "size": 15736986,
               "image": {
@@ -1899,7 +2734,7 @@
         "id": "6Od9v3wzLOysiMum0Wkmme",
         "type": "Asset",
         "createdAt": "2020-10-30T01:18:09.293Z",
-        "updatedAt": "2020-11-03T23:29:57.992Z",
+        "updatedAt": "2020-11-03T23:41:40.266Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1907,8 +2742,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 19,
-        "publishedAt": "2020-11-03T23:29:57.992Z",
+        "publishedVersion": 22,
+        "publishedAt": "2020-11-03T23:41:40.266Z",
         "firstPublishedAt": "2020-10-30T01:22:00.700Z",
         "createdBy": {
           "sys": {
@@ -1924,8 +2759,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 6,
-        "version": 20,
+        "publishedCounter": 7,
+        "version": 23,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1943,7 +2778,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/6Od9v3wzLOysiMum0Wkmme/073222ef063fb09b656f8d771754881e/cameron-kirby-88711.jpg",
+            "url": "//images.ctfassets.net/879jbu294ufv/6Od9v3wzLOysiMum0Wkmme/86ba4dc41cea9ff3b4ce43c16aa2ee8e/cameron-kirby-88711.jpg",
             "details": {
               "size": 7316629,
               "image": {
@@ -1969,7 +2804,7 @@
         "id": "76wL6OyAcXElctcEu2OqNi",
         "type": "Asset",
         "createdAt": "2020-11-03T21:51:39.292Z",
-        "updatedAt": "2020-11-03T21:56:12.131Z",
+        "updatedAt": "2020-11-03T23:41:39.996Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1977,8 +2812,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 20,
-        "publishedAt": "2020-11-03T21:56:12.131Z",
+        "publishedVersion": 23,
+        "publishedAt": "2020-11-03T23:41:39.996Z",
         "firstPublishedAt": "2020-11-03T21:56:12.131Z",
         "createdBy": {
           "sys": {
@@ -1994,8 +2829,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 1,
-        "version": 21,
+        "publishedCounter": 2,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2013,7 +2848,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//assets.ctfassets.net/879jbu294ufv/76wL6OyAcXElctcEu2OqNi/9851115b667e5f72dbfb55d643379c02/final_report.pdf",
+            "url": "//assets.ctfassets.net/879jbu294ufv/76wL6OyAcXElctcEu2OqNi/0e44cc75034a784538ba42d2c6ee1c00/final_report.pdf",
             "details": {
               "size": 7984213
             },
@@ -2035,7 +2870,7 @@
         "id": "5Fj481tU6Kh7P1Jl4tvDCF",
         "type": "Asset",
         "createdAt": "2020-11-03T21:56:17.689Z",
-        "updatedAt": "2020-11-03T21:58:39.813Z",
+        "updatedAt": "2020-11-03T23:41:39.733Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2043,8 +2878,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 19,
-        "publishedAt": "2020-11-03T21:58:39.813Z",
+        "publishedVersion": 22,
+        "publishedAt": "2020-11-03T23:41:39.733Z",
         "firstPublishedAt": "2020-11-03T21:58:39.813Z",
         "createdBy": {
           "sys": {
@@ -2060,8 +2895,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 1,
-        "version": 20,
+        "publishedCounter": 2,
+        "version": 23,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2079,7 +2914,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//downloads.ctfassets.net/879jbu294ufv/5Fj481tU6Kh7P1Jl4tvDCF/4c88d4d90609d8ab390827be358565b4/presentation.pdf",
+            "url": "//downloads.ctfassets.net/879jbu294ufv/5Fj481tU6Kh7P1Jl4tvDCF/ec6d4d2876cb0669ac81badbec45eafe/presentation.pdf",
             "details": {
               "size": 12802659
             },
@@ -2101,7 +2936,7 @@
         "id": "3dsoOB7GDLTb3vpLlk2BLm",
         "type": "Asset",
         "createdAt": "2020-11-03T22:05:59.692Z",
-        "updatedAt": "2020-11-03T23:09:25.354Z",
+        "updatedAt": "2020-11-03T23:41:39.394Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2109,8 +2944,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 30,
-        "publishedAt": "2020-11-03T23:09:25.354Z",
+        "publishedVersion": 33,
+        "publishedAt": "2020-11-03T23:41:39.394Z",
         "firstPublishedAt": "2020-11-03T22:09:00.326Z",
         "createdBy": {
           "sys": {
@@ -2126,8 +2961,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 2,
-        "version": 31,
+        "publishedCounter": 3,
+        "version": 34,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2145,7 +2980,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/3dsoOB7GDLTb3vpLlk2BLm/b9396698fb3764d0d1bb881206e623a9/pnc-5.jpg",
+            "url": "//images.ctfassets.net/879jbu294ufv/3dsoOB7GDLTb3vpLlk2BLm/f5c27aa380e6a5a7c2b87e7a83465874/pnc-5.jpg",
             "details": {
               "size": 5411903,
               "image": {
@@ -2171,7 +3006,7 @@
         "id": "3NCPHi2pF97SOBT7WVHcP0",
         "type": "Asset",
         "createdAt": "2020-11-03T22:11:15.093Z",
-        "updatedAt": "2020-11-03T22:13:40.893Z",
+        "updatedAt": "2020-11-03T23:41:38.799Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2179,8 +3014,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 6,
-        "publishedAt": "2020-11-03T22:13:40.893Z",
+        "publishedVersion": 9,
+        "publishedAt": "2020-11-03T23:41:38.799Z",
         "firstPublishedAt": "2020-11-03T22:13:40.893Z",
         "createdBy": {
           "sys": {
@@ -2196,8 +3031,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 1,
-        "version": 7,
+        "publishedCounter": 2,
+        "version": 10,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2212,7 +3047,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/3NCPHi2pF97SOBT7WVHcP0/b6257145d52bbc1c364c12733b685517/2013-02-16_12.14.21.jpg",
+            "url": "//images.ctfassets.net/879jbu294ufv/3NCPHi2pF97SOBT7WVHcP0/260f0eeb88695224ca6fe9b00f2033b9/2013-02-16_12.14.21.jpg",
             "details": {
               "size": 1312502,
               "image": {
@@ -2238,7 +3073,7 @@
         "id": "qZXIlL37u2Otth5pL0li9",
         "type": "Asset",
         "createdAt": "2020-11-03T22:17:34.724Z",
-        "updatedAt": "2020-11-03T22:17:56.673Z",
+        "updatedAt": "2020-11-03T23:41:37.993Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2246,8 +3081,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2020-11-03T22:17:56.673Z",
+        "publishedVersion": 7,
+        "publishedAt": "2020-11-03T23:41:37.993Z",
         "firstPublishedAt": "2020-11-03T22:17:56.673Z",
         "createdBy": {
           "sys": {
@@ -2263,8 +3098,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2279,7 +3114,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/qZXIlL37u2Otth5pL0li9/038ca70701e0c77cf9f9e6f09e882f33/DSC_0252.jpg",
+            "url": "//images.ctfassets.net/879jbu294ufv/qZXIlL37u2Otth5pL0li9/ac03837a4df9af24c0b3e9f4a0159fd9/DSC_0252.jpg",
             "details": {
               "size": 5722832,
               "image": {
@@ -2305,7 +3140,7 @@
         "id": "7lAmRP6FoGB2uBvc5HfEav",
         "type": "Asset",
         "createdAt": "2020-11-03T22:21:58.778Z",
-        "updatedAt": "2020-11-03T22:23:03.168Z",
+        "updatedAt": "2020-11-03T23:41:37.539Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2313,8 +3148,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 8,
-        "publishedAt": "2020-11-03T22:23:03.168Z",
+        "publishedVersion": 11,
+        "publishedAt": "2020-11-03T23:41:37.539Z",
         "firstPublishedAt": "2020-11-03T22:23:03.168Z",
         "createdBy": {
           "sys": {
@@ -2330,8 +3165,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 1,
-        "version": 9,
+        "publishedCounter": 2,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2349,7 +3184,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/7lAmRP6FoGB2uBvc5HfEav/f7fb6848da2d694413e1b623e3add5b3/Screen_Shot_2020-11-03_at_2.21.13_PM.png",
+            "url": "//images.ctfassets.net/879jbu294ufv/7lAmRP6FoGB2uBvc5HfEav/8c8769610624d22dca283ce55e992031/Screen_Shot_2020-11-03_at_2.21.13_PM.png",
             "details": {
               "size": 150382,
               "image": {
@@ -2375,7 +3210,7 @@
         "id": "18NPBIbwzpK0Q5z0entlOQ",
         "type": "Asset",
         "createdAt": "2020-11-03T22:23:17.819Z",
-        "updatedAt": "2020-11-03T22:24:45.310Z",
+        "updatedAt": "2020-11-03T23:41:36.684Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2383,8 +3218,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 13,
-        "publishedAt": "2020-11-03T22:24:45.310Z",
+        "publishedVersion": 16,
+        "publishedAt": "2020-11-03T23:41:36.684Z",
         "firstPublishedAt": "2020-11-03T22:24:45.310Z",
         "createdBy": {
           "sys": {
@@ -2400,8 +3235,8 @@
             "id": "0kg7uKy52oIEgObVqvwW0J"
           }
         },
-        "publishedCounter": 1,
-        "version": 14,
+        "publishedCounter": 2,
+        "version": 17,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2419,7 +3254,7 @@
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/18NPBIbwzpK0Q5z0entlOQ/ce3eca592bb25e156664e6a94c985cdf/Screen_Shot_2020-11-03_at_2.21.43_PM.png",
+            "url": "//images.ctfassets.net/879jbu294ufv/18NPBIbwzpK0Q5z0entlOQ/5738f40a5584643f8eb6d2d1ca02c5f1/Screen_Shot_2020-11-03_at_2.21.43_PM.png",
             "details": {
               "size": 137336,
               "image": {
@@ -2445,7 +3280,275 @@
         "id": "6FaQElwaJsgbfIfWlR60ia",
         "type": "Asset",
         "createdAt": "2020-11-03T22:25:49.267Z",
-        "updatedAt": "2020-11-03T22:26:31.365Z",
+        "updatedAt": "2020-11-03T23:41:36.430Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-11-03T23:41:36.430Z",
+        "firstPublishedAt": "2020-11-03T22:26:31.365Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "A Platypus Boat"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/6FaQElwaJsgbfIfWlR60ia/d8bd3bddd1d301898f7585e9fe0299c6/Screen_Shot_2020-11-03_at_2.26.05_PM.png",
+            "details": {
+              "size": 80059,
+              "image": {
+                "width": 1317,
+                "height": 735
+              }
+            },
+            "fileName": "Screen Shot 2020-11-03 at 2.26.05 PM.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "4XkE6OsIX8xtukSpkR5fCq",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:27:40.441Z",
+        "updatedAt": "2020-11-03T23:41:36.164Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2020-11-03T23:41:36.164Z",
+        "firstPublishedAt": "2020-11-03T22:27:57.470Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Platypus Boat, small"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/4XkE6OsIX8xtukSpkR5fCq/dedaf8d511d215cb48d4e6767bdd1dd0/Screen_Shot_2020-11-03_at_2.25.43_PM.png",
+            "details": {
+              "size": 76855,
+              "image": {
+                "width": 1066,
+                "height": 757
+              }
+            },
+            "fileName": "Screen Shot 2020-11-03 at 2.25.43 PM.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "5o4dFuPLZfQOUdPpbE0hsG",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:30:07.874Z",
+        "updatedAt": "2020-11-03T23:41:35.733Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-11-03T23:41:35.733Z",
+        "firstPublishedAt": "2020-11-03T22:30:24.703Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lo-Fi testing with users"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/5o4dFuPLZfQOUdPpbE0hsG/6fb5eeeac935cc3eb1b0285e0edc0858/Screen_Shot_2020-11-03_at_2.29.53_PM.png",
+            "details": {
+              "size": 960368,
+              "image": {
+                "width": 990,
+                "height": 677
+              }
+            },
+            "fileName": "Screen Shot 2020-11-03 at 2.29.53 PM.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "2oROtEWgy5usM9Y5xb08lu",
+        "type": "Asset",
+        "createdAt": "2020-11-03T22:33:39.022Z",
+        "updatedAt": "2020-11-03T23:41:35.317Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2020-11-03T23:41:35.317Z",
+        "firstPublishedAt": "2020-11-03T22:33:55.243Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0kg7uKy52oIEgObVqvwW0J"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Lo-Fi testing"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/879jbu294ufv/2oROtEWgy5usM9Y5xb08lu/d10f8146d4ebfc22556a1709955a66ac/Screen_Shot_2020-11-03_at_2.31.29_PM.png",
+            "details": {
+              "size": 559879,
+              "image": {
+                "width": 982,
+                "height": 388
+              }
+            },
+            "fileName": "Screen Shot 2020-11-03 at 2.31.29 PM.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "879jbu294ufv"
+          }
+        },
+        "id": "1Yp8gWJKJ1zALOBMcnBmtg",
+        "type": "Asset",
+        "createdAt": "2020-11-04T06:55:10.503Z",
+        "updatedAt": "2020-11-04T06:55:32.514Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2454,8 +3557,8 @@
           }
         },
         "publishedVersion": 5,
-        "publishedAt": "2020-11-03T22:26:31.365Z",
-        "firstPublishedAt": "2020-11-03T22:26:31.365Z",
+        "publishedAt": "2020-11-04T06:55:32.514Z",
+        "firstPublishedAt": "2020-11-04T06:55:32.514Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -2482,220 +3585,19 @@
       },
       "fields": {
         "title": {
-          "en-US": "A Platypus Boat"
+          "en-US": "Scissors"
         },
         "file": {
           "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/6FaQElwaJsgbfIfWlR60ia/e9cded0df90879c122cc794b78a6e555/Screen_Shot_2020-11-03_at_2.26.05_PM.png",
+            "url": "//images.ctfassets.net/879jbu294ufv/1Yp8gWJKJ1zALOBMcnBmtg/587d060cae9a064bea27f6c63e197b29/Screen_Shot_2020-11-03_at_10.54.14_PM.png",
             "details": {
-              "size": 80059,
+              "size": 32148,
               "image": {
-                "width": 1317,
-                "height": 735
+                "width": 518,
+                "height": 514
               }
             },
-            "fileName": "Screen Shot 2020-11-03 at 2.26.05 PM.png",
-            "contentType": "image/png"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "879jbu294ufv"
-          }
-        },
-        "id": "4XkE6OsIX8xtukSpkR5fCq",
-        "type": "Asset",
-        "createdAt": "2020-11-03T22:27:40.441Z",
-        "updatedAt": "2020-11-03T22:27:57.470Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 4,
-        "publishedAt": "2020-11-03T22:27:57.470Z",
-        "firstPublishedAt": "2020-11-03T22:27:57.470Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0kg7uKy52oIEgObVqvwW0J"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0kg7uKy52oIEgObVqvwW0J"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 5,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0kg7uKy52oIEgObVqvwW0J"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Platypus Boat, small"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/4XkE6OsIX8xtukSpkR5fCq/ccf3c37f5572e0ebc65aefbd8ab98e18/Screen_Shot_2020-11-03_at_2.25.43_PM.png",
-            "details": {
-              "size": 76855,
-              "image": {
-                "width": 1066,
-                "height": 757
-              }
-            },
-            "fileName": "Screen Shot 2020-11-03 at 2.25.43 PM.png",
-            "contentType": "image/png"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "879jbu294ufv"
-          }
-        },
-        "id": "5o4dFuPLZfQOUdPpbE0hsG",
-        "type": "Asset",
-        "createdAt": "2020-11-03T22:30:07.874Z",
-        "updatedAt": "2020-11-03T22:30:24.703Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 3,
-        "publishedAt": "2020-11-03T22:30:24.703Z",
-        "firstPublishedAt": "2020-11-03T22:30:24.703Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0kg7uKy52oIEgObVqvwW0J"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0kg7uKy52oIEgObVqvwW0J"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 4,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0kg7uKy52oIEgObVqvwW0J"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Lo-Fi testing with users"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/5o4dFuPLZfQOUdPpbE0hsG/b395adfaa5f5cbdb51480715f1e4108f/Screen_Shot_2020-11-03_at_2.29.53_PM.png",
-            "details": {
-              "size": 960368,
-              "image": {
-                "width": 990,
-                "height": 677
-              }
-            },
-            "fileName": "Screen Shot 2020-11-03 at 2.29.53 PM.png",
-            "contentType": "image/png"
-          }
-        }
-      }
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "879jbu294ufv"
-          }
-        },
-        "id": "2oROtEWgy5usM9Y5xb08lu",
-        "type": "Asset",
-        "createdAt": "2020-11-03T22:33:39.022Z",
-        "updatedAt": "2020-11-03T22:33:55.243Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 4,
-        "publishedAt": "2020-11-03T22:33:55.243Z",
-        "firstPublishedAt": "2020-11-03T22:33:55.243Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0kg7uKy52oIEgObVqvwW0J"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0kg7uKy52oIEgObVqvwW0J"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 5,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "0kg7uKy52oIEgObVqvwW0J"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Lo-Fi testing"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/879jbu294ufv/2oROtEWgy5usM9Y5xb08lu/2aa783ad89502ff800fc08dbbb4f49f3/Screen_Shot_2020-11-03_at_2.31.29_PM.png",
-            "details": {
-              "size": 559879,
-              "image": {
-                "width": 982,
-                "height": 388
-              }
-            },
-            "fileName": "Screen Shot 2020-11-03 at 2.31.29 PM.png",
+            "fileName": "Screen Shot 2020-11-03 at 10.54.14 PM.png",
             "contentType": "image/png"
           }
         }
