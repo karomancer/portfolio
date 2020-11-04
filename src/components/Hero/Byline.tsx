@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import './styles.scss'
 
 const ALPHABET = 'abcdefghijklmnopqrstuvwxyzαβΓΔδεζηθικΛλμνΞξΠπρΣσςτυΦφχΨψΩω';
 const BYLINE_OPTIONS = [
@@ -100,7 +101,7 @@ const Byline = () => {
     setTimeout(changeByline, 2800);
   });
 
-  return <h3 ref={bylineEl}>{byline}</h3>;
+  return <h3 className="byline" ref={bylineEl}>{byline}</h3>;
 };
 
 export default Byline;

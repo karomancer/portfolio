@@ -15,7 +15,7 @@ const IndexPage = () => (
   <Layout>
     <section id="banner">
       <div className="inner">
-        <h2>{config.heading}</h2>
+        <h1>{config.heading}</h1>
         <Hero />
         <ul className="actions special">
           <li>

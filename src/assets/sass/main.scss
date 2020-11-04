@@ -4,14 +4,35 @@
 @import 'libs/vendor';
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
-@import 'fontawesome-all.min.css';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
 
 /*
 	Spectral by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+:root {
+  /**
+   * Colors
+   **/
+  --tealColor: #50bfa0;
+  --darkColor: #231f20;
+  --lightColor: #666766;
+  --activeColor: #215e9e;
+
+  /**
+   * Fonts
+   **/
+  --fontFamily: futura-pt, sans-serif;
+  --headerFontWeight: 700;
+  --bodyFontWeight: 400;
+
+  --strongFontFamiliy: futura-pt-bold, sans-serif;
+  --strongFontWeight: 700;
+
+  --condensedFontFamily: futura-pt-condensed, sans-serif;
+  --condensedFontBoldWeight: 700;
+}
 
 // Breakpoints.
 
@@ -232,7 +253,7 @@ input,
 select,
 textarea {
   color: _palette(fg);
-  font-family: _font(family);
+  font-family: var(--fontFamily);
   font-size: 15pt;
   font-weight: _font(weight);
   letter-spacing: _size(letter-spacing);
@@ -290,12 +311,8 @@ h3,
 h4,
 h5,
 h6 {
-  color: _palette(fg-bold);
-  font-weight: _font(weight-extrabold);
-  letter-spacing: _size(letter-spacing-alt);
   line-height: 1em;
   margin: 0 0 (_size(element-margin) * 0.5) 0;
-  text-transform: uppercase;
 
   a {
     color: inherit;
@@ -303,9 +320,17 @@ h6 {
   }
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: var(--headerFontWeight);
+}
+
 h2 {
+  font-family: var(--strongFontFamiliy);
+  font-weight: var(--strongFontWeight);
   font-size: 1.35em;
   line-height: 1.75em;
+  text-transform: uppercase;
 
   @include breakpoint('<=small') {
     font-size: 1.1em;
@@ -314,6 +339,8 @@ h2 {
 }
 
 h3 {
+  font-family: var(--strongFontFamiliy);
+  font-weight: var(--strongFontWeight);
   font-size: 1.15em;
   line-height: 1.75em;
 
@@ -324,11 +351,14 @@ h3 {
 }
 
 h4 {
+  font-weight: var(--headerFontWeight);
   font-size: 1em;
   line-height: 1.5em;
 }
 
 h5 {
+  font-family: var(--condensedFontFamily);
+  font-weight: var(--condensedFontBoldWeight);
   font-size: 0.8em;
   line-height: 1.5em;
 }
@@ -696,7 +726,7 @@ input[type='radio'] {
 
   &.brands {
     &:before {
-      font-family: 'Font Awesome 5 Brands';
+      font-family: var(--fontFamily);
     }
   }
 
@@ -1574,7 +1604,6 @@ button,
         letter-spacing: _size(letter-spacing-alt);
         outline: 0;
         text-decoration: none;
-        text-transform: uppercase;
 
         @include breakpoint('<=small') {
           line-height: 3em;
@@ -1738,11 +1767,10 @@ button,
   position: relative;
   text-align: center;
 
-  h2 {
+  h1 {
     @include vendor('transform', 'scale(1)');
     @include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
     display: inline-block;
-    font-size: 1.75em;
     opacity: 1;
     padding: 0.35em 1em;
     position: relative;
@@ -1857,7 +1885,7 @@ button,
 body.is-preload,
 .main-body.is-preload {
   #banner {
-    h2 {
+    h1 {
       @include vendor('transform', 'scale(0.95)');
       opacity: 0;
 

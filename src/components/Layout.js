@@ -52,6 +52,7 @@ class Layout extends Component {
                 { name: 'keywords', content: 'site, web' },
               ]}
             >
+              <link rel="stylesheet" href="https://use.typekit.net/vgz8xeo.css" />
               <html lang="en" />
             </Helmet>
             <div
