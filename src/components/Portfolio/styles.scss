@@ -17,6 +17,22 @@
     overflow: hidden;
     min-height: var(--height);
 
+    &[data-key='cosplay'] {
+      --cosplayHeight: calc(var(--height) * 2);
+
+      height: var(--cosplayHeight);
+
+      .__portfolio-piece {
+        a, img {
+          height: var(--cosplayHeight);
+        }
+
+        .__title {
+          height: var(--cosplayHeight);
+        }
+      }
+    }
+
     &[data-key='illustration & graphic design'] {
       .__piece-type {
         width: 40%;
@@ -111,11 +127,12 @@
         width: 100%;
         height: var(--height);
         padding: 0.75rem;
+        transition: opacity 0.2s ease-in-out;
 
         h4 {
           font-family: var(--strongFontFamiliy);
           font-weight: var(--headerFontWeight);
-          font-size: 1.4rem;
+          font-size: 1.2rem;
           line-height: 1;
           overflow-wrap: anywhere;
 
