@@ -72,7 +72,7 @@ const IndexPage = () => (
     </section>
 
     <section id="two" className="wrapper alt style2">
-      <section className="spotlight">
+      {/* <section className="spotlight">
         <div className="image">
           <img src={pic1} alt="" />
         </div>
@@ -103,13 +103,13 @@ const IndexPage = () => (
             imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
           </p>
         </div>
-      </section>
+      </section> */}
       <section className="spotlight">
         <Portfolio />
       </section>
     </section>
 
-    <section id="three" className="wrapper style3 special">
+    {/* <section id="three" className="wrapper style3 special">
       <div className="inner">
         <header className="major">
           <h2>Accumsan mus tortor nunc aliquet</h2>
@@ -190,7 +190,7 @@ const IndexPage = () => (
           </li>
         </ul>
       </div>
-    </section>
+    </section> */}
   </Layout>
 );
 

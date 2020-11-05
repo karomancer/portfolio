@@ -1,45 +1,77 @@
 .__portfolio {
   --height: 10rem;
-  background-color: var(--light);
+  background-color: var(--dark);
 
   width: 100%;
 
   h2 {
+    margin-top: -1.75rem;
+    margin-bottom: 0;
+    height: 1.75rem;
     color: var(--dark);
-    text-align: center;
   }
 
   .__portfolio-section {
     display: flex;
+    justify-content: space-between;
+    overflow: hidden;
     min-height: var(--height);
 
-    &:nth-child(even) {
+    &[data-key='illustration & graphic design'] {
+      .__piece-type {
+        width: 40%;
+      }
+
+      ul {
+        max-width: 60%;
+      }
+    }
+
+    &:nth-child(odd) {
       flex-direction: row-reverse;
       justify-content: space-between;
 
       text-align: right;
-      background-color: var(--gray);
+      background-color: var(--light);
+
+      .__piece-type {
+        margin-left: 1.5rem;
+      }
+
+      ul {
+        justify-content: flex-start;
+      }
 
       h3 {
-        color: var(--light) !important;
+        color: var(--dark) !important;
         text-align: right;
       }
     }
 
+    &:nth-child(even) {
+      .__piece-type {
+        margin-right: 1.5rem;
+      }
+
+      ul {
+        justify-content: flex-end;
+      }
+    }
+
     .__piece-type {
-      width: 50%;
-      margin: 2rem 0;
+      min-width: 35rem;
+      margin: 2rem 1rem;
       position: relative;
 
       h3 {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 8rem;
+        font-size: 5rem;
         overflow-wrap: anywhere;
-        line-height: 0.75;
+        line-height: 0.7;
         text-transform: uppercase;
-        color: white;
+        color: var(--light);
       }
     }
 
@@ -50,11 +82,9 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      max-width: 50%;
     }
 
     .__portfolio-piece {
-      
       padding: 0;
 
       a {
@@ -85,8 +115,9 @@
         h4 {
           font-family: var(--strongFontFamiliy);
           font-weight: var(--headerFontWeight);
-          font-size: 1.75rem;
+          font-size: 1.4rem;
           line-height: 1;
+          overflow-wrap: anywhere;
 
           span {
             display: block;
