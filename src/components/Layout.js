@@ -7,8 +7,6 @@ import '../assets/sass/main.scss';
 import Footer from './Footer';
 import SideBar from './Sidebar';
 
-import Circuits from '../sketches/Circuits';
-
 class Layout extends Component {
   constructor(props) {
     super(props);
@@ -63,7 +61,6 @@ class Layout extends Component {
               }
             >
               <div id="page_layout">
-                <Circuits />
                 <SideBar fullMenu={fullMenu} />
                 {children}
                 <Footer />

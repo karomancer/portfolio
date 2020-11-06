@@ -22,9 +22,6 @@
     }
   }
 
-  .date {
-  }
-
   .process-photos {
     list-style: none;
     margin: 0;
@@ -32,15 +29,8 @@
 
     li {
       display: block;
+      margin: 0;
+      padding: 0;
     }
-  }
-
-  .pdf-document {
-      width: 100%;
-
-      canvas {
-          width: 100% !important;
-          height: auto !important;
-      }
   }
 }

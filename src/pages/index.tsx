@@ -6,6 +6,7 @@ import Scroll from '../components/Scroll';
 
 import Hero from '../components/Hero'
 import PortfolioSection from '../components/portfolio/section'
+import Circuits from '../sketches/Circuits';
 
 import pic1 from '../assets/images/pic01.jpg';
 import pic2 from '../assets/images/pic02.jpg';
@@ -14,6 +15,7 @@ import pic3 from '../assets/images/pic03.jpg';
 import config from '../../config';
 const IndexPage = () => (
   <Layout>
+  <Circuits />
     <section id="banner">
       <div className="inner">
         <h1>{config.heading}</h1>

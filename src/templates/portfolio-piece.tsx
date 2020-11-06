@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 
 import { PortfolioPiece as PortfolioPieceType } from '../components/portfolio/types';
 import PortfolioPiecePage from '../components/portfolio/page';
+import Layout from '../components/Layout';
 
 interface PortfolioPieceTemplateProps {
   data: {
@@ -17,9 +18,11 @@ class PortfolioPieceTemplate extends React.Component<
     const piece = this.props?.data?.contentfulPortfolioPiece;
 
     return (
-      <section className="wrapper">
-        <PortfolioPiecePage piece={piece} />
-      </section>
+      <Layout>
+        <section className="wrapper">
+          <PortfolioPiecePage piece={piece} />
+        </section>
+      </Layout>
     );
   }
 }
