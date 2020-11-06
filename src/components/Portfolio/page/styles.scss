@@ -1,0 +1,46 @@
+.porfolio-piece-full {
+  position: relative;
+
+  h2 {
+    margin: 2rem 0 0.75rem;
+  }
+
+  img {
+      width: 100%;
+  }
+
+  .hero {
+    width: 100vw;
+    max-height: 20rem;
+    margin-bottom: 4rem;
+    overflow: hidden;
+
+    img {
+      max-height: 20rem;
+      object-fit: cover !important;
+      object-position: top !important;
+    }
+  }
+
+  .date {
+  }
+
+  .process-photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: block;
+    }
+  }
+
+  .pdf-document {
+      width: 100%;
+
+      canvas {
+          width: 100% !important;
+          height: auto !important;
+      }
+  }
+}

@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Scroll from '../components/Scroll';
 
 import Hero from '../components/Hero'
-import Portfolio from '../components/Portfolio'
+import PortfolioSection from '../components/portfolio/section'
 
 import pic1 from '../assets/images/pic01.jpg';
 import pic2 from '../assets/images/pic02.jpg';
@@ -105,7 +105,7 @@ const IndexPage = () => (
         </div>
       </section> */}
       <section className="spotlight">
-        <Portfolio />
+        <PortfolioSection />
       </section>
     </section>
 

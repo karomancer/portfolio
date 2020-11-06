@@ -30,7 +30,7 @@
   --headerFontWeight: 700;
   --bodyFontWeight: 400;
 
-  --strongFontFamiliy: futura-pt-bold, sans-serif;
+  --strongFontFamily: futura-pt-bold, sans-serif;
 
   --condensedFontFamily: futura-pt-condensed, sans-serif;
   --condensedFontBoldWeight: 700;
@@ -328,8 +328,8 @@ h1 {
 }
 
 h2 {
-  font-family: var(--strongFontFamiliy);
-  font-weight: var(--strongFontWeight);
+  font-family: var(--strongFontFamily);
+  font-weight: var(--headerFontWeight);
   font-size: 1.35em;
   line-height: 1.75em;
   text-transform: uppercase;
@@ -341,8 +341,8 @@ h2 {
 }
 
 h3 {
-  font-family: var(--strongFontFamiliy);
-  font-weight: var(--strongFontWeight);
+  font-family: var(--strongFontFamily);
+  font-weight: var(--headerFontWeight);
   font-size: 1.15em;
   line-height: 1.75em;
 
@@ -1494,7 +1494,7 @@ button,
 .wrapper {
   @include padding(6em, 0);
 
-  > .inner {
+  .inner {
     width: var(--siteWidth);
     margin: 0 auto;
 

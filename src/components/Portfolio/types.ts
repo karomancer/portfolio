@@ -1,5 +1,9 @@
 import { FixedObject, FluidObject } from 'gatsby-image';
 
+export type ContentfulRichText = {
+  json?: Document;
+};
+
 export type ContentfulFile = {
   contentType: 'application/pdf';
   url: string;
@@ -16,7 +20,7 @@ export interface ContentfulMedia extends ContentfulFile {
 export type PortfolioPiece = {
   date: string;
   deliverables: ContentfulMedia[];
-  description?: string;
+  description?: ContentfulRichText;
   hero?: ContentfulMedia;
   hex: string;
   images?: ContentfulMedia[];

@@ -12,61 +12,7 @@ const Portfolio = () => {
         sort: { fields: [date, title], order: [DESC, ASC] }
       ) {
         nodes {
-          hero {
-            description
-            title
-          }
-          date(formatString: "YYYY")
-          deliverables {
-            title
-            description
-            file {
-              contentType
-              url
-            }
-            fixed {
-              src
-              srcSet
-              srcSetWebp
-              srcWebp
-              width
-              height
-              base64
-              aspectRatio
-            }
-          }
-          description {
-            description
-          }
-          images {
-            file {
-              url
-            }
-            title
-            description
-          }
-          thumbnail {
-            file {
-              url
-            }
-            fixed {
-              src
-              srcSet
-              srcSetWebp
-              srcWebp
-              width
-              height
-              base64
-              aspectRatio
-            }
-            title
-            description
-          }
-          hex
-          type
-          title
-          slug
-          role
+          ...App__PortfolioPieceFragment
         }
       }
     }

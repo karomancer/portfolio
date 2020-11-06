@@ -11,6 +11,9 @@
     "email": "karinachowtime@gmail.com"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^14.1.2",
+    "@contentful/rich-text-react-renderer": "^14.1.2",
+    "contentful": "^7.14.8",
     "dotenv": "^8.2.0",
     "fs": "^0.0.1-security",
     "gatsby": "^2.20.2",
@@ -26,6 +29,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-images": "^0.6.7",
+    "react-pdf": "^5.0.0",
     "react-scrollspy": "^3.4.2",
     "smoothscroll-polyfill": "^0.4.4"
   },
