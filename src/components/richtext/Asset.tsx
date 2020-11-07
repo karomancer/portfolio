@@ -16,8 +16,9 @@ const Asset = ({asset}: Props) => {
     case 'image/jpeg':
     case 'image/png':
     case 'image/gif':
-      return <Img alt={asset.title} fluid={asset.fluid} />;
+      return <img alt={asset.title} src={asset.file.url} />;
     default: 
+    debugger
       return null;
   }
 };

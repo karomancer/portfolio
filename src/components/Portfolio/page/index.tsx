@@ -17,6 +17,8 @@ const PortfolioPiecePage = ({ piece }: Props) => {
 
   const renderAsset = asset => (
     <li key={asset.title}>
+      <h3>{asset.title}</h3>
+      {asset.description && <p>{asset.description}</p>}
       <Asset asset={asset} />
     </li>
   );
@@ -29,22 +31,33 @@ const PortfolioPiecePage = ({ piece }: Props) => {
         </div>
       )}
       <div className="inner">
-        {piece.date}
+        <h4 className="type-role">
+          {piece.type}, {piece.date}
+        </h4>
         <h1>{piece.title}</h1>
-        <div className="portfolio-description">
-          <H2>Project Description</H2>
-          <RichText document={piece.description} />
-        </div>
+        <br />
+        {piece.description && (
+          <>
+            <div className="portfolio-description">
+              <H2>Project Description</H2>
+              <RichText document={piece.description} color={piece.hex} />
+            </div>
+            <br />
+          </>
+        )}
         {piece.images && (
           <>
             <H2>Process pictures</H2>
-            <ul className="process-photos">{piece.images.map(renderAsset)}</ul>
+            <ul className="process-photos">
+              {piece.images.map(renderAsset)}
+            </ul>
           </>
         )}
+        <br />
         {piece.deliverables && (
           <>
             <H2>Final deliverables</H2>
-            <ul className="process-photos">
+            <ul className="deliverables">
               {piece.deliverables.map(renderAsset)}
             </ul>
           </>

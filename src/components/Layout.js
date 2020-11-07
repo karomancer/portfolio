@@ -50,6 +50,7 @@ class Layout extends Component {
                 { name: 'keywords', content: 'site, web' },
               ]}
             >
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
               <link rel="stylesheet" href="https://use.typekit.net/vgz8xeo.css" />
               <html lang="en" />
             </Helmet>

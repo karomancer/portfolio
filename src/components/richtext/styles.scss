@@ -1,21 +1,102 @@
 .richtext {
-    h3 {
-        margin-bottom: 0.75rem;
+  h3 {
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    list-style-type: '»';
+    li {
+      p {
+        margin: 0;
+      }
     }
-    ul {
-        li {
-            p {
-                margin: 0;
-            }
-        }
-    }
+  }
+
+  .codepen {
+    height: 600px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    margin: 1em 0;
+    padding: 1em;
+  }
 }
 
-.pdf-document {
-  width: 100%;
+.pdf-viewer {
+  position: relative;
+  overflow: hidden;
 
-  canvas {
-    width: 100% !important;
-    height: auto !important;
+  .slide-numbers {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--dark);
+    padding: 0.25rem 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .page-controls {
+    button {
+      position: absolute;
+      border: 0;
+      outline: 0;
+      box-shadow: none;
+      top: 50%;
+
+      padding: 0 1rem;
+      width: 2rem;
+
+      background-color: var(--dark);
+      transition: all 0.2s ease-in-out;
+      opacity: 0.5;
+      font-size: 2rem;
+
+      &.previous-page {
+        left: -1.25rem;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        padding-left: 0.5rem;
+
+        &:hover {
+          left: 0;
+        }
+      }
+
+      &.next-page {
+        right: -1.25rem;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+        padding-right: 0.5rem;
+
+        &:hover {
+          right: 0;
+        }
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .pdf-document {
+    width: 100%;
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
   }
 }

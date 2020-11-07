@@ -5,7 +5,7 @@ export const portfolioPieceFragment = graphql`
     hero {
       description
       title
-      fluid {
+      fluid(quality: 100) {
         src
         aspectRatio
         sizes
@@ -13,6 +13,7 @@ export const portfolioPieceFragment = graphql`
         srcSet
         srcSetWebp
         srcWebp
+        tracedSVG
       }
       fixed {
         src
@@ -45,6 +46,7 @@ export const portfolioPieceFragment = graphql`
         srcSet
         srcSetWebp
         srcWebp
+        tracedSVG
       }
       fixed {
         src
@@ -74,6 +76,7 @@ export const portfolioPieceFragment = graphql`
         srcSet
         srcSetWebp
         srcWebp
+        tracedSVG
       }
       fixed {
         src
@@ -100,6 +103,7 @@ export const portfolioPieceFragment = graphql`
         srcSet
         srcSetWebp
         srcWebp
+        tracedSVG
       }
       fixed {
         src

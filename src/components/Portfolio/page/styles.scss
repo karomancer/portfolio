@@ -1,12 +1,19 @@
 .porfolio-piece-full {
   position: relative;
 
+  .type-role {
+    text-transform: uppercase;
+    span {
+      text-transform: none;
+    }
+  }
+
   h2 {
-    margin: 2rem 0 0.75rem;
+    margin-bottom: var(--bottomMargin);
   }
 
   img {
-      width: 100%;
+      max-width: 100%;
   }
 
   .hero {
@@ -17,20 +24,44 @@
 
     img {
       max-height: 20rem;
+      width: 100%;
       object-fit: cover !important;
-      object-position: top !important;
+      object-position: center !important;
     }
   }
 
   .process-photos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    max-width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      h3 {
+        display: none;
+      }
+    }
+  }
+
+  .deliverables {
     list-style: none;
     margin: 0;
     padding: 0;
 
     li {
       display: block;
-      margin: 0;
       padding: 0;
+      margin-bottom: 2rem;
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin-bottom: var(--bottomMargin);
+      }
     }
   }
 }

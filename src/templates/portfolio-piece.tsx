@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import { PortfolioPiece as PortfolioPieceType } from '../components/portfolio/types';
 import PortfolioPiecePage from '../components/portfolio/page';
@@ -19,6 +19,7 @@ class PortfolioPieceTemplate extends React.Component<
 
     return (
       <Layout>
+        <button onClick={window.history.back}>« Back</button>
         <section className="wrapper">
           <PortfolioPiecePage piece={piece} />
         </section>

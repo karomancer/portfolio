@@ -13,6 +13,7 @@
 
 :root {
   --siteWidth: 60em;
+  --bottomMargin: 0.75rem;
 
   /**
    * Colors
@@ -175,7 +176,7 @@ body {
 
 ol,
 ul {
-  list-style: none;
+  list-style-type: '»';
 }
 
 blockquote,
@@ -361,7 +362,7 @@ h4 {
 h5 {
   font-family: var(--condensedFontFamily);
   font-weight: var(--condensedFontBoldWeight);
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 1.5em;
 }
 
