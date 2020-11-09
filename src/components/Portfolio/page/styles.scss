@@ -1,6 +1,12 @@
 .porfolio-piece-full {
   position: relative;
 
+  .back-button {
+    text-align: left;
+    padding: 0;
+    border: 0;
+  }
+
   .type-role {
     text-transform: uppercase;
     span {

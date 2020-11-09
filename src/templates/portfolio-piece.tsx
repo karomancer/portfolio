@@ -19,7 +19,6 @@ class PortfolioPieceTemplate extends React.Component<
 
     return (
       <Layout>
-        <button onClick={window.history.back}>« Back</button>
         <section className="wrapper">
           <PortfolioPiecePage piece={piece} />
         </section>

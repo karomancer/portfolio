@@ -31,6 +31,7 @@ const PortfolioPiecePage = ({ piece }: Props) => {
         </div>
       )}
       <div className="inner">
+        <button className="back-button" onClick={window.history.back}>« Back</button>
         <h4 className="type-role">
           {piece.type}, {piece.date}
         </h4>
