@@ -7,11 +7,12 @@ import './styles.scss';
 const RichText = props => {
   const getAsset = data => {
     const fields = data?.target?.fields;
-    const file = fields['en-US']?.file;
     const {
-      url: { 'en-US': url },
       title: { 'en-US': title },
     } = fields;
+
+    const file = fields?.file && fields?.file['en-US'];
+    const url = fields?.url && fields?.url['en-US'];
 
     switch (file?.contentType) {
       case 'image/jpeg':
@@ -20,6 +21,7 @@ const RichText = props => {
 
     if (url) {
       if (url.match(/codepen/)) {
+        const slug = url.split('/').pop();
         return (
           <>
             <p
@@ -28,8 +30,7 @@ const RichText = props => {
               data-theme-id="light"
               data-default-tab="result"
               data-user="karomancer"
-              data-slug-hash="yLNdeXE"
-              data-preview="true"
+              data-slug-hash={slug}
               data-pen-title={title}
             >
               <span>
@@ -38,11 +39,19 @@ const RichText = props => {
                 <a href="https://codepen.io">CodePen</a>.
               </span>
             </p>
-            <script
-              async
-              src="https://static.codepen.io/assets/embed/ei.js"
-            ></script>
           </>
+        );
+      }
+      if (url.match(/vimeo/)) {
+        return (
+          <iframe
+            src={url}
+            width="100%"
+            height="600"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          ></iframe>
         );
       }
     }
@@ -50,13 +59,15 @@ const RichText = props => {
 
   const options = {
     renderNode: {
-    [BLOCKS.HEADING_2]: (node, children) => <h2 style={{ color: props.color}}>{node.content[0].value}</h2>,
-      [BLOCKS.EMBEDDED_ASSET]: ({ data }, children) => {
-        return getAsset(data);
-      },
-      'embedded-entry-inline': ({ data }, children) => {
-        return getAsset(data);
-      },
+      [BLOCKS.HEADING_2]: (node, children) => (
+        <h2 style={{ color: props.color }}>{node.content[0].value}</h2>
+      ),
+      [BLOCKS.QUOTE]: (node, children) => (
+        <blockquote style={{ borderColor: props.color }}>{children}</blockquote>
+      ),
+      [BLOCKS.EMBEDDED_ASSET]: ({ data }, children) => getAsset(data),
+      'embedded-entry-inline': ({ data }, children) => getAsset(data),
+      
     },
   };
 

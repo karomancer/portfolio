@@ -18,7 +18,6 @@ const Asset = ({asset}: Props) => {
     case 'image/gif':
       return <img alt={asset.title} src={asset.file.url} />;
     default: 
-    debugger
       return null;
   }
 };
