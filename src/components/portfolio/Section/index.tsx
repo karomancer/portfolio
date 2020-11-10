@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Piece from './Piece';
 
-const Portfolio = () => {
+const Section = () => {
   const {
     allContentfulPortfolioPiece: { nodes: portfolioPieces },
   } = useStaticQuery(graphql`
@@ -19,7 +19,7 @@ const Portfolio = () => {
   `);
 
   const portfolioTypeMap = {};
-  /* <Piece piece={piece} /> */
+
   portfolioPieces.forEach(piece => {
     if (!portfolioTypeMap[piece.type]) {
       portfolioTypeMap[piece.type] = [piece];
@@ -38,7 +38,7 @@ const Portfolio = () => {
           </div>
           <ul>
             {portfolioTypeMap[type].map(piece => (
-              <Piece piece={piece} />
+              <Piece key={piece.title} piece={piece} />
             ))}
           </ul>
         </section>
@@ -47,4 +47,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Section;

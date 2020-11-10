@@ -51,6 +51,10 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
             test: /p5/,
             use: loaders.null(),
           },
+          {
+            test: /react-pdf/,
+            use: loaders.null(),
+          },
         ],
       },
     });

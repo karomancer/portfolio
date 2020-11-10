@@ -1,21 +1,18 @@
 import React, { useEffect, useRef } from 'react';
 import p5 from 'p5';
 
-import Circuit from './Circuit'
+import Circuit from './Circuit';
+
+/**
+ * Class below
+ */
 
 const GRAY_RGB = [234, 234, 234];
-
-// const DARK_TEAL_RGB = [69, 156, 131];
-// const DARK_TEAL_HEX = '#459c83';
-
-// const TEAL_HEX = '#51b39a';
 
 const CIRCUITS_DIVISIBLE = 100000;
 const MODULO = 200;
 
-
-
-const Circuits = ({children}) => {
+const Circuits = () => {
   const circuitsEl = useRef();
   let circuitId = 0;
 
@@ -25,7 +22,6 @@ const Circuits = ({children}) => {
     p.setup = () => {
       p.createCanvas(p.windowWidth, p.windowHeight);
       p.background(GRAY_RGB);
-      // p.background(100, 100, 100);
     };
 
     p.draw = () => {
@@ -42,11 +38,6 @@ const Circuits = ({children}) => {
       for (let i = 0; i < circuits.length; i++) {
         circuits[i].draw();
       }
-      // p.line(30, 20, 85, 20);
-      // p.stroke(126);
-      // p.line(85, 20, 85, 75);
-      // p.stroke(255);
-      // p.line(85, 75, 30, 75);
     };
   };
 
@@ -54,7 +45,7 @@ const Circuits = ({children}) => {
     new p5(sketch, circuitsEl.current);
   }, []);
 
-  return <div id="circuits" ref={circuitsEl}>{children}</div>;
+  return <div id="circuits" ref={circuitsEl}></div>;
 };
 
 export default Circuits;

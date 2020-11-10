@@ -46,7 +46,6 @@ export const portfolioPieceFragment = graphql`
         srcSet
         srcSetWebp
         srcWebp
-        tracedSVG
       }
       fixed {
         src
@@ -76,7 +75,6 @@ export const portfolioPieceFragment = graphql`
         srcSet
         srcSetWebp
         srcWebp
-        tracedSVG
       }
       fixed {
         src
@@ -103,7 +101,6 @@ export const portfolioPieceFragment = graphql`
         srcSet
         srcSetWebp
         srcWebp
-        tracedSVG
       }
       fixed {
         src

@@ -12,7 +12,7 @@ interface Props {
   piece: PortfolioPiece;
 }
 
-const PortfolioPiecePage = ({ piece }: Props) => {
+const Page = ({ piece }: Props) => {
   const H2 = ({ children }) => <h2 style={{ color: piece.hex }}>{children}</h2>;
 
   const renderAsset = asset => (
@@ -31,7 +31,12 @@ const PortfolioPiecePage = ({ piece }: Props) => {
         </div>
       )}
       <div className="inner">
-        <button className="back-button" onClick={window.history.back}>« Back</button>
+        <button
+          className="back-button"
+          onClick={typeof window !== 'undefined' && window.history.back}
+        >
+          « Back
+        </button>
         <h4 className="type-role">
           {piece.type}, {piece.date}
         </h4>
@@ -49,9 +54,7 @@ const PortfolioPiecePage = ({ piece }: Props) => {
         {piece.images && (
           <>
             <H2>Process pictures</H2>
-            <ul className="process-photos">
-              {piece.images.map(renderAsset)}
-            </ul>
+            <ul className="process-photos">{piece.images.map(renderAsset)}</ul>
           </>
         )}
         <br />
@@ -68,4 +71,4 @@ const PortfolioPiecePage = ({ piece }: Props) => {
   );
 };
 
-export default PortfolioPiecePage;
+export default Page;

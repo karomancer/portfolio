@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+const isWindowDefined = typeof window !== 'undefined'
+
+if (isWindowDefined) {
+  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+}
 
 interface Props {
   pdfUrl: string;
@@ -15,7 +19,7 @@ const PDFViewer = ({ pdfUrl }: Props) => {
     setNumPages(numPages);
   }
 
-  return (
+  return isWindowDefined && (
     <div className="pdf-viewer">
       <Document
         className="pdf-document"
