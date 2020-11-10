@@ -33,9 +33,9 @@ const Page = ({ piece }: Props) => {
       <div className="inner">
         <button
           className="back-button"
-          onClick={typeof window !== 'undefined' && window.history.back}
+          onClick={() => typeof window !== 'undefined' && window.history.back()}
         >
-          « Back
+          Back
         </button>
         <h4 className="type-role">
           {piece.type}, {piece.date}

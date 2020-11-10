@@ -1,10 +1,10 @@
-const GRAY_RGB = [234, 234, 234];
+const GRAY_RGB = [255, 255, 255];
 
 const DARK_TEAL_RGB = [69, 156, 131];
 const DARK_TEAL_HEX = '#459c83';
 
-const TEAL_RGB = [81, 179, 154];
-const TEAL_HEX = '#51b39a';
+const TEAL_RGB = [80, 191, 160];
+const TEAL_HEX = '#50bfa0';
 
 const COMPARISON_THRESHOLD = 40;
 const MODULO = 200;
