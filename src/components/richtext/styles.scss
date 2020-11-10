@@ -2,7 +2,7 @@
   h2:not(:first-child) {
     margin-top: 2.5rem;
   }
-  
+
   h3 {
     margin-bottom: 0.5rem;
 
@@ -23,6 +23,7 @@
   }
 
   img {
+    border-radius: 0.5rem;
     max-height: 20rem;
     object-fit: cover;
     padding: 0 0.25rem;

@@ -19,7 +19,7 @@ const RichText = props => {
       case 'image/jpg':
       case 'image/gif':
       case 'image/png':
-        return <img src={file.url} />;
+        return <img alt={title} src={file.url} />;
     }
 
     if (url) {
@@ -53,6 +53,17 @@ const RichText = props => {
             height="600"
             frameBorder="0"
             allow="autoplay; fullscreen"
+            allowFullScreen
+          ></iframe>
+        );
+      }
+      if (url.match(/youtube/)) {
+        return (
+          <iframe
+            width="100%"
+            height="600"
+            src={url}
+            frameBorder="0"
             allowFullScreen
           ></iframe>
         );

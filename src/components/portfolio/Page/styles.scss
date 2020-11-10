@@ -18,11 +18,6 @@
     margin-bottom: var(--bottomMargin);
   }
 
-  img {
-      max-width: 100%;
-      border-radius: 0.5rem;
-  }
-
   .hero {
     width: 100vw;
     max-height: 20rem;
@@ -34,6 +29,13 @@
       width: 100%;
       object-fit: cover !important;
       object-position: center !important;
+    }
+  }
+
+  .inner {
+    img {
+      max-width: 100%;
+      border-radius: 0.75rem;
     }
   }
 
