@@ -16,6 +16,9 @@ const RichText = props => {
 
     switch (file?.contentType) {
       case 'image/jpeg':
+      case 'image/jpg':
+      case 'image/gif':
+      case 'image/png':
         return <img src={file.url} />;
     }
 
@@ -67,7 +70,6 @@ const RichText = props => {
       ),
       [BLOCKS.EMBEDDED_ASSET]: ({ data }, children) => getAsset(data),
       'embedded-entry-inline': ({ data }, children) => getAsset(data),
-      
     },
   };
 
