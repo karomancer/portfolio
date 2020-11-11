@@ -1,8 +1,8 @@
-.__portfolio {
+.portfolio {
   --height: 10rem;
-  background-color: var(--dark);
 
   width: 100%;
+  margin: 0 auto;
 
   h2 {
     margin-top: -1.75rem;
@@ -11,142 +11,125 @@
     color: var(--dark);
   }
 
-  .__portfolio-section {
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    min-height: var(--height);
+  .portfolio-sections {
+    .portfolio-section {
+      &[data-key='cosplay'] {
+        --cosplayHeight: calc(var(--height) * 2);
 
-    &[data-key='cosplay'] {
-      --cosplayHeight: calc(var(--height) * 2);
+        .portfolio-piece {
+          a,
+          img {
+            height: var(--cosplayHeight);
+          }
 
-      height: var(--cosplayHeight);
-
-      .__portfolio-piece {
-        a,
-        img {
-          height: var(--cosplayHeight);
-        }
-
-        .__title {
-          height: var(--cosplayHeight);
-        }
-      }
-    }
-
-    &[data-key='illustration & graphic design'] {
-      .__piece-type {
-        width: 40%;
-      }
-
-      ul {
-        max-width: 60%;
-      }
-    }
-
-    &:nth-child(odd) {
-      flex-direction: row-reverse;
-      justify-content: space-between;
-
-      text-align: right;
-      background-color: var(--light);
-
-      .__piece-type {
-        margin-left: 1.5rem;
-      }
-
-      ul {
-        justify-content: flex-start;
-      }
-
-      h3 {
-        color: var(--dark) !important;
-        text-align: right;
-      }
-    }
-
-    &:nth-child(even) {
-      .__piece-type {
-        margin-right: 1.5rem;
-      }
-
-      ul {
-        justify-content: flex-end;
-      }
-    }
-
-    .__piece-type {
-      min-width: 35rem;
-      margin: 2rem 1rem;
-      position: relative;
-
-      h3 {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 5rem;
-        overflow-wrap: anywhere;
-        line-height: 0.7;
-        text-transform: uppercase;
-        color: var(--light);
-      }
-    }
-
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .__portfolio-piece {
-      padding: 0;
-
-      a {
-        position: relative;
-        width: fit-content;
-        display: block;
-        overflow: hidden;
-        border: none;
-        height: var(--height);
-      }
-
-      img {
-        height: var(--height);
-        object-fit: cover;
-        object-position: center center;
-      }
-
-      .__title {
-        box-sizing: border-box;
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: var(--height);
-        padding: 0.75rem;
-        transition: opacity 0.2s ease-in-out;
-
-        h4 {
-          font-family: var(--strongFontFamiliy);
-          font-weight: var(--headerFontWeight);
-          font-size: 1.2rem;
-          line-height: 1;
-          overflow-wrap: anywhere;
-
-          span {
-            display: block;
-            font-family: var(--fontFamily);
-            font-weight: var(--bodyFontWeight);
-            margin-top: 0.5rem;
+          .title {
+            height: var(--cosplayHeight);
           }
         }
+      }
 
-        &:hover {
-          opacity: 1;
+      &:nth-child(even) {
+        background-color: var(--light);
+
+        & > div {
+          flex-direction: row-reverse;
+        }
+
+        .piece-type {
+          text-align: right;
+        }
+      }
+
+      &:nth-child(odd) {
+        background-color: white;
+
+        ul {
+          justify-content: flex-end;
+        }
+      }
+
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 0 2rem;
+        margin: 0 auto;
+        width: 100%;
+        max-width: calc(1.5 * var(--siteWidth));
+
+        .piece-type {
+          width: 20%;
+          min-width: 35rem;
+          font-size: 2rem;
+          margin: 0 0.7rem;
+          line-height: 1;
+          overflow-wrap: anywhere;
+          color: var(--dark);
+        }
+
+        ul {
+          width: 80%;
+          display: flex;
+          gap: 0.25rem;
+          flex-wrap: wrap;
+          align-items: center;
+          list-style: none;
+          padding: 1rem 0;
+          margin: 0;
+        }
+
+        .portfolio-piece {
+          margin: 0;
+          padding: 0;
+
+          a {
+            position: relative;
+            height: var(--height);
+            width: fit-content;
+            display: block;
+            border: none;
+            border-radius: var(--borderRadius);
+            overflow: hidden;
+          }
+
+          img {
+            height: var(--height);
+            object-fit: cover;
+            object-position: center center;
+          }
+
+          .title {
+            box-sizing: border-box;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--height);
+            padding: 0.75rem;
+            transition: opacity 0.2s ease-in-out;
+            color: white;
+
+            h4 {
+              font-family: var(--strongFontFamiliy);
+              font-weight: var(--headerFontWeight);
+              font-size: 1.2rem;
+              line-height: 1;
+              overflow-wrap: anywhere;
+
+              span {
+                display: block;
+                font-family: var(--fontFamily);
+                font-weight: var(--bodyFontWeight);
+                margin-top: 0.5rem;
+              }
+            }
+
+            &:hover {
+              opacity: 1;
+            }
+          }
         }
       }
     }

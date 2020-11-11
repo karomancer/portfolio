@@ -26,7 +26,7 @@
     &:hover {
       background: none;
       border-bottom: dotted 1px;
-      color: white;
+      color: var(--dark);
 
       &::before {
         left: -1.25rem;
@@ -63,7 +63,7 @@
   .inner {
     img {
       max-width: 100%;
-      border-radius: 0.75rem;
+      border-radius: var(--borderRadius);
     }
   }
 
@@ -103,6 +103,6 @@
   }
 
   iframe {
-    border-radius: 0.5rem;
+    border-radius: var(--borderRadius);
   }
 }

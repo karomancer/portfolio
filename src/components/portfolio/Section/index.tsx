@@ -29,20 +29,26 @@ const Section = () => {
   });
 
   return (
-    <section className="__portfolio">
+    <section className="portfolio">
       <h2>Things I've done</h2>
-      {Object.keys(portfolioTypeMap).map(type => (
-        <section data-key={type.toLowerCase()} className="__portfolio-section" key={`section-${type}`}>
-          <div className="__piece-type">
-            <h3>{type}</h3>
-          </div>
-          <ul>
-            {portfolioTypeMap[type].map(piece => (
-              <Piece key={piece.title} piece={piece} />
-            ))}
-          </ul>
-        </section>
-      ))}
+      <div className="portfolio-sections">
+        {Object.keys(portfolioTypeMap).map((type, i) => (
+          <section
+            data-key={type.toLowerCase()}
+            className="portfolio-section"
+            key={`section-${type}`}
+          >
+            <div>
+              <h3 className="piece-type">{type}</h3>
+              <ul>
+                {portfolioTypeMap[type].map(piece => (
+                  <Piece key={piece.title} piece={piece} />
+                ))}
+              </ul>
+            </div>
+          </section>
+        ))}
+      </div>
     </section>
   );
 };

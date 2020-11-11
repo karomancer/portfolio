@@ -1,10 +1,10 @@
 {
   "name": "karinachowtime",
   "version": "0.0.1",
-  "description": "Gatsby.js V2 starter template based on Spectral by HTML5 UP",
+  "description": "Gatsby + Contentful portfolio site",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-spectral.git"
+    "url": "git+https://github.com/karomancer/portfolio.git"
   },
   "author": {
     "name": "Karina Chow",

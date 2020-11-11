@@ -7,7 +7,7 @@ import Circuit from './Circuit';
  * Class below
  */
 
-const GRAY_RGB = [234, 234, 234];
+const GRAY_RGB = [255, 255, 255];
 
 const CIRCUITS_DIVISIBLE = 100000;
 const MODULO = 200;

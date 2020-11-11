@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
-import Scroll from '../components/Scroll';
 import Hero from '../components/Hero';
 import PortfolioSection from '../components/portfolio/Section';
 
@@ -16,27 +15,10 @@ const IndexPage = () => (
   <Layout>
     <Circuits />
     <section id="banner">
-      <div className="inner">
-        <h1>{config.heading}</h1>
-        <Hero />
-        <ul className="actions special">
-          <li>
-            <Scroll type="id" element="one">
-              <a href="/#" className="button primary">
-                Explore
-              </a>
-            </Scroll>
-          </li>
-        </ul>
-      </div>
-      <Scroll type="id" element="one">
-        <a href="#one" className="more">
-          Learn More
-        </a>
-      </Scroll>
+      <Hero />
     </section>
 
-    <section id="one" className="wrapper style1 special">
+    <section id="one" className="wrapper style3 special">
       <div className="inner">
         <header className="major">
           <h2>

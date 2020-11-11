@@ -1,9 +1,59 @@
-h1 {
-    font-size: 5rem;
-    margin: 1rem 0;
-}
+.inner {
+  position: relative;
+  height: 100%;
 
-.byline {
-    font-weight: 400;
-    font-size: 2rem;
+  .title-and-byline {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    h1 {
+      font-size: 8rem;
+      margin: 1rem 0;
+      color: var(--dark);
+    }
+
+    .byline {
+      text-align: 0;
+      font-weight: 400;
+      font-size: 3rem;
+      color: var(--gray);
+    //   background: linear-gradient(transparent, white, transparent);
+    }
+  }
+
+  .bust-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    svg {
+        position: absolute;
+        bottom: -5rem;
+
+        // three tone
+        // .gray {
+        //     fill: var(--teal);
+        // }
+        // .dark, .light {
+        //     fill: var(--gray);
+        // }
+        
+        // two tone
+        path {
+            fill: var(--light);
+
+            &.teal {
+                fill: var(--teal);
+            }
+
+            &.white {
+                fill: white;
+            }
+        }
+
+    }
+  }
 }

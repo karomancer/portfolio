@@ -63,10 +63,10 @@
 		),
 
 		accent3: (
-			bg:				#00f0ff,
-			fg-bold:		#ffffff,
-			fg:				mix(#00f0ff, #ffffff, 25%),
-			fg-light:		mix(#00f0ff, #ffffff, 40%),
+			bg:				var(--light),
+			fg-bold:		var(--dark),
+			fg:				var(--gray),
+			fg-light:		white,
 			border:			rgba(0,0,0,0.125),
 			border-bg:		rgba(255,255,255,0.075),
 			border2:		rgba(0,0,0,0.25),

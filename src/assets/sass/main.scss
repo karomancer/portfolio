@@ -14,6 +14,7 @@
 :root {
   --siteWidth: 60em;
   --bottomMargin: 0.75rem;
+  --borderRadius: 0.25rem;
 
   /**
    * Colors
@@ -384,12 +385,34 @@ sup {
 }
 
 hr {
+  position: relative;
+  overflow: visible;
   border: 0;
-  border-bottom: solid 2px _palette(border);
+  border-bottom: solid 0.4rem var(--teal);
   margin: (_size(element-margin) * 1.5) 0;
 
   &.major {
     margin: (_size(element-margin) * 2.25) 0;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--teal);
+    position: absolute;
+    top: -8.5px;
+  }
+
+  &::before {
+    left: -1.5rem;
+  }
+
+  &::after {
+    right: -1.5rem;
   }
 }
 
@@ -1521,7 +1544,7 @@ button,
   }
 
   &.style3 {
-    @include wrapper(accent5);
+    @include wrapper(accent3);
   }
 
   &.style4 {
@@ -2129,5 +2152,23 @@ body.is-mobile {
     #footer {
       background-color: darken(_palette(bg), 8);
     }
+  }
+}
+
+svg {
+  .teal {
+    fill: var(--teal);
+  }
+  .gray {
+    fill: var(--gray);
+  }
+  .light {
+    fill: var(--light);
+  }
+  .white {
+    fill: white;
+  }
+  .dark {
+    fill: var(--dark);
   }
 }

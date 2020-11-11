@@ -17,7 +17,6 @@ const Page = ({ piece }: Props) => {
 
   const renderAsset = asset => (
     <li key={asset.title}>
-      <h3>{asset.title}</h3>
       {asset.description && <p>{asset.description}</p>}
       <Asset asset={asset} />
     </li>

@@ -68,6 +68,17 @@ const RichText = props => {
           ></iframe>
         );
       }
+      if (url.match(/spotify/)) {
+        return (
+          <iframe
+            src={url}
+            width="100%"
+            height="300"
+            frameBorder="0"
+            allow="encrypted-media"
+          ></iframe>
+        );
+      }
     }
   };
 
