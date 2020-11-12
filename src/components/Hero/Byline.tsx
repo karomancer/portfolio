@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './styles.scss'
 
 const ALPHABET = 'abcdefghijklmnopqrstuvwxyzαβΓΔδεζηθικΛλμνΞξΠπρΣσςτυΦφχΨψΩω';
 const BYLINE_OPTIONS = [
   'senior frontend engineer',
   'freelance graphic designer',
-  'user experience nerd',
+  'user experience consultant',
   'web accessibility advocate',
   'creative coder',
   'amateur cosplayer',
@@ -98,7 +98,7 @@ const Byline = () => {
   };
 
   useEffect(() => {
-    setTimeout(changeByline, 5000);
+    setTimeout(changeByline, 7000);
   });
 
   return <h3 className="byline" ref={bylineEl}>{byline}</h3>;
