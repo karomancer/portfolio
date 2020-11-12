@@ -1,29 +1,77 @@
+@import '../../assets/sass/libs/vars';
 @import '../../assets/sass/libs/vendor';
 @import '../../assets/sass/libs/functions';
+@import '../../assets/sass/libs/mixins';
+@import '../../assets/sass/libs/breakpoints';
 
 .inner {
   position: relative;
   height: 100%;
 
   .title-and-byline {
-    position: absolute;
-    width: 100%;
+    position: absolute;    
+    left: 0;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
+    width: fit-content;
+    margin: 0 auto;
     opacity: 1;
 
     h1 {
+      @include vendor('transition', ('opacity 1s ease'));
+      @include vendor('transition-delay', '3.5s');
+      width: 100%;
+      color: var(--dark);
       font-size: 8rem;
       margin: 1rem 0;
-      color: var(--dark);
+      opacity: 1;
+      padding: 0.2em 1em;
+      position: relative;
+      z-index: 1;
+
+      &:after {
+        @include vendor('transition', 'width 0.85s ease');
+        @include vendor('transition-delay', '3.5s');
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0 auto;
+
+        border: 3px solid var(--gray);
+        border-radius: var(--borderRadius);
+
+        width: 100%;
+      }
     }
 
     .byline {
+      @include vendor('transition', ('opacity 0.5s ease'));
+      @include vendor('transition-delay', '4s');
       text-align: 0;
       font-weight: 400;
       font-size: 3rem;
       color: var(--gray);
-      //   background: linear-gradient(transparent, white, transparent);
+    }
+
+    @include breakpoint('<=small') {
+      h1 {
+        font-size: 6rem;
+        line-height: 0.85;
+        padding: 1rem;
+
+        &::after {
+          margin-top: -1rem;
+          width: 80%;
+        }
+      }
+
+      .byline {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -35,7 +83,7 @@
 
     svg {
       position: absolute;
-      bottom: -5rem;
+      bottom: -7rem;
 
       // three tone
       path {
@@ -62,6 +110,14 @@
           fill: white;
         }
       }
+    }
+
+    @include breakpoint('<=small') {
+      svg {
+        bottom: 0;
+        height: 100vh;
+      }
+    
     }
   }
 
