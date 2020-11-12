@@ -1577,18 +1577,15 @@ button,
   justify-content: center;
   margin: 0 auto;
   width: 100%;
-  height: 20rem;
+  height: 15rem;
   overflow: hidden;
-
-  #circuits {
-    max-height: 100vh;
-  }
 
   h1 {
     position: absolute;
     top: 50%;
     transform: translateY(50%);
     margin: 0;
+    height: 0;
   }
 }
 
@@ -1759,7 +1756,7 @@ button,
             &:after {
               content: '≡';
               display: inline-block;
-              vertical-align: top;
+              vertical-align: sub;
               font-size: 2rem;
               margin-left: 0.25rem;
             }
@@ -1947,6 +1944,7 @@ body.is-mobile {
 }
 
 .page {
+  @extend .wrapper;
 }
 
 /* Footer */

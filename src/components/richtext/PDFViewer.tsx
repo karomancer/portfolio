@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 
-const isWindowDefined = typeof window !== 'undefined'
+const isWindowDefined = typeof window !== 'undefined';
 
 if (isWindowDefined) {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -19,41 +19,46 @@ const PDFViewer = ({ pdfUrl }: Props) => {
     setNumPages(numPages);
   }
 
-  return isWindowDefined && (
-    <div className="pdf-viewer">
-      <Document
-        className="pdf-document"
-        file={pdfUrl}
-        onLoadError={console.error}
-        onLoadSuccess={onDocumentLoadSuccess}
-      >
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <div className="page-controls">
-        
-        {pageNumber > 1 && (
-          <button
-          className="previous-page"
-            onClick={() => setPageNumber(pageNumber - 1)}
-            aria-label="Previous page"
-          >
-            ‹
-          </button>
-        )}
-        {pageNumber < numPages && (
-          <button
-            className="next-page"
-            onClick={() => setPageNumber(pageNumber + 1)}
-            aria-label="Next page"
-          >
-            ›
-          </button>
+  return (
+    isWindowDefined && (
+      <div className="pdf-viewer">
+        <Document
+          className="pdf-document"
+          file={pdfUrl}
+          onLoadError={console.error}
+          onLoadSuccess={onDocumentLoadSuccess}
+        >
+          <Page pageNumber={pageNumber} />
+        </Document>
+        {numPages > 1 && (
+          <>
+            <div className="page-controls">
+              {pageNumber > 1 && (
+                <button
+                  className="previous-page"
+                  onClick={() => setPageNumber(pageNumber - 1)}
+                  aria-label="Previous page"
+                >
+                  ‹
+                </button>
+              )}
+              {pageNumber < numPages && (
+                <button
+                  className="next-page"
+                  onClick={() => setPageNumber(pageNumber + 1)}
+                  aria-label="Next page"
+                >
+                  ›
+                </button>
+              )}
+            </div>
+            <span className="slide-numbers">
+              Slide {pageNumber} of {numPages}
+            </span>
+          </>
         )}
       </div>
-      <span className="slide-numbers">Slide {pageNumber} of {numPages}</span>
-      <p>
-      </p>
-    </div>
+    )
   );
 };
 
