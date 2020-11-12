@@ -18,8 +18,8 @@ class PortfolioPieceTemplate extends React.Component<
     const piece = this.props?.data?.contentfulPortfolioPiece;
 
     return (
-      <Layout>
-        <section className="wrapper">
+      <Layout color={piece.hex}>
+        <section className="page">
           <PortfolioPiecePage piece={piece} />
         </section>
       </Layout>

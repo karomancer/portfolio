@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-export default function Nav({ onMenuToggle = () => {} }) {
+export default function Nav({ onMenuToggle = () => {}, color }) {
   return (
     <nav id="nav">
       <ul>
         <li className="special">
           <a
+            style={color && {
+              color: color,
+            }}
             href="#menu"
             onClick={e => {
               e.preventDefault();

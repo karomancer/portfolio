@@ -109,6 +109,10 @@
       h3 {
         display: none;
       }
+
+      img {
+        width: 100%;
+      }
     }
   }
 
@@ -127,6 +131,10 @@
 
       p {
         margin-bottom: var(--bottomMargin);
+      }
+
+      img {
+        max-width: 100%;
       }
     }
   }

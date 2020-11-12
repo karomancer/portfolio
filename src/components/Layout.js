@@ -62,7 +62,7 @@ class Layout extends Component {
               }
             >
               <div id="page_layout">
-                <SideBar fullMenu={fullMenu} />
+                <SideBar fullMenu={fullMenu} color={this.props.color} />
                 {children}
                 <Footer />
               </div>

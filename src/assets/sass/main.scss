@@ -1945,6 +1945,8 @@ body.is-mobile {
 
 .page {
   @extend .wrapper;
+
+  padding-top: 0;
 }
 
 /* Footer */
