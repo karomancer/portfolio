@@ -11,7 +11,6 @@
   margin: 0 auto;
 
   h2 {
-    margin-top: -1.75rem;
     margin-bottom: 0;
     height: 1.75rem;
     color: var(--dark);
@@ -56,6 +55,7 @@
 
       & > div {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         position: relative;
@@ -65,17 +65,16 @@
         max-width: calc(1.5 * var(--siteWidth));
 
         .piece-type {
-          width: 20%;
-          min-width: 35rem;
-          font-size: 2rem;
-          margin: 0 0.7rem;
+          width: 25%;
+          margin: 0;
+          padding: 0 1rem;
+          font-size: 2.5rem;
           line-height: 1;
-          overflow-wrap: anywhere;
           color: var(--dark);
         }
 
         ul {
-          width: 80%;
+          width: 75%;
           display: flex;
           gap: 0.25rem;
           flex-wrap: wrap;
@@ -88,6 +87,7 @@
         .portfolio-piece {
           margin: 0;
           padding: 0;
+          max-width: 100%;
 
           a {
             position: relative;
@@ -138,24 +138,37 @@
           }
         }
 
-        @include breakpoint('<=small') {
+        @include breakpoint('<=medium') {
           display: block;
-
-          ul {
-            width: 100%;
-            flex-wrap: nowrap;
-            justify-content: flex-start !important;
-          }
+          max-width: 100%;
 
           .piece-type {
             width: 100%;
-            min-width: auto;
-            text-align: left !important;
             margin: 0;
-            margin-bottom: 0.5rem;
+            padding: 0;
+            padding-top: 1.5rem;
+            text-align: left !important;
           }
 
-          .portfolio-piece {
+          ul {
+            width: 100%;
+            justify-content: flex-start !important;
+          }
+        }
+
+        @include breakpoint('<=small') {
+          padding: 2rem 1rem;
+          display: block;
+
+          .piece-type {
+            min-width: auto;
+            width: fit-content !important;
+            margin-bottom: 0.25rem;
+            font-size: 1.75rem !important;
+          }
+
+          ul {
+            flex-wrap: nowrap;
           }
         }
       }

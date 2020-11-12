@@ -300,6 +300,11 @@ h6 {
 h1 {
   font-size: 3rem;
   font-weight: var(--headerFontWeight);
+
+  @include breakpoint('<=small') {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 h2 {
@@ -386,6 +391,16 @@ hr {
 
   &::after {
     right: -1.5rem;
+  }
+
+  @include breakpoint('<=small') {
+    &::before {
+      left: -0.5rem;
+    }
+
+    &::after {
+      right: -0.5rem;
+    }
   }
 }
 
@@ -1489,7 +1504,7 @@ button,
 }
 
 .wrapper {
-  @include padding(6em, 0);
+  padding: 3rem 0;
 
   .inner {
     width: var(--siteWidth);
@@ -1501,6 +1516,11 @@ button,
 
     @include breakpoint('<=medium') {
       width: 100%;
+      padding: 0 2.5rem;
+    }
+
+    @include breakpoint('<=small') {
+      padding: 0 1rem;
     }
   }
 
@@ -1526,14 +1546,6 @@ button,
 
   &.style5 {
     @include wrapper(accent7);
-  }
-
-  @include breakpoint('<=medium') {
-    @include padding(4em, 3em);
-  }
-
-  @include breakpoint('<=small') {
-    @include padding(3em, 2em);
   }
 }
 
@@ -1569,7 +1581,7 @@ button,
   @include vendor('transition', 'transform #{_duration(menu)} ease');
   -webkit-overflow-scrolling: touch;
   background: _palette(accent1, bg);
-  color: _palette(accent1, fg-bold);
+  color: var(--dark);
   height: 100%;
   max-width: 80%;
   overflow-y: auto;

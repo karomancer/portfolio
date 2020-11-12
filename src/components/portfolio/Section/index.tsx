@@ -30,7 +30,6 @@ const Section = () => {
 
   return (
     <section className="portfolio">
-      <h2>Things I've done</h2>
       <div className="portfolio-sections">
         {Object.keys(portfolioTypeMap).map((type, i) => (
           <section

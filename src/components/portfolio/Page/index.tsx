@@ -40,14 +40,12 @@ const Page = ({ piece }: Props) => {
           {piece.type}, {piece.date}
         </h4>
         <h1>{piece.title}</h1>
-        <br />
         {piece.description && (
           <>
             <div className="portfolio-description">
               <H2>Project Description</H2>
               <RichText document={piece.description} color={piece.hex} />
             </div>
-            <br />
           </>
         )}
         {piece.images && (
