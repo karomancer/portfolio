@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'gatsby-image';
 
 import PDFViewer from './PDFViewer';
 
@@ -9,7 +8,7 @@ interface Props {
   asset: ContentfulMedia;
 }
 
-const Asset = ({asset}: Props) => {
+const Asset = ({ asset }: Props) => {
   switch (asset.file.contentType) {
     case 'application/pdf':
       return <PDFViewer pdfUrl={`https:${asset.file.url}`} />;
@@ -17,9 +16,15 @@ const Asset = ({asset}: Props) => {
     case 'image/png':
     case 'image/gif':
       return <img alt={asset.title} src={asset.file.url} />;
-    default: 
+    case 'video/mp4':
+      return (
+        <video controls>
+          <source src={asset.file.url} type={asset.file.contentType} />
+        </video>
+      );
+    default:
       return null;
   }
 };
 
-export default Asset
+export default Asset;

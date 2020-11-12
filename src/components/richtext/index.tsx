@@ -3,6 +3,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 
 import './styles.scss';
+import Asset from './Asset';
 
 const RichText = props => {
   const getAsset = data => {
@@ -14,12 +15,12 @@ const RichText = props => {
     const file = fields?.file && fields?.file['en-US'];
     const url = fields?.url && fields?.url['en-US'];
 
-    switch (file?.contentType) {
-      case 'image/jpeg':
-      case 'image/jpg':
-      case 'image/gif':
-      case 'image/png':
-        return <img alt={title} src={file.url} />;
+    if (file?.contentType) {
+      const asset = {
+        title: title,
+        file: file,
+      }
+      return <Asset asset={asset} />
     }
 
     if (url) {

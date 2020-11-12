@@ -5,7 +5,7 @@ export type ContentfulRichText = {
 };
 
 export type ContentfulFile = {
-  contentType: 'application/pdf' | 'image/jpeg' | 'image/gif' | 'image/png';
+  contentType: 'application/pdf' | 'image/jpeg' | 'image/gif' | 'image/png' | 'video/mp4';
   url: string;
 };
 
