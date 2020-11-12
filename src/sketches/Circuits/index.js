@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import PropTypes from 'prop-types'
 import p5 from 'p5';
 
 import Circuit from './Circuit';
@@ -12,7 +13,7 @@ const GRAY_RGB = [255, 255, 255];
 const CIRCUITS_DIVISIBLE = 100000;
 const MODULO = 200;
 
-const Circuits = () => {
+const Circuits = ({ width, height }) => {
   const circuitsEl = useRef();
   let circuitId = 0;
 
@@ -20,7 +21,7 @@ const Circuits = () => {
     const circuits = [];
 
     p.setup = () => {
-      p.createCanvas(p.windowWidth, p.windowHeight);
+      p.createCanvas(width || p.windowWidth, height || p.windowHeight);
       p.background(GRAY_RGB);
     };
 
@@ -46,6 +47,11 @@ const Circuits = () => {
   }, []);
 
   return <div id="circuits" ref={circuitsEl}></div>;
+};
+
+Circuits.propTypes = {
+  width: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  height: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
 };
 
 export default Circuits;

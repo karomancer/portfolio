@@ -57,7 +57,7 @@
     span {
       text-transform: none;
     }
-  }
+  }  
 
   h2 {
     margin-bottom: var(--bottomMargin);
@@ -87,6 +87,12 @@
       img {
         max-height: 10rem;
       }
+    }
+  }
+
+  .inner {
+    img {
+      border-radius: var(--borderRadius);
     }
   }
 

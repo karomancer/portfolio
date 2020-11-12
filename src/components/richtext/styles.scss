@@ -37,7 +37,7 @@
     border-radius: var(--borderRadius);
     max-height: 20rem;
     object-fit: cover;
-    padding: 0 0.25rem;
+    margin: 0 0.25rem;
 
     @include breakpoint('<=small') {
       object-fit: contain;
