@@ -3,7 +3,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Piece from './Piece';
 
-const Section = () => {
+interface Props {
+  showHeader?: boolean;
+}
+
+const Section = ({ showHeader }: Props) => {
   const {
     allContentfulPortfolioPiece: { nodes: portfolioPieces },
   } = useStaticQuery(graphql`
@@ -29,8 +33,14 @@ const Section = () => {
   });
 
   return (
-    <section className="portfolio">
+    <section className="portfolio" id="one">
       <div className="portfolio-sections">
+        {showHeader && (
+          <div className="section-header">
+            <h1>Things I've Done</h1>
+            <hr />
+          </div>
+        )}
         {Object.keys(portfolioTypeMap).map((type, i) => (
           <section
             data-key={type.toLowerCase()}
@@ -38,7 +48,7 @@ const Section = () => {
             key={`section-${type}`}
           >
             <div>
-              <h3 className="piece-type">{type}</h3>
+              <h2 className="piece-type">{type}</h2>
               <ul>
                 {portfolioTypeMap[type].map(piece => (
                   <Piece key={piece.title} piece={piece} />

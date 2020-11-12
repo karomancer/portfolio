@@ -10,11 +10,27 @@
   width: 100%;
   margin: 0 auto;
 
-  h2 {
-    margin-bottom: 0;
-    height: 1.75rem;
-    color: var(--dark);
+  .section-header {
+    position: relative;
+    height: 8rem;
+    margin: 0;
+    background-color: var(--light);
+
+    h1 {
+      position: absolute;
+      bottom: 0;
+      left: 2rem;
+    }
+
+    hr {
+      position: absolute;
+      margin: 0;
+      left: 0;
+      right: 0;
+      bottom: -0.4rem;
+    }
   }
+  
 
   .portfolio-sections {
     .portfolio-section {
@@ -86,9 +102,8 @@
           width: 25%;
           margin: 0;
           padding: 0 1rem;
-          font-size: 2.5rem;
           line-height: 1;
-          color: var(--dark);
+          color: var(--gray);
         }
 
         ul {

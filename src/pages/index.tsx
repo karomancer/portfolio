@@ -15,7 +15,7 @@ const IndexPage = () => (
   <Layout>
     <Circuits />
     <HeroSection />
-    <PortfolioSection />
+    <PortfolioSection showHeader />
 
     {/* <section id="one" className="wrapper style3 special">
       <div className="inner">
