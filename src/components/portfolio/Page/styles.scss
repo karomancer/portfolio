@@ -7,6 +7,10 @@
 .porfolio-piece-full {
   position: relative;
 
+  h1 {
+    margin-bottom: calc(var(--bottomMargin) * 2.5);
+  }
+
   .back-button {
     position: relative;
     font-weight: 400;
@@ -57,7 +61,7 @@
     span {
       text-transform: none;
     }
-  }  
+  }
 
   h2 {
     margin-bottom: var(--bottomMargin);
@@ -68,6 +72,7 @@
   }
 
   .hero {
+    position: relative;
     width: 100vw;
     max-height: 20rem;
     margin-bottom: 4rem;
@@ -141,7 +146,7 @@
 
   iframe {
     border-radius: var(--borderRadius);
-    
+
     @include breakpoint('<=small') {
       height: 20rem;
     }
