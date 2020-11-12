@@ -1753,56 +1753,6 @@ button,
   }
 }
 
-/* Banner */
-
-#banner {
-  @include vendor('display', 'flex');
-  @include vendor('flex-direction', 'column');
-  @include vendor('justify-content', 'center');
-  cursor: default;
-  height: 100vh;
-  min-height: 35em;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-
-  p {
-    letter-spacing: _size(letter-spacing-alt);
-    text-transform: uppercase;
-
-    a {
-      color: inherit;
-    }
-  }
-
-  &:after {
-    @include vendor('pointer-events', 'none');
-    @include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
-    content: '';
-    background: _palette(bg);
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-  }
-
-  @include breakpoint('<=small') {
-    height: 100vh;
-    min-height: 0;
-
-    h2 {
-      font-size: 1.25em;
-    }
-
-    br {
-      display: none;
-    }
-  }
-}
-
 body.is-preload,
 .main-body.is-preload {
   #banner {
