@@ -1,4 +1,5 @@
 @import '../../assets/sass/libs/vendor';
+@import '../../assets/sass/libs/functions';
 
 .inner {
   position: relative;
@@ -9,6 +10,7 @@
     width: 100%;
     top: 50%;
     transform: translateY(-50%);
+    opacity: 1;
 
     h1 {
       font-size: 8rem;
@@ -37,23 +39,67 @@
 
       // three tone
       path {
-        @include vendor('transition', 'opacity 0.2s ease-in-out');
-        @include vendor('transition-delay', '1.25s');
         opacity: 1;
         fill: var(--light);
 
-        &.light {
-          @include vendor('transition-delay', '1.75s');
+        &.dark {
+          @include vendor('transition', 'opacity 0.5s ease-in-out');
+          @include vendor('transition-delay', '1.5s');
+        }
+
+        &.gray {
+          @include vendor('transition', 'opacity 0.5s ease-in-out');
+          @include vendor('transition-delay', '2.5s');
         }
 
         &.teal {
-          @include vendor('transition-delay', '2.25s');
+          @include vendor('transition', 'opacity 0.5s ease-in-out');
+          @include vendor('transition-delay', '3.5s');
           fill: var(--teal);
         }
 
         &.white {
           fill: white;
         }
+      }
+    }
+  }
+
+  .more {
+    @include vendor(
+      'transition',
+      ('transform 0.75s ease', 'opacity 0.75s ease', 'color 0.2s ease')
+    );
+    @include vendor('transition-delay', '5s');
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    bottom: 2rem;
+    border: none;
+    color: inherit;
+    letter-spacing: 0.15rem;
+    opacity: 1;
+    outline: 0;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+
+    &:after {
+      @include vendor('transition', ('bottom 0.5s ease', 'color 0.2s ease'));
+      display: block;
+      position: absolute;
+      bottom: 0.5rem;
+      left: 0;
+      right: 0;
+      content: '⇣';
+    }
+
+    &:hover {
+      color: var(--gray);
+
+      &:after {
+        bottom: 0rem;
       }
     }
   }

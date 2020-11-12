@@ -12,15 +12,10 @@ const Hero = ({}) => {
   return (
     <>
       <Circuits />
-
       <section id="banner">
         <div className="inner">
           <div className="bust-container">
-            <Bust
-              onLoad={e => {
-                debugger;
-              }}
-            />
+            <Bust />
           </div>
           <div className="title-and-byline">
             <h1>karina chow</h1>

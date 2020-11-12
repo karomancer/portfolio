@@ -1793,35 +1793,39 @@ button,
   position: relative;
   text-align: center;
 
-  h1 {
-    @include vendor('transform', 'scale(1)');
-    @include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
-    display: inline-block;
-    opacity: 1;
-    padding: 0.35em 1em;
-    position: relative;
-    z-index: 1;
+  .title-and-byline {
+    h1 {
+      @include vendor('transition', ('opacity 1s ease'));
+      @include vendor('transition-delay', '3.5s');
+      display: inline-block;
+      opacity: 1;
+      padding: 0.2em 1em;
+      position: relative;
+      z-index: 1;
 
-    &:before,
-    &:after {
-      @include vendor('transition', 'width 0.85s ease');
-      @include vendor('transition-delay', '0.25s');
-      background: _palette(fg-bold);
-      content: '';
-      display: block;
-      height: 2px;
-      position: absolute;
-      width: 100%;
+      &:after {
+        @include vendor('transition', 'width 0.85s ease');
+        @include vendor('transition-delay', '3.5s');
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        border: 3px solid var(--gray);
+        border-radius: var(--borderRadius);
+        width: 100%;
+        content: '';
+        display: block;
+      }
+
+      &:after {
+        bottom: 0;
+        right: 0;
+      }
     }
 
-    &:before {
-      top: 0;
-      left: 0;
-    }
-
-    &:after {
-      bottom: 0;
-      right: 0;
+    .byline {
+      @include vendor('transition', ('opacity 0.5s ease'));
+      @include vendor('transition-delay', '4s');
     }
   }
 
@@ -1834,50 +1838,9 @@ button,
     }
   }
 
-  .more {
-    @include vendor(
-      'transition',
-      ('transform 0.75s ease', 'opacity 0.75s ease')
-    );
-    @include vendor('transition-delay', '3.5s');
-    @include vendor('transform', 'translateY(0)');
-    border: none;
-    bottom: 0;
-    color: inherit;
-    font-size: 0.8em;
-    height: 8.5em;
-    left: 50%;
-    letter-spacing: _size(letter-spacing-alt);
-    margin-left: -8.5em;
-    opacity: 1;
-    outline: 0;
-    padding-left: _size(letter-spacing-alt);
-    position: absolute;
-    text-align: center;
-    text-transform: uppercase;
-    width: 16em;
-    z-index: 1;
-
-    &:after {
-      background-image: url('../images/arrow.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      bottom: 4em;
-      content: '';
-      display: block;
-      height: 1.5em;
-      left: 50%;
-      margin: 0 0 0 -0.75em;
-      position: absolute;
-      width: 1.5em;
-    }
-  }
-
   &:after {
     @include vendor('pointer-events', 'none');
     @include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
-    @include vendor('transition-delay', '1.25s');
     content: '';
     background: _palette(bg);
     display: block;
@@ -1915,10 +1878,13 @@ body.is-preload,
       @include vendor('transform', 'scale(0.95)');
       opacity: 0;
 
-      &:before,
       &:after {
         width: 0;
       }
+    }
+
+    .byline {
+      opacity: 0;
     }
 
     .more {
@@ -1928,6 +1894,14 @@ body.is-preload,
 
     &:after {
       opacity: 1;
+    }
+
+    .inner .bust-container svg {
+      .gray,
+      .dark,
+      .teal {
+        opacity: 0;
+      }
     }
   }
 }
