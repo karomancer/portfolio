@@ -1,6 +1,5 @@
 import '../assets/sass/resume.scss';
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import CircuitsHero from '../components/CircuitsHero';
@@ -19,6 +18,7 @@ const ResumePage = () => (
         <object className="resume-pdf" data={RESUME_URL} type="application/pdf">
           <embed src={RESUME_URL} type="application/pdf" />
         </object>
+        <PDFViewer pdfUrl={RESUME_URL} />
       </div>
     </section>
   </Layout>

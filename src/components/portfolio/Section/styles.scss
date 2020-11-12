@@ -18,20 +18,38 @@
 
   .portfolio-sections {
     .portfolio-section {
+      &[data-key='illustration & graphic design'] {
+        .portfolio-piece {
+          a,
+          img, 
+          .title {
+            width: calc(var(--height) * 1.2);
+          }
+        }
+      }
+
       &[data-key='cosplay'] {
         --cosplayHeight: calc(var(--height) * 2);
 
         .portfolio-piece {
           a,
-          img {
-            height: var(--cosplayHeight);
-          }
-
+          img, 
           .title {
             height: var(--cosplayHeight);
           }
         }
       }
+
+      &[data-key='ux research'] {
+        .portfolio-piece {
+          a,
+          img, 
+          .title {
+            width: calc(var(--height) * 1.5);
+          }
+        }
+      }
+
 
       &:nth-child(odd) {
         background-color: var(--light);
