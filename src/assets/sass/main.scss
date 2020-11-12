@@ -1601,7 +1601,7 @@ button,
   @include vendor('transform', 'translateX(20em)');
   @include vendor('transition', 'transform #{_duration(menu)} ease');
   -webkit-overflow-scrolling: touch;
-  background: _palette(accent1, bg);
+  background: var(--dark);
   color: var(--dark);
   height: 100%;
   max-width: 80%;
@@ -1615,12 +1615,12 @@ button,
 
   ul {
     list-style: none;
+    margin-top: 2rem;
     padding: 0;
 
     > li {
-      border-top: solid 1px _palette(accent1, border);
-      margin: 0.5em 0 0 0;
-      padding: 0.5em 0 0 0;
+      margin: 0;
+      padding: 0;
 
       &:first-child {
         border-top: 0 !important;
@@ -1629,13 +1629,19 @@ button,
       }
 
       > a {
+        @include vendor('transition', 'color 0.1s ease-in');
+        font-weight: var(--condensedFontBoldWeight);
+        text-transform: uppercase;
         border: 0;
-        color: inherit;
+        color: white;
         display: block;
-        font-size: 0.8em;
         letter-spacing: _size(letter-spacing-alt);
         outline: 0;
         text-decoration: none;
+
+        &:hover {
+          color: var(--teal);
+        }
 
         @include breakpoint('<=small') {
           line-height: 3em;
@@ -1732,27 +1738,30 @@ button,
         padding: 0;
 
         > a {
+          @include vendor('transition', 'color #{_duration(transitions)} ease');
           border: 0;
           color: _palette(fg-bold);
           display: block;
           font-size: 0.8em;
+          font-family: var(--strongFontFamily);
           letter-spacing: _size(letter-spacing-alt);
           padding: 0 1.5em;
           text-transform: uppercase;
 
           &.menuToggle {
-            outline: 0;
             position: relative;
+            outline: 0;
+
+            > span {
+              vertical-align: middle;
+            }
 
             &:after {
-              background-image: url('../images/bars.png');
-              background-position: right center;
-              background-repeat: no-repeat;
-              content: '';
+              content: '≡';
               display: inline-block;
-              height: 3.75em;
               vertical-align: top;
-              width: 2em;
+              font-size: 2rem;
+              margin-left: 0.25rem;
             }
 
             @include breakpoint('<=small') {
@@ -1762,6 +1771,10 @@ button,
                 display: none;
               }
             }
+          }
+
+          &:hover {
+            color: var(--dark);
           }
 
           @include breakpoint('<=small') {
