@@ -37,8 +37,8 @@ const Section = ({ showHeader }: Props) => {
       <div className="portfolio-sections">
         {showHeader && (
           <div className="section-header">
-            <h1>Things I've Done</h1>
             <hr />
+            <h1>Things I've Done</h1>
           </div>
         )}
         {Object.keys(portfolioTypeMap).map((type, i) => (

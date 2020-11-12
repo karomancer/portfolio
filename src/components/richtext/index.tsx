@@ -37,9 +37,16 @@ const RichText = props => {
               data-pen-title={title}
             >
               <span>
+                <span className="reload-pen">
+                  Not seeing the pen?
+                  <br />
+                  <button onClick={() => location.reload()}>Reload codepen</button>
+                </span>
+                <span className="see-pen">
                 See the Pen <a href={url}>{title}</a> by karomancer (
                 <a href="https://codepen.io/karomancer">@karomancer</a>) on{' '}
                 <a href="https://codepen.io">CodePen</a>.
+                </span>
               </span>
             </p>
           </>

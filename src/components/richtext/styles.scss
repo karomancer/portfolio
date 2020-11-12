@@ -58,13 +58,40 @@
 
   .codepen {
     height: 600px;
+    border-radius: var(--borderRadius);
     box-sizing: border-box;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
-    border: 2px solid;
+    border: 2px solid var(--dark);
     margin: 1em 0;
     padding: 1em;
+
+    .reload-pen {
+      display: block;
+      text-align: center;
+
+      button {
+        border-radius: var(--borderRadius);
+        border: 1px solid var(--dark);
+        color: var(--dark);
+        box-shadow: 1px 1px 8px 2px var(--light);
+        margin-top: 1rem;
+
+        &:hover {
+          background-color: var(--light);
+        }
+      }
+    }
+
+    .see-pen {
+      position: absolute;
+      text-align: center;
+      bottom: 2rem;
+      left: 0;
+      right: 0;
+    }    
   }
 }
 
