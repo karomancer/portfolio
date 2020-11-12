@@ -24,11 +24,11 @@ const Page = ({ piece }: Props) => {
 
   return (
     <div className="porfolio-piece-full">
-      {piece.hero && (
+      {piece.hero ? (
         <div className="hero">
           <Img fluid={piece.hero.fluid} />
         </div>
-      )}
+      ) : <hr style={{borderColor: piece.hex}} />}
       <div className="inner">
         <button
           className="back-button"
