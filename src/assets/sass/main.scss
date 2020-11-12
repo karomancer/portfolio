@@ -1690,11 +1690,10 @@ button,
   );
   background: _palette(bg);
   height: 3em;
-  left: 0;
+  right: 0;
   line-height: 3em;
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: _misc(z-index-base);
 
   h1 {
