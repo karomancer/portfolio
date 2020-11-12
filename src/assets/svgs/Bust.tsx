@@ -1,12 +1,14 @@
 import React from 'react';
 
 interface SVGProps {
+  onLoad?: (e: React.SyntheticEvent) => void;
   width: number | string;
   height: number | string;
 }
 
-const Bust = ({ width, height }: SVGProps) => (
+const Bust = ({ onLoad, width, height }: SVGProps) => (
   <svg
+    onLoad={onLoad}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 765 1051"
     width={width}

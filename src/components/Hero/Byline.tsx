@@ -98,7 +98,7 @@ const Byline = () => {
   };
 
   useEffect(() => {
-    setTimeout(changeByline, 2800);
+    setTimeout(changeByline, 5000);
   });
 
   return <h3 className="byline" ref={bylineEl}>{byline}</h3>;

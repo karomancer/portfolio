@@ -18,7 +18,8 @@ const Piece = ({ piece }: Props) => {
         <div
           className="title"
           style={{
-            background: `linear-gradient(${piece.hex} 0%, ${piece.hex} 10%, transparent 100%)`,
+            backgroundColor: piece.hex,
+            // background: `linear-gradient(${piece.hex} 0%, ${piece.hex} 10%, transparent 100%)`,
           }}
         >
           <h4>

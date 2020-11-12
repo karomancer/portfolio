@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
-import Hero from '../components/Hero';
+import HeroSection from '../components/Hero';
 import PortfolioSection from '../components/portfolio/Section';
 
 import Circuits from '../sketches/Circuits';
@@ -14,9 +14,8 @@ import config from '../../config';
 const IndexPage = () => (
   <Layout>
     <Circuits />
-    <section id="banner">
-      <Hero />
-    </section>
+    <HeroSection />
+    <PortfolioSection />
 
     {/* <section id="one" className="wrapper style3 special">
       <div className="inner">
@@ -54,7 +53,6 @@ const IndexPage = () => (
       </div>
     </section> */}
 
-    <section id="two" className="wrapper alt style3">
       {/* <section className="spotlight">
         <div className="image">
           <img src={pic1} alt="" />
@@ -87,10 +85,6 @@ const IndexPage = () => (
           </p>
         </div>
       </section> */}
-      <section className="spotlight">
-        <PortfolioSection />
-      </section>
-    </section>
 
     {/* <section id="three" className="wrapper style3 special">
       <div className="inner">
