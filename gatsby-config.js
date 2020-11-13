@@ -8,7 +8,10 @@ module.exports = {
     title: config.siteTitle,
   },
   plugins: [
+    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -33,8 +36,6 @@ module.exports = {
         failOnError: true,
       },
     },
-    'gatsby-plugin-sass',
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-source-contentful',
       options: {
