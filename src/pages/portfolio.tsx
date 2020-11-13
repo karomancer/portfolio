@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import CircuitsHero from '../components/CircuitsHero';
 import PortfolioSection from '../components/portfolio/Section';
 
+
 const PortfolioPage = () => (
   <Layout>
     <Helmet>

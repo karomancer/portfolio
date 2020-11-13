@@ -1,15 +1,42 @@
 import React from 'react';
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 export default function Nav({ onMenuToggle = () => {}, color }) {
+  const slugMatches = slug => {
+    if (typeof window !== undefined) {
+      return window.location.pathname === slug
+    }
+    return false;
+  };
+
+  const LINKS = [
+    { title: 'Home', slug: '/' },
+    { title: 'Portfolio', slug: '/portfolio' },
+    { title: 'Résumé', slug: '/resume' },
+  ];
+
+  const navLinks = LINKS.map(({ title, slug }) => (
+    <li>
+      {slugMatches(slug) ? (
+        <span>{title}</span>
+      ) : (
+        <AniLink cover bg="#50bfa0" direction="down" to={slug}>
+          {title}
+        </AniLink>
+      )}
+    </li>
+  ));
+
   return (
     <nav id="nav">
       <ul>
         <li className="special">
           <a
-            style={color && {
-              color: color,
-            }}
+            style={
+              color && {
+                color: color,
+              }
+            }
             href="#menu"
             onClick={e => {
               e.preventDefault();
@@ -20,17 +47,7 @@ export default function Nav({ onMenuToggle = () => {}, color }) {
             <span>Menu</span>
           </a>
           <div id="menu">
-            <ul>
-              <li>
-                <AniLink cover bg="#50bfa0" direction="down" to="/">Home</AniLink>
-              </li>
-              <li>
-                <AniLink cover bg="#50bfa0" direction="down" to="/portfolio">Portfolio</AniLink>
-              </li>
-              <li>
-                <AniLink cover bg="#50bfa0" direction="down" to="/resume">Resume</AniLink>
-              </li>
-            </ul>
+            <ul>{navLinks}</ul>
             <a
               className="close"
               onClick={e => {

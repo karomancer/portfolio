@@ -1625,7 +1625,10 @@ button,
         padding-top: 0 !important;
       }
 
-      > a {
+        
+
+      > a,
+      > span {
         @include vendor('transition', 'color 0.1s ease-in');
         font-weight: var(--condensedFontBoldWeight);
         text-transform: uppercase;
@@ -1636,13 +1639,17 @@ button,
         outline: 0;
         text-decoration: none;
 
-        &:hover {
-          color: var(--teal);
-        }
-
         @include breakpoint('<=small') {
           line-height: 3em;
         }
+      }
+
+      > span {
+        color: var(--teal);
+      }
+
+      > a:hover {
+        color: var(--light);
       }
     }
   }

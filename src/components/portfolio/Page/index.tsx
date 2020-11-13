@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import Helmet from 'react-helmet';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import Asset from '../../richtext/Asset';
 import RichText from '../../richtext';
@@ -37,12 +38,15 @@ const Page = ({ piece }: Props) => {
           <hr style={{ borderColor: piece.hex }} />
         )}
         <div className="inner">
-          {/* <button
-          className="back-button"
-          onClick={() => typeof window !== 'undefined' && window.history.back()}
-        >
-          Back
-        </button> */}
+          <AniLink
+            cover
+            direction="left"
+            hex="#50bfa0"
+            className="back-button"
+            to="/portfolio"
+          >
+            Back
+          </AniLink>
           <h4 className="type-role">
             {piece.type}, {piece.date}
           </h4>
