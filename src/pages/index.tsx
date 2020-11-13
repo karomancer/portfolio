@@ -13,7 +13,6 @@ import pic3 from '../assets/images/pic03.jpg';
 import config from '../../config';
 const IndexPage = () => (
   <Layout>
-    <Circuits />
     <HeroSection />
     <PortfolioSection showHeader />
 
