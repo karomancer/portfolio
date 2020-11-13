@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './styles.scss'
+import './styles.scss';
 
 const ALPHABET = 'abcdefghijklmnopqrstuvwxyzαβΓΔδεζηθικΛλμνΞξΠπρΣσςτυΦφχΨψΩω';
 const BYLINE_OPTIONS = [
@@ -25,7 +25,7 @@ const Byline = () => {
 
   const setByline = newByline => {
     if (bylineEl && bylineEl.current) {
-  // @ts-ignore
+      // @ts-ignore
       bylineEl.current.innerText = newByline;
     }
   };
@@ -56,40 +56,49 @@ const Byline = () => {
     }
 
     const length = bylineArray.length;
-    const midpoint = Math.floor(length / 2);
 
     byline = newByline;
 
+    let indexTimeouts = [];
     const scrambleIndex = (index, times) => {
-      setTimeout(() => {
-        if (times < 5) {
-          bylineArray[index] =
-            newBylineArray[index] !== ' ' ? getRandomLetter() : ' ';
-          setByline(bylineArray.join(''));
-          scrambleIndex(index, ++times);
-        } else {
-          bylineArray[index] = newBylineArray[index];
-          setByline(bylineArray.join(''));
-        }
-      }, 80);
+      indexTimeouts.push(
+        setTimeout(() => {
+          if (times < 5) {
+            bylineArray[index] =
+              newBylineArray[index] !== ' ' ? getRandomLetter() : ' ';
+            setByline(bylineArray.join(''));
+            scrambleIndex(index, ++times);
+          } else {
+            bylineArray[index] = newBylineArray[index];
+            setByline(bylineArray.join(''));
+          }
+        }, 80)
+      );
     };
 
     const indexArray = bylineArray.map((_, i) => i);
 
+    let letterTimeouts = [];
     const scrambleRandomLetters = (index, indices) => {
-      setTimeout(() => {
-        const indicesLeft = indices.length;
-        const i = getRandomIndex(indicesLeft);
+      letterTimeouts.push(
+        setTimeout(() => {
+          const indicesLeft = indices.length;
+          const i = getRandomIndex(indicesLeft);
 
-        if (indices.length > 0) {
-          scrambleIndex(indices[i], 0);
-          indices.splice(i, 1);
-          scrambleRandomLetters(index, indices);
-        } else {
-          clearTimeout(timeout);
-          timeout = setTimeout(changeByline, 1800);
-        }
-      }, 400);
+          if (indices.length > 0) {
+            scrambleIndex(indices[i], 0);
+            indices.splice(i, 1);
+            scrambleRandomLetters(index, indices);
+          } else {
+            clearTimeout(timeout);
+            clearTimeout(letterTimeouts.pop());
+            if (letterTimeouts.length === 0) {
+              indexTimeouts.forEach(t => clearTimeout(t));
+            }
+            timeout = setTimeout(changeByline, 1800);
+          }
+        }, 400)
+      );
     };
 
     scrambleRandomLetters(getRandomIndex(length), indexArray);
@@ -101,7 +110,11 @@ const Byline = () => {
     setTimeout(changeByline, 7000);
   });
 
-  return <h3 className="byline" ref={bylineEl}>{byline}</h3>;
+  return (
+    <h3 className="byline" ref={bylineEl}>
+      {byline}
+    </h3>
+  );
 };
 
 export default Byline;

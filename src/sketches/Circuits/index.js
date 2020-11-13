@@ -10,7 +10,7 @@ import Circuit from './Circuit';
 
 const GRAY_RGB = [255, 255, 255];
 
-const CIRCUITS_DIVISIBLE = 100000;
+const CIRCUITS_DIVISIBLE = 200000;
 const MODULO = 200;
 
 const Circuits = ({ width, height }) => {
