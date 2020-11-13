@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default function Nav({ onMenuToggle = () => {}, color }) {
   return (
@@ -22,13 +22,13 @@ export default function Nav({ onMenuToggle = () => {}, color }) {
           <div id="menu">
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <AniLink cover bg="#50bfa0" direction="down" to="/">Home</AniLink>
               </li>
               <li>
-                <Link to="/portfolio">Portfolio</Link>
+                <AniLink cover bg="#50bfa0" direction="down" to="/portfolio">Portfolio</AniLink>
               </li>
               <li>
-                <Link to="/resume">Resume</Link>
+                <AniLink cover bg="#50bfa0" direction="down" to="/resume">Resume</AniLink>
               </li>
             </ul>
             <a
