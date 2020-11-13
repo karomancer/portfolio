@@ -48,6 +48,9 @@ class Layout extends Component {
               meta={[
                 { name: 'description', content: 'Spectral' },
                 { name: 'keywords', content: 'site, web' },
+                { name: 'og:title', content: 'Karina Chow: Jack of all Trades'},
+                { name: 'og:url', content: 'http://www.karinachowtime.com'},
+                { name: 'og:image', content: 'http://www.karinachowtime.com/images/og_image.png'},
               ]}
             >
               <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
