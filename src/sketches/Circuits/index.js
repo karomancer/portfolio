@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import p5 from 'p5';
 
 import Circuit from './Circuit';
@@ -23,6 +23,10 @@ const Circuits = ({ width, height }) => {
     p.setup = () => {
       p.createCanvas(width || p.windowWidth, height || p.windowHeight);
       p.background(GRAY_RGB);
+
+      setTimeout(() => {
+        p.noLoop();
+      }, 60000);
     };
 
     p.draw = () => {
