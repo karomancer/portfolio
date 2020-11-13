@@ -30,12 +30,12 @@ const Page = ({ piece }: Props) => {
         </div>
       ) : <hr style={{borderColor: piece.hex}} />}
       <div className="inner">
-        <button
+        {/* <button
           className="back-button"
           onClick={() => typeof window !== 'undefined' && window.history.back()}
         >
           Back
-        </button>
+        </button> */}
         <h4 className="type-role">
           {piece.type}, {piece.date}
         </h4>
