@@ -1,9 +1,11 @@
 import React from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
+const isWindowDefined = typeof window !== 'undefined';
+
 export default function Nav({ onMenuToggle = () => {}, color }) {
   const slugMatches = slug => {
-    if (typeof window !== undefined) {
+    if (isWindowDefined) {
       return window.location.pathname === slug
     }
     return false;
