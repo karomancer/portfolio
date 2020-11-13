@@ -1,5 +1,6 @@
 import '../assets/sass/resume.scss';
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import Layout from '../components/Layout';
 import CircuitsHero from '../components/CircuitsHero';
@@ -9,6 +10,9 @@ const RESUME_URL = '/pdfs/resume.pdf';
 
 const ResumePage = () => (
   <Layout>
+    <Helmet>
+      <title>Karina Chow | Résumé</title>
+    </Helmet>
     <section className="page resume">
       <CircuitsHero>Résumé</CircuitsHero>
       <div className="inner">

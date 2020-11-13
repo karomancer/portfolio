@@ -1,12 +1,15 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import Layout from '../components/Layout';
 import CircuitsHero from '../components/CircuitsHero';
 import PortfolioSection from '../components/portfolio/Section';
 
-
 const PortfolioPage = () => (
   <Layout>
+    <Helmet>
+      <title>Karina Chow | Portfolio</title>
+    </Helmet>
     <div className="page">
       <CircuitsHero>Things I've Done</CircuitsHero>
       <PortfolioSection />
