@@ -46,15 +46,34 @@ class Layout extends Component {
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
-                { name: 'description', content: 'Spectral' },
-                { name: 'keywords', content: 'site, web' },
-                { name: 'og:title', content: 'Karina Chow: Jack of all Trades'},
-                { name: 'og:url', content: 'http://www.karinachowtime.com'},
-                { name: 'og:image', content: 'http://www.karinachowtime.com/images/og_image.png'},
+                {
+                  name: 'description',
+                  content: 'Screw the rules, I have green hair.',
+                },
+                {
+                  name: 'keywords',
+                  content:
+                    'karina chow, karina, chow, portfolio site, portfolio, personal site, personal website',
+                },
+                {
+                  name: 'og:title',
+                  content: 'Karina Chow | Jack of all Trades',
+                },
+                { name: 'og:url', content: 'http://www.karinachowtime.com' },
+                {
+                  name: 'og:image',
+                  content: 'http://www.karinachowtime.com/images/og_image.png',
+                },
               ]}
             >
-              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-              <link rel="stylesheet" href="https://use.typekit.net/vgz8xeo.css" />
+              <script
+                async
+                src="https://static.codepen.io/assets/embed/ei.js"
+              ></script>
+              <link
+                rel="stylesheet"
+                href="https://use.typekit.net/vgz8xeo.css"
+              />
               <html lang="en" />
             </Helmet>
             <div
