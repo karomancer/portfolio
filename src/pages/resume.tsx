@@ -11,7 +11,7 @@ const RESUME_URL = '/pdfs/resume.pdf';
 const ResumePage = () => (
   <Layout>
     <Helmet>
-      <title>Karina Chow | Résumé</title>
+      <title>Résumé | Karina Chow</title>
     </Helmet>
     <section className="page resume">
       <CircuitsHero>Résumé</CircuitsHero>

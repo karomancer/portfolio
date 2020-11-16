@@ -9,7 +9,7 @@ import PortfolioSection from '../components/portfolio/Section';
 const PortfolioPage = () => (
   <Layout>
     <Helmet>
-      <title>Karina Chow | Portfolio</title>
+      <title>Portfolio | Karina Chow</title>
     </Helmet>
     <div className="page">
       <CircuitsHero>Things I've Done</CircuitsHero>

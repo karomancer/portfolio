@@ -24,10 +24,25 @@ const Page = ({ piece }: Props) => {
     </li>
   );
 
+  const title = `${piece.title} | Karina Chow`
+
   return (
     <>
-      <Helmet>
-        <title>{`Karina Chow | ${piece.title}`}</title>
+      <Helmet
+        title={title}
+        meta={[
+          {
+            name: 'og:title',
+            content: title,
+          },
+          { name: 'og:url', content: `http://www.karinachowtime.com/portfolio/${piece.slug}` },
+          {
+            name: 'og:image',
+            content: piece.thumbnail,
+          },
+        ]}
+      >
+        <title>{title}</title>
       </Helmet>
       <div className="porfolio-piece-full">
         {piece.hero ? (
