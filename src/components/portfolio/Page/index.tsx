@@ -38,7 +38,7 @@ const Page = ({ piece }: Props) => {
           { name: 'og:url', content: `http://www.karinachowtime.com/portfolio/${piece.slug}` },
           {
             name: 'og:image',
-            content: piece.thumbnail,
+            content: piece.thumbnail.file.url,
           },
         ]}
       >
