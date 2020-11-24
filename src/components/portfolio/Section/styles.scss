@@ -115,7 +115,7 @@
           color: var(--gray);
         }
 
-        ul {
+        ul.pieces-desktop {
           width: 75%;
           display: flex;
           gap: 0.25rem;
@@ -124,12 +124,23 @@
           list-style: none;
           padding: 0.5rem 0;
           margin: 0;
+
+          .portfolio-piece {
+            margin: 0;
+          padding: 0;
+          }
         }
 
-        .portfolio-piece {
-          margin: 0;
-          padding: 0;
-          max-width: 100%;
+        ul.carousel {
+          display: none;
+          
+          @include breakpoint('<=small') {
+            margin-top: 0.5rem;
+            display: flex !important;
+          }
+        }
+
+        .portfolio-piece {          
 
           a {
             position: relative;
@@ -209,8 +220,8 @@
             font-size: 1.75rem !important;
           }
 
-          ul {
-            flex-wrap: nowrap;
+          ul.pieces-desktop {
+            display: none;
           }
         }
       }

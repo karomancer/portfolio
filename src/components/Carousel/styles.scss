@@ -1,0 +1,26 @@
+@import '../../assets/sass/libs/breakpoints';
+
+.carousel {
+  width: 100vw;
+
+  ul {
+    display: flex;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 0.5rem 0;
+    list-style: none;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: scroll;
+
+    & > li {
+      &:first-child {
+        margin-left: 1rem !important;
+      }
+
+      &:last-child a {
+          margin-right: 1rem !important;
+      }
+    }
+  }
+}

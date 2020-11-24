@@ -32,6 +32,10 @@ const Page = ({ piece }: Props) => {
         title={title}
         meta={[
           {
+            name: 'description',
+            content: `Explore Karina's "${piece.title}" project.`,
+          },
+          {
             name: 'og:title',
             content: title,
           },

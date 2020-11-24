@@ -1,6 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import Carousel from '../../Carousel'
+
 import Piece from './Piece';
 
 interface Props {
@@ -49,11 +51,16 @@ const Section = ({ showHeader }: Props) => {
           >
             <div>
               <h2 className="piece-type">{type}</h2>
-              <ul>
-                {portfolioTypeMap[type].map(piece => (
+              <ul className="pieces-desktop">
+              {portfolioTypeMap[type].map(piece => (
                   <Piece key={piece.title} piece={piece} />
                 ))}
               </ul>
+              <Carousel>
+                {portfolioTypeMap[type].map(piece => (
+                  <Piece key={piece.title} piece={piece} />
+                ))}
+              </Carousel>
             </div>
           </section>
         ))}

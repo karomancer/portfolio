@@ -45,12 +45,11 @@
     }
 
     @include breakpoint('<=small') {
-      &::before {
-        left: -0.75rem;
-      }
+      vertical-align: baseline;
 
-      &:hover::before {
-        left: -1rem;
+      &::before {
+        position: static;
+        padding-right: 0.25rem;
       }
     }
   }
