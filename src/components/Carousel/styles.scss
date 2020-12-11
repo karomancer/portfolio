@@ -1,7 +1,7 @@
 @import '../../assets/sass/libs/breakpoints';
 
 .carousel {
-  width: 100vw;
+  display: none;
 
   ul {
     display: flex;
@@ -15,12 +15,16 @@
 
     & > li {
       &:first-child {
-        margin-left: 1rem !important;
-      }
+        margin-left: 1rem !important; }
 
       &:last-child a {
           margin-right: 1rem !important;
       }
     }
+  }
+
+  @include breakpoint('<=small') {
+    display: block;
+    width: 100vw;
   }
 }
