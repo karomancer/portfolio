@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import Helmet from 'react-helmet';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from 'gatsby'
 
 import Asset from '../../richtext/Asset';
 import RichText from '../../richtext';
@@ -57,7 +57,7 @@ const Page = ({ piece }: Props) => {
           <hr style={{ borderColor: piece.hex }} />
         )}
         <div className="inner">
-          <AniLink
+          <Link
             cover
             direction="left"
             hex="#50bfa0"
@@ -65,7 +65,7 @@ const Page = ({ piece }: Props) => {
             to="/portfolio"
           >
             Back
-          </AniLink>
+          </Link>
           <h4 className="type-role">
             {piece.type}, {piece.date}
           </h4>

@@ -1,5 +1,5 @@
 import React from 'react';
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from 'gatsby'
 
 import './styles.scss';
 
@@ -13,7 +13,7 @@ const Piece = ({ piece }: Props) => {
   console.log(piece.hex)
   return (
     <li className="portfolio-piece">
-      <AniLink paintDrip direction="right" duration={0.5} hex={piece.hex} to={`/portfolio/${piece.slug}`}>
+      <Link to={`/portfolio/${piece.slug}`}>
         <img src={piece.thumbnail.file.url} />
         <div
           className="title"
@@ -26,7 +26,7 @@ const Piece = ({ piece }: Props) => {
             {piece.title} <span>({piece.date})</span>
           </h4>
         </div>
-      </AniLink>
+      </Link>
     </li>
   );
 };

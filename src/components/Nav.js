@@ -1,5 +1,5 @@
 import React from 'react';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from 'gatsby'
 
 const isWindowDefined = typeof window !== 'undefined';
 
@@ -22,9 +22,9 @@ export default function Nav({ onMenuToggle = () => {}, color }) {
       {slugMatches(slug) ? (
         <span>{title}</span>
       ) : (
-        <AniLink cover bg="#50bfa0" direction="down" to={slug}>
+        <Link cover bg="#50bfa0" direction="down" to={slug}>
           {title}
-        </AniLink>
+        </Link>
       )}
     </li>
   ));
