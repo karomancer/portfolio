@@ -30,7 +30,7 @@ export const portfolioPieceFragment = graphql`
         url
       }
     }
-    date(formatString: "YYYY")
+    date(formatString: "MMMM Do, YYYY")
     deliverables {
       title
       description

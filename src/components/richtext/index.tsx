@@ -90,7 +90,7 @@ const RichText = props => {
     }
   };
 
-  const options = {
+  let options = {
     renderNode: {
       [BLOCKS.HEADING_2]: (node, children) => (
         <h2 style={{ color: props.color }}>{node.content[0].value}</h2>
@@ -102,6 +102,21 @@ const RichText = props => {
       'embedded-entry-inline': ({ data }, children) => getAsset(data),
     },
   };
+
+  if (props.plainText) {
+    const nullFn = () => null
+    const plainFn = node => node.content[0].value
+    options = {
+      renderNode: {
+        [BLOCKS.HEADING_1]: nullFn,
+        [BLOCKS.HEADING_2]: nullFn,
+        [BLOCKS.HEADING_3]: nullFn,
+        [BLOCKS.PARAGRAPH]: plainFn,
+        [BLOCKS.QUOTE]: plainFn,
+        [BLOCKS.EMBEDDED_ASSET]: () => null,
+      }
+    }
+  }
 
   return (
     <div className="richtext">

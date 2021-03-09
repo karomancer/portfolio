@@ -312,7 +312,7 @@ h2 {
   font-weight: var(--headerFontWeight);
   font-size: 1.35em;
   line-height: 1.75em;
-  text-transform: uppercase;
+  color: var(--gray);
 
   @include breakpoint('<=small') {
     font-size: 1.1em;
