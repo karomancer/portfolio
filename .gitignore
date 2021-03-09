@@ -11,3 +11,5 @@ yarn.lock
 
 # Variables
 .env
+.env.production
+.env.development

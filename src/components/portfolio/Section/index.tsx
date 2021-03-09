@@ -1,9 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Carousel from '../../Carousel'
+import Carousel from '../../Carousel';
 
-import Piece from './Piece';
+import Shot from './Shot';
 
 interface Props {
   showHeader?: boolean;
@@ -11,59 +11,43 @@ interface Props {
 
 const Section = ({ showHeader }: Props) => {
   const {
-    allContentfulPortfolioPiece: { nodes: portfolioPieces },
+    allDribbbleShot: { edges: allDribbbleShot },
   } = useStaticQuery(graphql`
     query PortfolioIndexQuery {
-      allContentfulPortfolioPiece(
-        sort: { fields: [date, title], order: [DESC, ASC] }
-      ) {
-        nodes {
-          ...App__PortfolioPieceFragment
+      allDribbbleShot(limit: 4) {
+        edges {
+          node {
+            description
+            title
+            url
+            updated(formatString: "MM/DD/YYYY")
+            localCover {
+              absolutePath
+              relativePath
+              url
+            }
+          }
         }
       }
     }
   `);
 
-  const portfolioTypeMap = {};
-
-  portfolioPieces.forEach(piece => {
-    if (!portfolioTypeMap[piece.type]) {
-      portfolioTypeMap[piece.type] = [piece];
-    } else {
-      portfolioTypeMap[piece.type].push(piece);
-    }
-  });
+  const dribbbleShots = allDribbbleShot.map(shot => shot.node);
 
   return (
     <section className="portfolio" id="one">
+      {showHeader && (
+        <div className="section-header">
+          <hr />
+          <h1>Things I've Done</h1>
+        </div>
+      )}
       <div className="portfolio-sections">
-        {showHeader && (
-          <div className="section-header">
-            <hr />
-            <h1>Things I've Done</h1>
-          </div>
-        )}
-        {Object.keys(portfolioTypeMap).map((type, i) => (
-          <section
-            data-key={type.toLowerCase()}
-            className="portfolio-section"
-            key={`section-${type}`}
-          >
-            <div>
-              <h2 className="piece-type">{type}</h2>
-              <ul className="pieces-desktop">
-              {portfolioTypeMap[type].map(piece => (
-                  <Piece key={piece.title} piece={piece} />
-                ))}
-              </ul>
-              <Carousel>
-                {portfolioTypeMap[type].map(piece => (
-                  <Piece key={piece.title} piece={piece} />
-                ))}
-              </Carousel>
-            </div>
-          </section>
-        ))}
+        <ul className="shots-desktop">
+          {dribbbleShots.map(shot => (
+            <Shot key={shot.url} shot={shot} />
+          ))}
+        </ul>
       </div>
     </section>
   );

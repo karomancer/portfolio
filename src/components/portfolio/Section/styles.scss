@@ -5,10 +5,15 @@
 @import '../../../assets/sass/libs/breakpoints';
 
 .portfolio {
-  --height: 10rem;
+  --shotHeight: 14rem;
+  --shotWidth: calc(var(--shotHeight) * 1.4);
+  --noLightShadow: 0px 0px 6px 0px var(--gray);
+  --lightShadow: 0px 4px 6px 1px var(--gray);
+  --animationTransition: 0.5s ease-in-out; 
 
   width: 100%;
   margin: 0 auto;
+  background-color: var(--light);
 
   .section-header {
     position: relative;
@@ -20,7 +25,6 @@
       position: absolute;
       bottom: 0;
       left: 2rem;
-      
     }
 
     hr {
@@ -39,191 +43,153 @@
       }
     }
   }
-  
 
   .portfolio-sections {
-    .portfolio-section {
-      &[data-key='illustration & graphic design'] {
-        .portfolio-piece {
-          a,
-          img, 
-          .title {
-            width: calc(var(--height) * 1.2);
-          }
-        }
-      }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 2rem;
+    margin: 0 auto;
+    max-width: calc(1.5 * var(--siteWidth));
 
-      &[data-key='cosplay'] {
-        --cosplayHeight: calc(var(--height) * 2);
+    .dribbble-shot {
+      --lampWidth: calc(var(--shotWidth) / 3);
 
-        .portfolio-piece {
-          a,
-          img, 
-          .title {
-            height: var(--cosplayHeight);
-          }
-        }
-      }
-
-      &[data-key='ux research'] {
-        .portfolio-piece {
-          a,
-          img, 
-          .title {
-            width: calc(var(--height) * 1.5);
-          }
-        }
-      }
-
-
-      &:nth-child(odd) {
-        background-color: var(--light);
-
-        & > div {
-          flex-direction: row-reverse;
-        }
-
-        .piece-type {
-          text-align: right;
-        }
-      }
-
-      &:nth-child(even) {
-        background-color: transparent;
-
-        ul {
-          justify-content: flex-end;
-        }
-      }
-
-      & > div {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+      .dribbble-light {
         position: relative;
-        padding: 0 2rem;
-        margin: 0 auto;
-        width: 100%;
-        max-width: calc(1.5 * var(--siteWidth));
+        background: linear-gradient(to bottom, #bf953f, #fcf6ba, #b38728);
+        height: 0.5rem;
+        width: var(--lampWidth);
+        margin: 0 auto 0.2rem;
+        border-top-right-radius: 0.2rem;
+        border-top-left-radius: 0.2rem;
+        z-index: 1;
 
-        .piece-type {
-          width: 25%;
-          margin: 0;
-          padding: 0 1rem;
-          line-height: 1;
-          color: var(--gray);
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          background-color: #bf953f;
+          left: calc(var(--shotWidth) / 8);
+          right: calc(var(--shotWidth) / 8);
+          bottom: -0.2rem;
+          height: 0.25rem;
+        }
+      }
+
+      a {
+        position: relative;
+        box-sizing: border-box;
+        border: 0.5rem inset var(--dribbble);
+        border-radius: 0.25rem;
+        max-width: var(--shotWidth);
+        max-height: var(--shotHeight);
+        display: block;
+        background-color: white;
+        padding: 0.25rem;
+        box-shadow: var(--noLightShadow);
+        filter: brightness(0.9);
+        transition: all var(--animationTransition);
+
+        &::after {
+          transition: opacity var(--animationTransition);
+          opacity: 0;
         }
 
-        ul.pieces-desktop {
-          width: 75%;
-          display: flex;
-          gap: 0.25rem;
-          flex-wrap: wrap;
-          align-items: center;
-          list-style: none;
-          padding: 0.5rem 0;
-          margin: 0;
-
-          .portfolio-piece {
-            margin: 0;
-          padding: 0;
-          }
-        }
-
-        ul.carousel {
-          display: none;
-          
-          @include breakpoint('<=small') {
-            margin-top: 0.5rem;
-            display: flex !important;
-          }
-        }
-
-        .portfolio-piece {          
+        &:hover {
+          filter: brightness(1);
 
           a {
-            position: relative;
-            height: var(--height);
-            width: fit-content;
-            display: block;
-            border: none;
-            border-radius: var(--borderRadius);
-            overflow: hidden;
-          }
-
-          img {
-            height: var(--height);
-            object-fit: cover;
-            object-position: center center;
+            box-shadow: var(--lightShadow);
           }
 
           .title {
-            box-sizing: border-box;
-            opacity: 0;
+            box-shadow: 0px 2px 4px 0px var(--gray);
+          }
+
+          &::after {
+            content: '';
+            display: block;
             position: absolute;
-            top: 0;
+            clip-path: polygon(0% 0%, 100% 0%, 200% 100%, 0% 200%);
+            background: radial-gradient(
+              circle at 50% -10%,
+              rgba(255, 255, 255, 0.9),
+              rgba(252, 246, 186, 0.6) 20%,
+              transparent
+            );
+            top: -0.75rem;
+            margin: 0 auto;
             left: 0;
-            width: 100%;
-            height: var(--height);
-            padding: 0.75rem;
-            transition: opacity 0.2s ease-in-out;
-
-            h4 {
-              font-family: var(--strongFontFamiliy);
-              font-weight: var(--headerFontWeight);
-              font-size: 1.2rem;
-              line-height: 1;
-              overflow-wrap: anywhere;
-              color: white;
-
-              span {
-                display: block;
-                font-family: var(--fontFamily);
-                font-weight: var(--bodyFontWeight);
-                margin-top: 0.5rem;
-              }
-            }
-
-            &:hover {
-              opacity: 1;
-            }
+            right: 0;
+            height: calc(var(--shotHeight) / 4);
+            width: var(--lampWidth);
+            opacity: 0.8;
           }
         }
+      }
 
-        @include breakpoint('<=medium') {
-          display: block;
-          max-width: 100%;
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
 
-          .piece-type {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            padding-top: 1.5rem;
-            text-align: left !important;
-          }
+      .title {
+        width: calc(var(--shotHeight) / 2);
+        text-transform: uppercase;
+        font-size: 0.5rem;
+        background-color: white;
+        padding: 0.25rem;
+        text-align: center;
+        margin: 0.5rem auto;
+        border-radius: 0.25rem;
+        box-shadow: 0px 0px 4px 0px var(--gray);
+        transition: box-shadow var(--animationTransition);
+      }
+    }
 
-          ul {
-            width: 100%;
-            justify-content: flex-start !important;
-          }
-        }
+    ul.shots-desktop {
+      width: 75%;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      gap: 0.75rem;
+      list-style: none;
+      padding: 0.5rem 0;
+      margin: 0;
 
-        @include breakpoint('<=small') {
-          padding: 2rem 1rem;
-          display: block;
+      .dribbble-shot {
+        margin: 0;
+        padding: 0;
+      }
+    }
 
-          .piece-type {
-            min-width: auto;
-            width: fit-content !important;
-            margin-bottom: 0.25rem;
-            font-size: 1.75rem !important;
-          }
+    ul.carousel {
+      display: none;
 
-          ul.pieces-desktop {
-            display: none;
-          }
-        }
+      @include breakpoint('<=small') {
+        margin-top: 0.5rem;
+        display: flex !important;
+      }
+    }
+
+    @include breakpoint('<=medium') {
+      display: block;
+      max-width: 100%;
+
+      ul {
+        width: 100%;
+        justify-content: flex-start !important;
+      }
+    }
+
+    @include breakpoint('<=small') {
+      padding: 2rem 1rem;
+      display: block;
+
+      ul.pieces-desktop {
+        display: none;
       }
     }
   }

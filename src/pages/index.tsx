@@ -10,7 +10,7 @@ import BlogSection from '../components/blog/Section';
 const IndexPage = () => (
   <Layout>
     <HeroSection />
-    {/* <PortfolioSection showHeader /> */}
+    <PortfolioSection showHeader />
     <BlogSection showHeader />
   </Layout>
 );

@@ -2,6 +2,8 @@ require('dotenv').config();
 
 const config = require('./config');
 
+console.log({access: process.env.DRIBBBLE_ACCESS_TOKEN})
+
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
@@ -42,5 +44,11 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-source-dribbble`,
+      options: {
+        access_token: process.env.DRIBBBLE_ACCESS_TOKEN,
+      }
+    }
   ],
 };

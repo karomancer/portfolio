@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 
 import Layout from '../components/Layout';
 import CircuitsHero from '../components/CircuitsHero';
-import PortfolioSection from '../components/portfolio/Section';
+import PortfolioSection from '../components/blog/Section';
 
 
 const PortfolioPage = () => (

@@ -80,6 +80,8 @@
       .post-content {
         background-color: white;
         padding: 0.5rem 1rem;
+        line-height: 1.2;
+        font-size: 1rem;
 
         .post-date {
           font-size: 0.8rem;
@@ -98,6 +100,7 @@
           width: fit-content;
           padding: 0 0.2rem;
           line-height: 2;
+          margin-top: 1rem;
 
           &[data-key='illustration & graphic design'] {
             background-color: #efff45;
@@ -121,7 +124,7 @@
         h4 {
           font-family: var(--strongFontFamiliy);
           font-weight: var(--headerFontWeight);
-          margin-bottom: 0;
+          margin: 0.25rem 0;
         }
 
         .richtext {
@@ -129,7 +132,7 @@
           max-height: 5.5rem;
           overflow: hidden;
           display: -webkit-box;
-          -webkit-line-clamp: 3;
+          -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
         }
       }

@@ -12,7 +12,7 @@
 */
 
 :root {
-  --siteWidth: 60em;
+  --siteWidth: 45em;
   --bottomMargin: 0.75rem;
   --borderRadius: 0.5rem;
 
@@ -24,6 +24,11 @@
   --gray: #666766;
   --active: #215e9e;
   --light: #eaeaea;
+
+  /**
+  * Vendor brand colors
+  **/
+  --dribbble: #ea4c89;
 
   /**
    * Fonts
