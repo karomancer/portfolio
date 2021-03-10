@@ -487,6 +487,40 @@ article {
   }
 }
 
+section {
+  width: 100%; 
+
+  .section-two-pane {
+    max-width: calc(2 * var(--siteWidth));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin: 0 auto;
+
+    @include breakpoint('<=small') {
+      display: block;
+
+      .section-description {
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  
+  .section-description {
+    width: 25%;
+
+    h1 {
+      text-transform: capitalize;
+      margin-bottom: 0;
+    }
+  }
+}
+
 header {
   p {
     color: _palette(fg-light);

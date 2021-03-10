@@ -14,7 +14,7 @@ const Section = ({ showHeader }: Props) => {
     allDribbbleShot: { edges: allDribbbleShot },
   } = useStaticQuery(graphql`
     query PortfolioIndexQuery {
-      allDribbbleShot(limit: 4) {
+      allDribbbleShot(limit: 6) {
         edges {
           node {
             description
@@ -35,19 +35,25 @@ const Section = ({ showHeader }: Props) => {
   const dribbbleShots = allDribbbleShot.map(shot => shot.node);
 
   return (
-    <section className="portfolio" id="one">
-      {showHeader && (
-        <div className="section-header">
-          <hr />
-          <h1>Things I've Done</h1>
+    <section className="dribbble-section" id="one">
+      <div className="section-two-pane">
+        {showHeader && (
+          <div className="section-description">
+            <h2 className="MoMa">MoMD</h2>
+            <h2><b>M</b>useum <b>o</b>f <b>M</b>odern <b>D</b>ribbles</h2>
+            <p>
+              Designs I've been working on or finished recently can be viewed on my Dribbble account. If you'd like to see the work I've done for clients in the past, this is the place to look.
+            </p>
+            <a href="https://www.chowtime.dribbble.com">View my Dribbble</a>
+          </div>
+        )}
+        <div className="portfolio-sections">
+          <ul className="shots-desktop">
+            {dribbbleShots.map(shot => (
+              <Shot key={shot.url} shot={shot} />
+            ))}
+          </ul>
         </div>
-      )}
-      <div className="portfolio-sections">
-        <ul className="shots-desktop">
-          {dribbbleShots.map(shot => (
-            <Shot key={shot.url} shot={shot} />
-          ))}
-        </ul>
       </div>
     </section>
   );

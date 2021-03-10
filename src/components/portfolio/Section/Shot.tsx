@@ -26,10 +26,11 @@ const Shot = ({ shot }: Props) => {
       <div className="dribbble-light"></div>
       <a href={shot.url}>
         <img src={shot.localCover.url} />
-      </a>
-      <h4 className="title">
+        <h4 className="title">
         {shot.title} 
       </h4>
+      </a>
+      
     </li>
   );
 };
