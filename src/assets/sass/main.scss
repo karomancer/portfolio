@@ -480,6 +480,22 @@ pre {
 
 /* Section/Article */
 
+  h2.section-title {
+    display: inline-block;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+    padding: 1rem 4rem;
+    background-color: var(--teal);
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+
+    @include breakpoint('<=small') {
+      padding-left: 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+
 section,
 article {
   &.special {

@@ -39,8 +39,8 @@ const Section = ({ showHeader }: Props) => {
       <div className="section-two-pane">
         {showHeader && (
           <div className="section-description">
-            <h2 className="MoMa">MoMD</h2>
-            <h2><b>M</b>useum <b>o</b>f <b>M</b>odern <b>D</b>ribbles</h2>
+            <span className="MoMa">MoMD</span>
+            <h3><b>M</b>useum <b>o</b>f <b>M</b>odern <b>D</b>ribbles</h3>
             <p>
               Designs I've been working on or finished recently can be viewed on my Dribbble account. If you'd like to see the work I've done for clients in the past, this is the place to look.
             </p>

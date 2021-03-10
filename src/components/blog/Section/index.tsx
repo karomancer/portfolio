@@ -29,7 +29,7 @@ const Section = ({ showHeader }: Props) => {
     <section className="blog" id="one">
       <div className="blog-section section-two-pane">
         <div className="section-description">
-          <h2>Project Process Blog</h2>
+          <h2>Maker Journal</h2>
           <p>
             A collection of things I've been working on. I work on a lot of
             disparate projects and have decided to chronicle the process &
