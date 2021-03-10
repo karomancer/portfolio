@@ -23,14 +23,13 @@ interface Props {
 const Shot = ({ shot }: Props) => {
   return (
     <li className="dribbble-shot">
-      <div className="dribbble-light"></div>
       <a href={shot.url}>
-        <img src={shot.localCover.url} />
-        <h4 className="title">
-        {shot.title} 
-      </h4>
+        <div className="shot-frame">
+          <div className="dribbble-light"></div>
+          <img src={shot.localCover.url} />
+        </div>
+        <h4 className="title">{shot.title}</h4>
       </a>
-      
     </li>
   );
 };

@@ -11,8 +11,8 @@
   width: 100%;
   margin: 0 auto;
 
-  .blog-section {    
-    position: relative;    
+  .blog-section {
+    position: relative;
     width: 100%;
 
     ul.blog-desktop {
@@ -22,7 +22,7 @@
       grid-template-rows: auto;
       gap: 0.75rem;
       align-content: stretch;
-      list-style: none;      
+      list-style: none;
 
       .blog-post {
         margin: 0;
@@ -63,7 +63,7 @@
         object-fit: cover;
         object-position: center;
         border-top-right-radius: var(--borderRadius);
-      border-top-left-radius: var(--borderRadius);
+        border-top-left-radius: var(--borderRadius);
       }
 
       .post-content {
@@ -130,6 +130,11 @@
         position: absolute;
         bottom: 1rem;
         right: 1rem;
+      }
+      
+      @include breakpoint('<=medium') {
+        width: 14rem;
+        margin-right: 1rem;
       }
 
       @include breakpoint('<=small') {

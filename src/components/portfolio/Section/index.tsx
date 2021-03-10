@@ -44,7 +44,7 @@ const Section = ({ showHeader }: Props) => {
             <p>
               Designs I've been working on or finished recently can be viewed on my Dribbble account. If you'd like to see the work I've done for clients in the past, this is the place to look.
             </p>
-            <a href="https://www.chowtime.dribbble.com">View my Dribbble</a>
+            <a href="http://chowtime.dribbble.com/">View my Dribbble</a>
           </div>
         )}
         <div className="portfolio-sections">
