@@ -15,6 +15,7 @@ const BYLINE_OPTIONS = [
   'funky saxophonista',
   'animation enthusiast',
   'swiss army knife',
+  'gun for hire',
   'are you still there?',
 ];
 

@@ -1,0 +1,111 @@
+@import '../../assets/sass/libs/vars';
+@import '../../assets/sass/libs/vendor';
+@import '../../assets/sass/libs/functions';
+@import '../../assets/sass/libs/mixins';
+@import '../../assets/sass/libs/breakpoints';
+
+.about-me {
+  width: 100%;
+  padding-top: 1rem;
+
+  .about-me-content {
+    max-width: var(--siteWidth);
+    margin: 0 auto;
+    text-align: center;
+
+    @include breakpoint('<=medium') {
+      width: 100%;
+    }
+
+    blockquote {
+      font-size: 2rem;
+      font-family: var(--strongFontFamily);
+      color: var(--dark);
+      margin: 1rem auto;
+      padding: 1rem 2rem;
+
+      border-top: 0.5rem solid var(--light);
+      border-bottom: 0.5rem solid var(--light);
+      border-left: solid 0.5rem white;
+      border-right: solid 0.5rem white;
+
+      b {
+        color: white;
+        background-color: var(--teal);
+        padding: 0 0.25rem;
+      }
+
+      @include breakpoint('<=small') {
+        line-height: 1.4;
+      }
+    }
+
+    .about-me-lists {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem;
+      text-align: left;
+      list-style: none;
+
+      @include breakpoint('<=medium') {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include breakpoint('<=small') {
+          display: flex;
+        flex-direction: column;
+      }
+
+      b {
+        color: var(--dark);
+        text-transform: uppercase;
+        margin-left: -1rem;
+      }
+
+      strong {
+        display: inline-block;
+        margin-top: 1rem;
+      }
+
+      & > li {
+        position: relative;
+        padding: 2rem 1rem 2rem 2rem;
+        margin: 0 auto;
+        z-index: 1;
+        box-shadow: 0.75rem 0.75rem 0 0.25rem var(--teal);
+        border: 1px solid var(--light);
+        width: 100%;
+        height: fit-content;
+
+        ul {
+          margin: 0;
+        }
+
+        .list-of-tech {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 1rem 0;
+          list-style: none;
+          display: grid;
+          grid-template-columns: 20% 20% 20% 20% 20%;
+          row-gap: 1rem;
+
+          li {
+            margin: 0;
+            padding: 0;
+            height: 60px;
+          }
+
+          img {
+            object-fit: contain;
+            border-radius: 0.5rem;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

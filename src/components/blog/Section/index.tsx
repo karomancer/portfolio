@@ -26,7 +26,7 @@ const Section = ({ showHeader }: Props) => {
   `);
 
   return (
-    <section className="blog" id="one">
+    <section className="blog">
       <div className="blog-section section-two-pane">
         <div className="section-description">
           <h2>Maker Journal</h2>

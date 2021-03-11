@@ -12,7 +12,7 @@
 */
 
 :root {
-  --siteWidth: 45em;
+  --siteWidth: 90em;
   --bottomMargin: 0.75rem;
   --borderRadius: 0.5rem;
 
@@ -507,7 +507,7 @@ section {
   width: 100%; 
 
   .section-two-pane {
-    max-width: calc(2 * var(--siteWidth));
+    max-width: var(--siteWidth);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

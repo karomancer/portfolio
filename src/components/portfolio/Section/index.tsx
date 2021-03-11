@@ -35,7 +35,7 @@ const Section = ({ showHeader }: Props) => {
   const dribbbleShots = allDribbbleShot.map(shot => shot.node);
 
   return (
-    <section className="dribbble-section" id="one">
+    <section className="dribbble-section">
       <div className="section-two-pane">
         {showHeader && (
           <div className="section-description">
