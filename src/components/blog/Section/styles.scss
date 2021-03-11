@@ -58,10 +58,10 @@
       }
 
       img {
-        width: inherit;
+        width: 100%;
         height: var(--imgHeight);
         object-fit: cover;
-        object-position: center;
+        object-position: 0% 8%;
         border-top-right-radius: var(--borderRadius);
         border-top-left-radius: var(--borderRadius);
       }
@@ -144,11 +144,13 @@
     }
 
     @include breakpoint('<=medium') {
-      display: block;
       max-width: 100%;
 
-      ul {
-        width: 100%;
+      ul.blog-desktop {
+        grid-template-columns: 33% 33% 33%;
+      }
+
+      ul.carousel {
         justify-content: flex-start !important;
       }
     }

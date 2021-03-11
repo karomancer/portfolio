@@ -96,7 +96,7 @@
           border-top-right-radius: 0.2rem;
           border-top-left-radius: 0.2rem;
           z-index: 1;
-  
+
           &::before {
             content: '';
             display: block;
@@ -108,7 +108,7 @@
             height: 0.25rem;
           }
         }
-  
+
         img {
           display: block;
           width: 100%;
@@ -159,7 +159,7 @@
     }
 
     ul.shots-desktop {
-      --rowGap: 2rem; 
+      --rowGap: 2rem;
 
       width: 75%;
       display: grid;
@@ -212,6 +212,7 @@
           margin-top: 50%;
 
           @include breakpoint('<=medium') {
+            width: 100%;
             margin-top: 75%;
           }
         }
@@ -228,7 +229,14 @@
           }
 
           @include breakpoint('<=medium') {
-            margin-top: 2.5rem;
+            margin-top: calc(var(--rowGap) - 1rem);
+            .title {
+              display: none;
+            }
+          }
+
+          @include breakpoint('<=small') {
+            margin-top: 2rem;            
           }
         }
 
@@ -239,7 +247,7 @@
         }
       }
 
-      @include breakpoint('<=medium') {
+      @include breakpoint('<=small') {
         margin-left: -1rem;
         width: 100%;
         row-gap: 1rem;
@@ -255,7 +263,7 @@
       }
     }
 
-    @include breakpoint('<=medium') {
+    @include breakpoint('<=small') {
       display: block;
       margin: 0 auto;
       max-width: 100%;
