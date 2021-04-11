@@ -5,12 +5,10 @@
 @import '../../assets/sass/libs/breakpoints';
 
 .about-me {
-  width: 100%;
   padding-top: 1rem;
+  margin: 0 auto;
 
   .about-me-content {
-    max-width: var(--siteWidth);
-    margin: 0 auto;
     text-align: center;
 
     @include breakpoint('<=medium') {
@@ -22,6 +20,7 @@
       font-family: var(--strongFontFamily);
       color: var(--dark);
       margin: 1rem auto;
+      max-width: var(--siteWidth);
       padding: 1rem 2rem;
 
       border-top: 0.5rem solid var(--light);

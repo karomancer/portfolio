@@ -96,9 +96,9 @@ const Byline = () => {
             if (letterTimeouts.length === 0) {
               indexTimeouts.forEach(t => clearTimeout(t));
             }
-            timeout = setTimeout(changeByline, 1800);
+            timeout = setTimeout(changeByline, 1500);
           }
-        }, 400)
+        }, 300)
       );
     };
 

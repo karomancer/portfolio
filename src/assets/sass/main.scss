@@ -12,7 +12,7 @@
 */
 
 :root {
-  --siteWidth: 90em;
+  --siteWidth: 80rem;
   --bottomMargin: 0.75rem;
   --borderRadius: 0.5rem;
 
@@ -505,10 +505,6 @@ article {
 
 section {
   width: 100vw; 
-
-  & > div {
-    max-width: var(--siteWidth);
-  }
 
   .section-two-pane {
     max-width: var(--siteWidth);
@@ -1639,7 +1635,7 @@ button,
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: 100%;
+  width: 100vw;
   height: 15rem;
   overflow: hidden;
 
@@ -1649,6 +1645,10 @@ button,
     transform: translateY(50%);
     margin: 0;
     height: 0;
+  }
+
+  canvas {
+    width: 100vw;
   }
 }
 
@@ -2007,7 +2007,6 @@ body.is-mobile {
 
 .page {
   @extend .wrapper;
-
   padding-top: 0;
 }
 

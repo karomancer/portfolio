@@ -8,12 +8,11 @@
   --postHeight: 22rem;
   --imgHeight: 6rem;
 
-  width: 100%;
   margin: 0 auto;
 
   .blog-section {
     position: relative;
-    width: 100%;
+    width: 100;
 
     ul.blog-desktop {
       width: 75%;
@@ -23,6 +22,7 @@
       gap: 0.75rem;
       align-content: stretch;
       list-style: none;
+      padding-left: 2rem;
 
       &.full-width {
         width: 100%;
@@ -138,11 +138,13 @@
       }
       
       @include breakpoint('<=medium') {
+        min-width: 14rem;
         width: 14rem;
         margin-right: 1rem;
       }
 
       @include breakpoint('<=small') {
+        min-width: 14rem;
         width: 14rem;
         margin-right: 1rem;
       }
