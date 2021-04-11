@@ -7,13 +7,14 @@ import Post from './Post';
 
 interface Props {
   showHeader?: boolean;
+  pieces?: object[]
 }
 
-const Section = ({ showHeader }: Props) => {
+const Section = ({ showHeader, pieces }: Props) => {
   const {
     allContentfulPortfolioPiece: { nodes: portfolioPieces },
   } = useStaticQuery(graphql`
-    query BlogIndexQuery {
+    query BlogSectionQuery {
       allContentfulPortfolioPiece(
         limit: 8
         sort: { fields: [date, title], order: [DESC, ASC] }
@@ -28,7 +29,7 @@ const Section = ({ showHeader }: Props) => {
   return (
     <section className="blog">
       <div className="blog-section section-two-pane">
-        <div className="section-description">
+        {showHeader && <div className="section-description">
           <h2>Maker Journal</h2>
           <p>
             A collection of things I've been working on. I work on a lot of
@@ -36,14 +37,14 @@ const Section = ({ showHeader }: Props) => {
             learnings from each.
           </p>
           <Link to="/portfolio">View all posts</Link>
-        </div>
-        <ul className="blog-desktop">
-          {portfolioPieces.map(piece => (
+        </div>}
+        <ul className={`blog-desktop ${!showHeader && 'full-width'}`}>
+          {(pieces || portfolioPieces).map(piece => (
             <Post key={piece.title} piece={piece} />
           ))}
         </ul>
         <Carousel>
-          {portfolioPieces.map(piece => (
+          {(pieces || portfolioPieces).map(piece => (
             <Post key={piece.title} piece={piece} />
           ))}
         </Carousel>

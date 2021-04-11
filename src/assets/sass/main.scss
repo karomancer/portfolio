@@ -504,7 +504,11 @@ article {
 }
 
 section {
-  width: 100%; 
+  width: 100vw; 
+
+  & > div {
+    max-width: var(--siteWidth);
+  }
 
   .section-two-pane {
     max-width: var(--siteWidth);
@@ -835,6 +839,10 @@ input[type='radio'] {
 }
 
 /* Image */
+
+#page_layout {
+  max-width: var(--siteWidth);
+}
 
 .image {
   border-radius: 3px;
@@ -2007,6 +2015,7 @@ body.is-mobile {
 
 #footer {
   @include padding(6em, 0);
+  width: 100vw;
   background-color: _palette(fg);
   text-align: center;
 
