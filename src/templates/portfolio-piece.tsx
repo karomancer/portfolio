@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 
 import { PortfolioPiece as PortfolioPieceType } from '../components/portfolio/types';
-import PortfolioPiecePage from '../components/portfolio/Page';
+import PortfolioPiecePage from '../components/blog/Page';
 import Layout from '../components/Layout';
 
 interface PortfolioPieceTemplateProps {
