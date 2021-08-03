@@ -1,3 +1,5 @@
+.python-version
+
 # Project dependencies
 .cache
 node_modules
@@ -11,5 +13,6 @@ yarn.lock
 
 # Variables
 .env
+.env.local
 .env.production
 .env.development
