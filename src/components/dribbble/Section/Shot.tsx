@@ -23,7 +23,7 @@ interface Props {
 const Shot = ({ shot }: Props) => {
   return (
     <li className="dribbble-shot">
-      <a href={shot.url}>
+      <a href={shot.url} target="_blank">
         <div className="shot-frame">
           <div className="dribbble-light"></div>
           <img src={shot.localCover.url} />

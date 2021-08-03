@@ -1,22 +1,17 @@
 import React from 'react';
-import moment from 'moment';
+import { differenceInYears, differenceInMonths, differenceInDays, subMonths, getDaysInMonth } from 'date-fns'
 
 import './styles.scss';
 
 const MONTHS_INTERN = 10;
-const FULLTIME_START_DATE = moment([2013, 8, 5, 9]).subtract(
-  MONTHS_INTERN,
-  'months'
-); //August 5th, 9:00 AM
+const FULLTIME_START_DATE = subMonths(new Date(2013, 8, 5, 9), MONTHS_INTERN)
 
 const AboutMe = () => {
-  const timeInTech = Number(moment().diff(FULLTIME_START_DATE, 'years', true));
-  const numYears = Math.round(timeInTech);
+  const today = new Date()
 
-  const _numMonths = (timeInTech % numYears) * 12;
-  const numMonths = Math.round(_numMonths);
-  const numDays = Math.round((_numMonths % numMonths) * 365);
-  debugger;
+  const numYears = differenceInYears(today, FULLTIME_START_DATE);
+  const numMonths = differenceInMonths(today, FULLTIME_START_DATE) % 12
+  const numDays = ((differenceInDays(today, FULLTIME_START_DATE) % 365) - numMonths * 30) % getDaysInMonth(today)
 
   return (
     <section className="about-me" id="one">
@@ -30,7 +25,7 @@ const AboutMe = () => {
           What does that mean? Well I'm glad you asked.
           <br />
           This is what I've been doing in my last{' '}
-          {`${numYears} years, ${numMonths} months, and ${numDays} days`} of
+          {`${numYears} years, ${numMonths > 0 && `${(numDays > 30 ? numMonths + 1 : numMonths)} month${numMonths !== 1 ? 's' : ''},`} and ${numDays} day${numDays !== 1 ? 's' : ''}`} of
           working in tech:
           <ul className="about-me-lists">
             <List

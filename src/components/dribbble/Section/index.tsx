@@ -38,11 +38,11 @@ const Section = ({ showHeader }: Props) => {
         {showHeader && (
           <div className="section-description">
             <span className="MoMa">MoMD</span>
-            <h3><b>M</b>useum <b>o</b>f <b>M</b>odern <b>D</b>ribbles</h3>
+            <h3><b>M</b>useum <b>o</b>f <b>M</b>odern <b>D</b>esigns</h3>
             <p>
-              Designs I've been working on or finished recently can be viewed on my Dribbble account. If you'd like to see the work I've done for clients in the past, this is the place to look.
+              Designs I'm currently working on or have finished recently. If you'd like to see the graphic design work I've done for clients in the past, this is the place to look.
             </p>
-            <a href="http://chowtime.dribbble.com/">View my Dribbble</a>
+            View on <a href="http://karomancer.dribbble.com/" target="_blank">Dribbble</a> or <a href="http://instagram.com/karomancer" target="_blank">Instagram</a>
           </div>
         )}
         <div className="portfolio-sections">
