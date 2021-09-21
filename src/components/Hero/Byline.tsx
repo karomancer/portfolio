@@ -1,23 +1,43 @@
 import React, { useEffect, useRef } from 'react';
 import './styles.scss';
 
+function shuffle(array) {
+  var currentIndex = array.length, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
 const ALPHABET = 'abcdefghijklmnopqrstuvwxyzαβΓΔδεζηθικΛλμνΞξΠπρΣσςτυΦφχΨψΩω';
-const BYLINE_OPTIONS = [
+const BYLINE_OPTIONS = shuffle([
+  'creative coder',
   'senior frontend engineer',
   'freelance graphic designer',
-  'user experience consultant',
-  'web accessibility advocate',
-  'creative coder',
-  'amateur cosplayer',
   'aspiring installation artist',
+  'web accessibility advocate',
+  'user experience researcher',
+  'amateur cosplayer',
   'energetic aikidoka',
   'video & board game geek',
   'funky saxophonista',
   'animation enthusiast',
   'swiss army knife',
   'gun for hire',
-  'are you still there?',
-];
+]);
+BYLINE_OPTIONS.unshift('engineering & design consultant')
+BYLINE_OPTIONS.push('are you still there?')
+
 
 const Byline = () => {
   const bylineEl = useRef();
