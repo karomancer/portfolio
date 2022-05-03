@@ -2,13 +2,13 @@ import React from "react";
 
 // import AboutMe from '../components/AboutMe'
 import Layout from '../components/Layout';
-// import HeroSection from '../components/Hero';
+import HeroSection from '../components/Hero';
 // import DribbbleSection from '../components/dribbble/Section';
 // import BlogSection from '../components/blog/Section';
 
 const IndexPage = () => (
   <Layout>
-    {/* <HeroSection /> */}
+    <HeroSection />
     {/* <AboutMe /> */}
     <h2 className="section-title">Social</h2>
     {/* <DribbbleSection showHeader /> */}
