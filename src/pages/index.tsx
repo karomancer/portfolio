@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import AboutMe from '../components/AboutMe'
+// import AboutMe from '../components/AboutMe'
 import Layout from '../components/Layout';
-import HeroSection from '../components/Hero';
-import DribbbleSection from '../components/dribbble/Section';
-import BlogSection from '../components/blog/Section';
+// import HeroSection from '../components/Hero';
+// import DribbbleSection from '../components/dribbble/Section';
+// import BlogSection from '../components/blog/Section';
 
 const IndexPage = () => (
   <Layout>
-    <HeroSection />
-    <AboutMe />
+    {/* <HeroSection /> */}
+    {/* <AboutMe /> */}
     <h2 className="section-title">Social</h2>
-    <DribbbleSection showHeader />
+    {/* <DribbbleSection showHeader /> */}
     <h2 className="section-title">Blog</h2>
-    <BlogSection showHeader />
+    {/* <BlogSection showHeader /> */}
   </Layout>
 );
 
