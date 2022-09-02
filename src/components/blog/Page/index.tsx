@@ -17,8 +17,8 @@ interface Props {
 const Page = ({ piece }: Props) => {
   const H2 = ({ children }) => <h2 style={{ color: piece.hex }}>{children}</h2>;
 
-  const renderAsset = asset => (
-    <li key={asset.title}>
+  const renderAsset = assetType => asset => (
+    <li key={`${assetType}-${asset.title}`}>
       {asset.description && <p>{asset.description}</p>}
       <Asset asset={asset} />
     </li>
@@ -58,9 +58,6 @@ const Page = ({ piece }: Props) => {
         )}
         <div className="inner">
           <Link
-            cover
-            direction="left"
-            hex="#50bfa0"
             className="back-button"
             to="/portfolio"
           >
@@ -82,7 +79,7 @@ const Page = ({ piece }: Props) => {
             <>
               <H2>Process pictures</H2>
               <ul className="process-photos">
-                {piece.images.map(renderAsset)}
+                {piece.images.map(renderAsset('image'))}
               </ul>
             </>
           )}
@@ -91,7 +88,7 @@ const Page = ({ piece }: Props) => {
             <>
               <H2>Final deliverables</H2>
               <ul className="deliverables">
-                {piece.deliverables.map(renderAsset)}
+                {piece.deliverables.map(renderAsset('deliverable'))}
               </ul>
             </>
           )}

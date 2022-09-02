@@ -52,13 +52,13 @@ const Section = ({ showHeader }: Props) => {
             <div>
               <h2 className="piece-type">{type}</h2>
               <ul className="pieces-desktop">
-              {portfolioTypeMap[type].map(piece => (
-                  <Piece key={piece.title} piece={piece} />
+                {portfolioTypeMap[type].map(piece => (
+                  <Piece key={`desktop-piece-${piece.title}`} piece={piece} />
                 ))}
               </ul>
               <Carousel>
                 {portfolioTypeMap[type].map(piece => (
-                  <Piece key={piece.title} piece={piece} />
+                  <Piece key={`mobile-piece-${piece.title}`} piece={piece} />
                 ))}
               </Carousel>
             </div>

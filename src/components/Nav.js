@@ -18,11 +18,11 @@ export default function Nav({ onMenuToggle = () => {}, color }) {
   ];
 
   const navLinks = LINKS.map(({ title, slug }) => (
-    <li>
+    <li key={`nav-link-${title}`}>
       {slugMatches(slug) ? (
         <span>{title}</span>
       ) : (
-        <Link cover bg="#50bfa0" direction="down" to={slug}>
+        <Link bg="#50bfa0" direction="down" to={slug}>
           {title}
         </Link>
       )}
