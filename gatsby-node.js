@@ -62,6 +62,14 @@ exports.onCreateWebpackConfig = ({
             test: /canvas/,
             use: loaders.null(),
           },
+          {
+            test: /p5/,
+            use: loaders.null(),
+          },
+          {
+            test: /react-pdf/,
+            use: loaders.null(),
+          },
         ],
       },
     })
