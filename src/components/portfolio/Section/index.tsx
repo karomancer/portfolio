@@ -7,26 +7,13 @@ import Piece from './Piece';
 
 interface Props {
   showHeader?: boolean;
+  pieces?: object[]
 }
 
-const Section = ({ showHeader }: Props) => {
-  const {
-    allContentfulPortfolioPiece: { nodes: portfolioPieces },
-  } = useStaticQuery(graphql`
-    query PortfolioIndexQuery {
-      allContentfulPortfolioPiece(
-        sort: { fields: [date, title], order: [DESC, ASC] }
-      ) {
-        nodes {
-          ...App__PortfolioPieceFragment
-        }
-      }
-    }
-  `);
-
+const Section = ({ showHeader, pieces }: Props) => {
   const portfolioTypeMap = {};
 
-  portfolioPieces.forEach(piece => {
+  pieces.forEach(piece => {
     if (!portfolioTypeMap[piece.type]) {
       portfolioTypeMap[piece.type] = [piece];
     } else {
@@ -53,12 +40,12 @@ const Section = ({ showHeader }: Props) => {
               <h2 className="piece-type">{type}</h2>
               <ul className="pieces-desktop">
                 {portfolioTypeMap[type].map(piece => (
-                  <Piece key={`desktop-piece-${piece.title}`} piece={piece} />
+                  <Piece key={piece.title} piece={piece} />
                 ))}
               </ul>
               <Carousel>
                 {portfolioTypeMap[type].map(piece => (
-                  <Piece key={`mobile-piece-${piece.title}`} piece={piece} />
+                  <Piece key={piece.title} piece={piece} />
                 ))}
               </Carousel>
             </div>
