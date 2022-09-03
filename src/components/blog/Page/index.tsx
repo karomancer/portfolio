@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby'
 
@@ -25,6 +24,7 @@ const Page = ({ piece }: Props) => {
   );
 
   const title = `${piece.title} | Karina Chow`
+  debugger
 
   return (
     <>
@@ -51,7 +51,8 @@ const Page = ({ piece }: Props) => {
       <div className="porfolio-piece-full">
         {piece.hero ? (
           <div className="hero">
-            <Img fluid={piece.hero.fluid} />
+            {/* Need to fix this image */}
+            <img src={piece.hero.url} alt={`${piece.hero.title} cover image`} />
           </div>
         ) : (
           <hr style={{ borderColor: piece.hex }} />

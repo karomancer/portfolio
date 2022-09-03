@@ -1,10 +1,53 @@
 const axios = require('axios');
+const path = require('path');
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
 // constants for your GraphQL Post and Author types
 const POST_NODE_TYPE = `DribbbleShot`;
+
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  return new Promise((resolve, reject) => {
+    const portfolioPiece = path.resolve('./src/templates/portfolio-piece.tsx')
+    resolve(
+      graphql(
+        `
+          {
+            allContentfulPortfolioPiece {
+              edges {
+                node {
+                  title
+                  slug
+                }
+              }
+            }
+          }
+          `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
+        }
+
+        const pieces = result.data.allContentfulPortfolioPiece.edges
+
+        pieces.forEach((piece, index) => {
+          createPage({
+            path: `/portfolio/${piece.node.slug}/`,
+            component: portfolioPiece,
+            context: {
+              slug: piece.node.slug
+            },
+          })
+        })
+      })
+    )
+  })
+}
 
 exports.onCreateWebpackConfig = ({
   stage,

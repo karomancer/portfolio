@@ -20,7 +20,7 @@ const Post = ({ piece }: Props) => {
         <span className="piece-type" data-key={piece.type.toLowerCase()}>{piece.type}</span>
         <h4>{piece.title}</h4>
         {piece?.description?.raw && (
-          <RichText plainText document={{ json: JSON.parse(piece.description.raw) }} />
+          <RichText plainText document={piece.description} />
         )}
         <Link to={`/portfolio/${piece.slug}`}>Read more</Link>
       </div>

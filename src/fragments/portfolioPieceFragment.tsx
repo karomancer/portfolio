@@ -5,14 +5,24 @@ export const portfolioPieceFragment = graphql`
     hero {
       description
       title
-      file {
-        contentType
-        url
-      }
+      url
     }
     date(formatString: "MMMM Do, YYYY")
     description {
       raw
+      references {
+        ... on ContentfulAsset {
+          __typename
+          id
+          contentful_id
+          title
+          url
+          file {
+            contentType
+            url
+          }
+        }
+      }
     }
     deliverables {
       title
