@@ -6,6 +6,25 @@ require("dotenv").config({
 // constants for your GraphQL Post and Author types
 const POST_NODE_TYPE = `DribbbleShot`;
 
+exports.onCreateWebpackConfig = ({
+  stage,
+  loaders,
+  actions,
+}) => {
+  if (stage === "build-html" || stage === "develop-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /canvas/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+};
+
 exports.sourceNodes = async (
   { actions, createContentDigest, createNodeId },
 ) => {

@@ -56,7 +56,7 @@ const Section = ({ showHeader }: Props) => {
         <div className="portfolio-sections">
           <ul className="shots-desktop">
             {dribbbleShots.map(shot => (
-              <Shot key={shot.id} shot={shot} />
+              <Shot key={`shot-${shot.title}`} shot={shot} />
             ))}
           </ul>
         </div>

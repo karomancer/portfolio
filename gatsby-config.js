@@ -2,14 +2,14 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.karinachowtime.com`,
   },
   plugins: [
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        accessToken: '7q1DU_G-tz0Uf99UbZ9mUgBw6IT5eY3qvlT0ai1KohE',
-        spaceId: '879jbu294ufv',
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     'gatsby-plugin-sass',

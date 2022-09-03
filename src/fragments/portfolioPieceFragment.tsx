@@ -11,6 +11,9 @@ export const portfolioPieceFragment = graphql`
       }
     }
     date(formatString: "MMMM Do, YYYY")
+    description {
+      raw
+    }
     deliverables {
       title
       description
@@ -36,7 +39,7 @@ export const portfolioPieceFragment = graphql`
     }
     hex
     type
-    title
+    title    
     slug
     role
   }

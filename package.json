@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "canvas": "^2.9.3",
     "gatsby": "^4.13.1",
     "gatsby-plugin-image": "^2.13.0",
     "gatsby-plugin-react-helmet": "^5.13.0",
@@ -28,6 +29,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-pdf": "^5.0.0",
     "sass": "^1.51.0",
     "smoothscroll-polyfill": "^0.4.4"
   },
