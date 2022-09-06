@@ -5,25 +5,31 @@ export const portfolioPieceFragment = graphql`
     hero {
       description
       title
-      url
-    }
-    date(formatString: "MMMM Do, YYYY")
-    description {
-      raw
-      references {
-        ... on ContentfulAsset {
-          __typename
-          id
-          contentful_id
-          title
-          url
-          file {
-            contentType
-            url
-          }
-        }
+      fluid(quality: 100) {
+        src
+        aspectRatio
+        sizes
+        base64
+        srcSet
+        srcSetWebp
+        srcWebp
+      }
+      fixed {
+        src
+        srcSet
+        srcSetWebp
+        srcWebp
+        width
+        height
+        base64
+        aspectRatio
+      }
+      file {
+        contentType
+        url
       }
     }
+    date(formatString: "MMMM Do, YYYY")
     deliverables {
       title
       description
@@ -31,11 +37,53 @@ export const portfolioPieceFragment = graphql`
         contentType
         url
       }
+      fluid {
+        src
+        aspectRatio
+        sizes
+        base64
+        srcSet
+        srcSetWebp
+        srcWebp
+      }
+      fixed {
+        src
+        srcSet
+        srcSetWebp
+        srcWebp
+        width
+        height
+        base64
+        aspectRatio
+      }
+    }
+    description {
+      nodeType
+      json
     }
     images {
       file {
         contentType
         url
+      }
+      fluid {
+        src
+        aspectRatio
+        sizes
+        base64
+        srcSet
+        srcSetWebp
+        srcWebp
+      }
+      fixed {
+        src
+        srcSet
+        srcSetWebp
+        srcWebp
+        width
+        height
+        base64
+        aspectRatio
       }
       title
       description
@@ -44,12 +92,31 @@ export const portfolioPieceFragment = graphql`
       file {
         url
       }
+      fluid {
+        src
+        aspectRatio
+        sizes
+        base64
+        srcSet
+        srcSetWebp
+        srcWebp
+      }
+      fixed {
+        src
+        srcSet
+        srcSetWebp
+        srcWebp
+        width
+        height
+        base64
+        aspectRatio
+      }
       title
       description
     }
     hex
     type
-    title    
+    title
     slug
     role
   }

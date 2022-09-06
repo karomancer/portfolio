@@ -38,25 +38,25 @@ $breakpoints: () !global;
   }
 
   // Less than or equal.
-  @else if (str-slice($query, 0, 2) == '<=') {
+  @elseif (str-slice($query, 0, 2) == '<=') {
     $op: 'lte';
     $breakpoint: str-slice($query, 3);
   }
 
   // Greater than.
-  @else if (str-slice($query, 0, 1) == '>') {
+  @elseif (str-slice($query, 0, 1) == '>') {
     $op: 'gt';
     $breakpoint: str-slice($query, 2);
   }
 
   // Less than.
-  @else if (str-slice($query, 0, 1) == '<') {
+  @elseif (str-slice($query, 0, 1) == '<') {
     $op: 'lt';
     $breakpoint: str-slice($query, 2);
   }
 
   // Not.
-  @else if (str-slice($query, 0, 1) == '!') {
+  @elseif (str-slice($query, 0, 1) == '!') {
     $op: 'not';
     $breakpoint: str-slice($query, 2);
   }
@@ -84,22 +84,22 @@ $breakpoints: () !global;
         }
 
         // Less than or equal (<= y)
-        @else if ($op == 'lte') {
+        @elseif ($op == 'lte') {
           $media: 'screen and (max-width: ' + $y + ')';
         }
 
         // Greater than (> y)
-        @else if ($op == 'gt') {
+        @elseif ($op == 'gt') {
           $media: 'screen and (min-width: ' + ($y + 1) + ')';
         }
 
         // Less than (< 0 / invalid)
-        @else if ($op == 'lt') {
+        @elseif ($op == 'lt') {
           $media: 'screen and (max-width: -1px)';
         }
 
         // Not (> y)
-        @else if ($op == 'not') {
+        @elseif ($op == 'not') {
           $media: 'screen and (min-width: ' + ($y + 1) + ')';
         }
 
@@ -117,22 +117,22 @@ $breakpoints: () !global;
         }
 
         // Less than or equal (<= inf / anything)
-        @else if ($op == 'lte') {
+        @elseif ($op == 'lte') {
           $media: 'screen';
         }
 
         // Greater than (> inf / invalid)
-        @else if ($op == 'gt') {
+        @elseif ($op == 'gt') {
           $media: 'screen and (max-width: -1px)';
         }
 
         // Less than (< x)
-        @else if ($op == 'lt') {
+        @elseif ($op == 'lt') {
           $media: 'screen and (max-width: ' + ($x - 1) + ')';
         }
 
         // Not (< x)
-        @else if ($op == 'not') {
+        @elseif ($op == 'not') {
           $media: 'screen and (max-width: ' + ($x - 1) + ')';
         }
 
@@ -150,27 +150,24 @@ $breakpoints: () !global;
         }
 
         // Less than or equal (<= y)
-        @else if ($op == 'lte') {
+        @elseif ($op == 'lte') {
           $media: 'screen and (max-width: ' + $y + ')';
         }
 
         // Greater than (> y)
-        @else if ($op == 'gt') {
+        @elseif ($op == 'gt') {
           $media: 'screen and (min-width: ' + ($y + 1) + ')';
         }
 
         // Less than (< x)
-        @else if ($op == 'lt') {
+        @elseif ($op == 'lt') {
           $media: 'screen and (max-width: ' + ($x - 1) + ')';
         }
 
         // Not (< x and > y)
-        @else if ($op == 'not') {
-          $media: 'screen and (max-width: ' +
-            ($x - 1) +
-            '), screen and (min-width: ' +
-            ($y + 1) +
-            ')';
+        @elseif ($op == 'not') {
+          $media: 'screen and (max-width: ' + ($x - 1) +
+            '), screen and (min-width: ' + ($y + 1) + ')';
         }
 
         // Equal (>= x and <= y)
