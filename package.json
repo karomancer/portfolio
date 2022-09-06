@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "description": "Karina's Portfolio Site",
-  "author": "Karina Chow",
-  "keywords": [
-    "gatsby"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karomancer/portfolio.git"
+  },
+  "author": {
+    "name": "Karina Chow",
+    "email": "karinachowtime@gmail.com"
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -29,8 +33,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-pdf": "^5.0.0",
-    "sass": "^1.51.0",
+    "react-pdf": "^5.7.2",
+    "sass": "^1.54.8",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
