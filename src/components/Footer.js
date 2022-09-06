@@ -7,7 +7,7 @@ export default function Footer() {
         {config.socialLinks.map(social => {
           const { style, icon, name, url } = social;
           return (
-            <li key={url}>
+            <li key={`footer-linkto-${url}`}>
               <a href={url} className={`icon ${style} ${icon}`}>
                 <span className="label">{name}</span>
               </a>

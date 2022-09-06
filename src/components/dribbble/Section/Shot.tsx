@@ -2,17 +2,19 @@ import React from 'react';
 
 import './styles.scss';
 
-type Asset = {
-  absolutePath: string;
-  relativePath: string;
-  url: string;
-};
+type Image = {
+  fullImage: string;
+  twoX: string;
+  thumbnail: string;
+  teaser: string;
+}
 
 type Shot = {
-  url: string;
-  localCover: Asset;
   title: string;
-  updated: string;
+  description: string;
+  updatedAt: string;
+  images: Image;
+  url: string;
 };
 
 interface Props {
@@ -26,7 +28,7 @@ const Shot = ({ shot }: Props) => {
       <a href={shot.url} target="_blank">
         <div className="shot-frame">
           <div className="dribbble-light"></div>
-          <img src={shot.localCover.url} />
+          <img src={shot.images.thumbnail} />
         </div>
         <h4 className="title">{shot.title}</h4>
       </a>

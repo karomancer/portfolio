@@ -40,12 +40,12 @@ const Section = ({ showHeader, pieces }: Props) => {
         </div>}
         <ul className={`blog-desktop ${!showHeader && 'full-width'}`}>
           {(pieces || portfolioPieces).map(piece => (
-            <Post key={piece.title} piece={piece} />
+            <Post key={`desktop-piece-${piece.title}`} piece={piece} />
           ))}
         </ul>
         <Carousel>
           {(pieces || portfolioPieces).map(piece => (
-            <Post key={piece.title} piece={piece} />
+            <Post key={`mobile-piece-${piece.title}`} piece={piece} />
           ))}
         </Carousel>
       </div>

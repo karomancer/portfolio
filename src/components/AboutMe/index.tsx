@@ -19,7 +19,7 @@ const AboutMe = () => {
         <blockquote>
           “Screw the rules, I have <b>green hair</b>”
         </blockquote>
-        <p>
+        <div>
           Hello World! My name is Karina Chow and I'm a swiss army knife.
           <br />
           What does that mean? Well I'm glad you asked.
@@ -97,7 +97,7 @@ const AboutMe = () => {
           </ul>
           {/* If you got here from social media, you probably have seen the phrase */}
           {/* above. */}
-        </p>
+        </div>
       </div>
     </section>
   );
@@ -107,8 +107,8 @@ const List = ({ title, items, logos }) => (
   <li>
     <b>{title}</b>
     <ul className="list-of-things">
-      {items.map(item => (
-        <li>{item}</li>
+      {items.map((item, i) => (
+        <li key={`${title}-${i}`}>{item}</li>
       ))}
     </ul>
     {logos && (
@@ -116,7 +116,7 @@ const List = ({ title, items, logos }) => (
         <strong>Skills/Tools</strong>
         <ul className="list-of-tech">
           {logos.map(logo => (
-            <li>
+            <li key={`logo-${logo}`}>
               <img
                 src={`../images/logos/${logo}.png`}
                 alt={`Logo for ${logo}`}
