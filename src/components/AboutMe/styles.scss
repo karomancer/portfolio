@@ -36,16 +36,25 @@
 
       @include breakpoint('<=small') {
         line-height: 1.4;
+        padding: 0 2rem;
+      }
+    }
+
+    div {
+      @include breakpoint('<=small') {
+        padding: 0 2rem;
       }
     }
 
     .about-me-lists {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 2rem;
-      margin: 2rem;
+      max-width: calc(var(--siteWidth) + 125px);
+      margin: 3rem auto;
       text-align: left;
       list-style: none;
+      padding: 0;
 
       @include breakpoint('<=medium') {
         display: grid;
@@ -53,8 +62,9 @@
       }
 
       @include breakpoint('<=small') {
-          display: flex;
+        display: flex;
         flex-direction: column;
+        max-width: 100vw;
       }
 
       b {

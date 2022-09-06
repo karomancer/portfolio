@@ -98,7 +98,7 @@ const AboutMe = () => {
   );
 };
 
-const List = ({ title, items, logos }) => (
+const List = ({ title, items, logos = [] }) => (
   <li>
     <b>{title}</b>
     <ul className="list-of-things">

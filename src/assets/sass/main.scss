@@ -480,21 +480,21 @@ pre {
 
 /* Section/Article */
 
-  h2.section-title {
-    display: inline-block;
-    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
-    padding: 1rem 4rem;
-    background-color: var(--teal);
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: white;
-    margin: 0;
+h2.section-title {
+  display: inline-block;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+  padding: 1rem 4rem;
+  background-color: var(--teal);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
 
-    @include breakpoint('<=small') {
-      padding-left: 3rem;
-      margin-bottom: 2rem;
-    }
+  @include breakpoint('<=small') {
+    padding-left: 3rem;
+    margin-bottom: 2rem;
   }
+}
 
 section,
 article {
@@ -504,7 +504,7 @@ article {
 }
 
 section {
-  width: 100vw; 
+  width: 100vw;
 
   .section-two-pane {
     max-width: calc(var(--siteWidth) + 10rem);
@@ -526,7 +526,7 @@ section {
       }
     }
   }
-  
+
   .section-description {
     width: 25%;
 
@@ -1580,6 +1580,7 @@ button,
 
     @include breakpoint('<=small') {
       padding: 0 1rem;
+      width: 100vw;
     }
   }
 
@@ -1688,8 +1689,6 @@ button,
         padding-top: 0 !important;
       }
 
-        
-
       > a,
       > span {
         @include vendor('transition', 'color 0.1s ease-in');
@@ -1792,6 +1791,10 @@ button,
     position: absolute;
     right: 0;
     top: 0;
+
+    @include breakpoint('<=small') {
+      right: 2rem;
+    }
 
     > ul {
       list-style: none;
