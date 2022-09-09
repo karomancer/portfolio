@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby'
 
@@ -17,14 +16,15 @@ interface Props {
 const Page = ({ piece }: Props) => {
   const H2 = ({ children }) => <h2 style={{ color: piece.hex }}>{children}</h2>;
 
-  const renderAsset = asset => (
-    <li key={asset.title}>
+  const renderAsset = assetType => asset => (
+    <li key={`${assetType}-${asset.title}`}>
       {asset.description && <p>{asset.description}</p>}
       <Asset asset={asset} />
     </li>
   );
 
   const title = `${piece.title} | Karina Chow`
+  debugger
 
   return (
     <>
@@ -51,16 +51,14 @@ const Page = ({ piece }: Props) => {
       <div className="porfolio-piece-full">
         {piece.hero ? (
           <div className="hero">
-            <Img fluid={piece.hero.fluid} />
+            {/* Need to fix this image */}
+            <img src={piece.hero.url} alt={`${piece.hero.title} cover image`} />
           </div>
         ) : (
           <hr style={{ borderColor: piece.hex }} />
         )}
         <div className="inner">
           <Link
-            cover
-            direction="left"
-            hex="#50bfa0"
             className="back-button"
             to="/portfolio"
           >
@@ -82,7 +80,7 @@ const Page = ({ piece }: Props) => {
             <>
               <H2>Process pictures</H2>
               <ul className="process-photos">
-                {piece.images.map(renderAsset)}
+                {piece.images.map(renderAsset('image'))}
               </ul>
             </>
           )}
@@ -91,7 +89,7 @@ const Page = ({ piece }: Props) => {
             <>
               <H2>Final deliverables</H2>
               <ul className="deliverables">
-                {piece.deliverables.map(renderAsset)}
+                {piece.deliverables.map(renderAsset('deliverable'))}
               </ul>
             </>
           )}

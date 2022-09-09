@@ -19,7 +19,7 @@ const AboutMe = () => {
         <blockquote>
           “Screw the rules, I have <b>green hair</b>”
         </blockquote>
-        <p>
+        <div>
           Hello World! My name is Karina Chow and I'm a swiss army knife.
           <br />
           What does that mean? Well I'm glad you asked.
@@ -58,7 +58,7 @@ const AboutMe = () => {
               items={[
                 'creating wireframe UI designs',
                 'making interactive prototype demos and videos for pitch meetings',
-                'consulting with startups on their UX',
+                'consulting with startups on their user experiences',
                 'playing ambassador between design and engineering',
                 'selecting colors, typography, and style for client branding',
                 'developing product design systems from scratch',
@@ -75,7 +75,7 @@ const AboutMe = () => {
             <List
               title="Entrepreneur"
               items={[
-                'operating my own LLC',
+                'operating my own LLC and working with clients',
                 <>
                   running a{' '}
                   <a
@@ -86,29 +86,24 @@ const AboutMe = () => {
                   </a>
                 </>,
                 'participating in venture competitions and startup hackathons',
-              ]}
-            />
-            <List
-              title="Crazy person"
-              items={[
-                'spending way too much time making this website',
+                <>writing tech and mental health <a href="https://medium.com/@karomancer" target="_blank">Medium articles</a>, some of which have reached the <a href="https://news.ycombinator.com/item?id=28173721" target="_blank">front page of Hacker News</a></>
               ]}
             />
           </ul>
           {/* If you got here from social media, you probably have seen the phrase */}
           {/* above. */}
-        </p>
+        </div>
       </div>
     </section>
   );
 };
 
-const List = ({ title, items, logos }) => (
+const List = ({ title, items, logos = [] }) => (
   <li>
     <b>{title}</b>
     <ul className="list-of-things">
-      {items.map(item => (
-        <li>{item}</li>
+      {items.map((item, i) => (
+        <li key={`${title}-${i}`}>{item}</li>
       ))}
     </ul>
     {logos && (
@@ -116,7 +111,7 @@ const List = ({ title, items, logos }) => (
         <strong>Skills/Tools</strong>
         <ul className="list-of-tech">
           {logos.map(logo => (
-            <li>
+            <li key={`logo-${logo}`}>
               <img
                 src={`../images/logos/${logo}.png`}
                 alt={`Logo for ${logo}`}

@@ -9,28 +9,25 @@ interface Props {
 
 const Section = ({ showHeader }: Props) => {
   const {
-    allDribbbleShot: { edges: allDribbbleShot },
+    allDribbbleShot: { nodes: dribbbleShots },
   } = useStaticQuery(graphql`
     query DribbbleIndexQuery {
       allDribbbleShot(limit: 6) {
-        edges {
-          node {
-            description
-            title
-            url
-            updated(formatString: "MM/DD/YYYY")
-            localCover {
-              absolutePath
-              relativePath
-              url
-            }
+        nodes {
+          description
+          title
+          url: html_url
+          updatedAt: updated_at(formatString: "MM/DD/YYYY")
+          images {
+            fullImage: eight_x
+            twoX: two_x
+            thumbnail: normal
+            teaser
           }
         }
       }
     }
   `);
-
-  const dribbbleShots = allDribbbleShot.map(shot => shot.node);
 
   return (
     <section className="dribbble-section">
@@ -38,17 +35,28 @@ const Section = ({ showHeader }: Props) => {
         {showHeader && (
           <div className="section-description">
             <span className="MoMa">MoMD</span>
-            <h3><b>M</b>useum <b>o</b>f <b>M</b>odern <b>D</b>esigns</h3>
+            <h3>
+              <b>M</b>useum <b>o</b>f <b>M</b>odern <b>D</b>esigns
+            </h3>
             <p>
-              Designs I'm currently working on or have finished recently. If you'd like to see the graphic design work I've done for clients in the past, this is the place to look.
+              Designs I'm currently working on or have finished recently. If
+              you'd like to see the graphic design work I've done for clients in
+              the past, this is the place to look.
             </p>
-            View on <a href="http://karomancer.dribbble.com/" target="_blank">Dribbble</a> or <a href="http://instagram.com/karomancer" target="_blank">Instagram</a>
+            View on{' '}
+            <a href="http://karomancer.dribbble.com/" target="_blank">
+              Dribbble
+            </a>{' '}
+            or{' '}
+            <a href="http://instagram.com/karomancer" target="_blank">
+              Instagram
+            </a>
           </div>
         )}
         <div className="portfolio-sections">
           <ul className="shots-desktop">
             {dribbbleShots.map(shot => (
-              <Shot key={shot.url} shot={shot} />
+              <Shot key={`shot-${shot.title}`} shot={shot} />
             ))}
           </ul>
         </div>
