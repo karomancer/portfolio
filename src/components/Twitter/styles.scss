@@ -1,0 +1,17 @@
+.twitter {
+  position: relative;
+  margin: 0 auto;
+
+  .view-more-twitter {
+    position: absolute;
+    bottom: 1rem;
+
+    width: 100%;
+    text-align: center;
+    a {
+      color: #1d9bf0;
+      background-color: white;
+      padding: 0 0.2rem;
+    }
+  }
+}
