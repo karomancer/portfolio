@@ -37,7 +37,7 @@ const Twitter = ({ showHeader, pieces }: Props) => {
   `);
 
   return (
-    <section className="twitter">
+    <section className="twitter" id="twitter">
       <Tweets tweets={tweets} />
       <p className="view-more-twitter">View more on <a href="https://www.twitter.com/karomancer" target="_blank">Twitter</a></p>
     </section>

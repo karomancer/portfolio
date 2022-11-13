@@ -30,7 +30,7 @@ const Section = ({ showHeader }: Props) => {
   `);
 
   return (
-    <section className="dribbble-section">
+    <section className="dribbble-section" id="dribbble">
       <div className="section-two-pane">
         {showHeader && (
           <div className="section-description">
