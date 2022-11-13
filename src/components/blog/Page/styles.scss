@@ -6,9 +6,23 @@
 
 .porfolio-piece-full {
   position: relative;
+  font-size: 1.25rem;
 
   h1 {
     margin-bottom: calc(var(--bottomMargin) * 2.5);
+  }
+
+  h2 {
+    margin-bottom: var(--bottomMargin);
+
+    @include breakpoint('<=small') {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
   }
 
   .back-button {
@@ -59,14 +73,6 @@
     text-transform: uppercase;
     span {
       text-transform: none;
-    }
-  }
-
-  h2 {
-    margin-bottom: var(--bottomMargin);
-
-    @include breakpoint('<=small') {
-      margin-bottom: 0.25rem;
     }
   }
 
