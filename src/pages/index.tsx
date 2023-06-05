@@ -4,7 +4,6 @@ import AboutMe from '../components/AboutMe'
 import Layout from '../components/Layout';
 import HeroSection from '../components/Hero';
 import DribbbleSection from '../components/dribbble/Section';
-import TwitterSection from '../components/Twitter';
 import BlogSection from '../components/blog/Section';
 
 const IndexPage = () => (
@@ -13,7 +12,6 @@ const IndexPage = () => (
     <AboutMe />
     <h2 className="section-title">Social</h2>
     <DribbbleSection showHeader />
-    <TwitterSection showHeader />
     <h2 className="section-title">Blog</h2>
     <BlogSection showHeader />
   </Layout>
