@@ -28,7 +28,6 @@
     "gatsby-plugin-sitemap": "^5.22.0",
     "gatsby-source-contentful": "^7.20.0",
     "gatsby-source-filesystem": "^4.22.0",
-    "gatsby-source-twitter": "^4.0.1",
     "gatsby-transformer-sharp": "^4.22.0",
     "p5": "^1.4.2",
     "react": "^17.0.2",
